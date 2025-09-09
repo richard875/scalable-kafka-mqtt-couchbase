@@ -14,6 +14,7 @@ package-lock.json
 # build output
 /build
 /dist
+**/*/dist
 /.next
 /.vite
 *.local
@@ -35,6 +36,7 @@ Thumbs.db
 # ===============================
 # compiled TypeScript
 /dist
+**/*/dist
 /lib
 *.tsbuildinfo
 
