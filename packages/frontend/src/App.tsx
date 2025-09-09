@@ -1,4 +1,5 @@
 import Header from "@/components/header/Header";
+import Footer from "./components/footer/Footer";
 import SideBar from "./components/sidebar/SideBar";
 import MainContent from "./components/mainContent/MainContent";
 
@@ -7,7 +8,7 @@ const App = () => {
     <>
       <Header />
       <div className="relative">
-        <div className="max-w-[1632px] m-auto my-4 flex gap-4">
+        <div className="max-w-[1664px] m-auto my-4 px-4 flex gap-4">
           <div className="w-55">
             <SideBar />
           </div>
@@ -16,6 +17,7 @@ const App = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
