@@ -7,3 +7,8 @@ body {
     Helvetica Neue,
     sans-serif;
 }
+
+.main-wrapper {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
