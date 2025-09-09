@@ -1,5 +1,11 @@
-function App() {
-  return <>React + Vite + TS</>;
-}
+import Header from "@/components/header/Header";
+
+const App = () => {
+  return (
+    <>
+      <Header />
+    </>
+  );
+};
 
 export default App;
