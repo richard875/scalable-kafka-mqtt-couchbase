@@ -4,7 +4,14 @@ import football from "@/assets/icons/football.svg";
 import rugby from "@/assets/icons/rugby.svg";
 import soccer from "@/assets/icons/soccer.svg";
 
-const Sports = [
+export type Sport = {
+  key: string;
+  titleShort: string;
+  title: string;
+  icon: string;
+};
+
+const Sports: Sport[] = [
   {
     key: "premierLeague",
     titleShort: "Premier League",
