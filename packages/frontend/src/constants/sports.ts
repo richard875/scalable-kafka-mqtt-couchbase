@@ -7,8 +7,8 @@ import soccer from "@/assets/icons/soccer.svg";
 const Sports = [
   {
     key: "premierLeague",
-    titleShort: "EPL",
-    title: "Premier League",
+    titleShort: "Premier League",
+    title: "English Premier League",
     icon: soccer,
   },
   {
