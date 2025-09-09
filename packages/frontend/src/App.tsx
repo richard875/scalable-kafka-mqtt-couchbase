@@ -5,9 +5,9 @@ import MainContent from "./components/mainContent/MainContent";
 
 const App = () => {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <div className="relative">
+      <div className="relative flex-auto">
         <div className="max-w-[1664px] m-auto my-4 px-4 flex gap-4">
           <div className="w-55">
             <SideBar />
@@ -18,7 +18,7 @@ const App = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 };
 
