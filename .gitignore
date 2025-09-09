@@ -6,7 +6,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 package-lock.json
+
+# Yarn specific
+.yarn/
+!.yarn/releases
 
 # ===============================
 # React
@@ -15,6 +20,7 @@ package-lock.json
 /build
 /dist
 **/*/dist
+dist-ssr
 /.next
 /.vite
 *.local
@@ -23,13 +29,16 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
-
-# vscode
-.vscode/
+.env.production
 
 # OS
 .DS_Store
 Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
 # ===============================
 # Express / Hono
@@ -63,6 +72,9 @@ kafka-logs/
 # Misc
 # ===============================
 .idea/
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
 *.swp
 *.swo
 *.bak
