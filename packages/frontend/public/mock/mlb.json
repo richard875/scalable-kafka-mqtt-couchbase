@@ -1,0 +1,3827 @@
+[
+    {
+        "id": "74d58a8f5c9d978234194bb5bc6b8fcb",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T22:36:00Z",
+        "home_team": "Baltimore Orioles",
+        "away_team": "Pittsburgh Pirates",
+        "bookmakers": [
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.64
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.32
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.62
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.64
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.27
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.63
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.35
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.63
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.28
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.65
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.25
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.65
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.25
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.6
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.33
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.61
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.35
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.65
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.71
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.38
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Baltimore Orioles",
+                                "price": 1.73
+                            },
+                            {
+                                "name": "Pittsburgh Pirates",
+                                "price": 2.4
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "61b9f92a893c3d4200dfb126c00a8e4c",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T22:41:00Z",
+        "home_team": "Cleveland Guardians",
+        "away_team": "Kansas City Royals",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 1.99
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.83
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.84
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.01
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 1.99
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.78
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.05
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.78
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.05
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.81
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.8
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.05
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.91
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.06
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Cleveland Guardians",
+                                "price": 1.94
+                            },
+                            {
+                                "name": "Kansas City Royals",
+                                "price": 2.1
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "359e283ce7ce39b1922145dc75446a19",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T22:41:00Z",
+        "home_team": "Miami Marlins",
+        "away_team": "Washington Nationals",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.8
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.02
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.83
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.02
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.81
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.83
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.77
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.07
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.76
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.06
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.85
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.89
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.06
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Miami Marlins",
+                                "price": 1.94
+                            },
+                            {
+                                "name": "Washington Nationals",
+                                "price": 2.12
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "45f0bcfd70f0277fead0b175ae8e43a2",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T22:46:00Z",
+        "home_team": "Philadelphia Phillies",
+        "away_team": "New York Mets",
+        "bookmakers": [
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.77
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.05
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.76
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.07
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.76
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.05
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.8
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.08
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.75
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.75
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.75
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.06
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.78
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.05
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.77
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.75
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.81
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "New York Mets",
+                                "price": 2.24
+                            },
+                            {
+                                "name": "Philadelphia Phillies",
+                                "price": 1.84
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "202d8206759501993be70881827adc2f",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T23:06:00Z",
+        "home_team": "New York Yankees",
+        "away_team": "Detroit Tigers",
+        "bookmakers": [
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.34
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.63
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.61
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.29
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.63
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.63
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.6
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.4
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.62
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.62
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.62
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.61
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.6
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.44
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.67
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Detroit Tigers",
+                                "price": 2.48
+                            },
+                            {
+                                "name": "New York Yankees",
+                                "price": 1.69
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "3a51379006b33fdc5103c7e52494a792",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T23:07:00Z",
+        "home_team": "Toronto Blue Jays",
+        "away_team": "Houston Astros",
+        "bookmakers": [
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.63
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.62
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.35
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.62
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.42
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.69
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.46
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.71
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.28
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.63
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.3
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.65
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.3
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.63
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.3
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.65
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.27
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.64
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.28
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.64
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Houston Astros",
+                                "price": 2.25
+                            },
+                            {
+                                "name": "Toronto Blue Jays",
+                                "price": 1.64
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "b007cf11ed53ca64967bd0a001982166",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T23:16:00Z",
+        "home_team": "Atlanta Braves",
+        "away_team": "Chicago Cubs",
+        "bookmakers": [
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.92
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.92
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.89
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.91
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.85
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.93
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.87
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.94
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.92
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.92
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 1.99
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 1.97
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Atlanta Braves",
+                                "price": 2.04
+                            },
+                            {
+                                "name": "Chicago Cubs",
+                                "price": 2.02
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "8dd12a2b7e09a1020c95eb8a7a39364f",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-09T23:41:00Z",
+        "home_team": "Chicago White Sox",
+        "away_team": "Tampa Bay Rays",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.12
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.72
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.69
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 1.95
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.75
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 1000.0
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 2.06
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.75
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.25
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.69
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.72
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.72
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.17
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Chicago White Sox",
+                                "price": 2.16
+                            },
+                            {
+                                "name": "Tampa Bay Rays",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "31b955c2b4e44904f80b4bb7a7986829",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-10T00:05:00Z",
+        "home_team": "Texas Rangers",
+        "away_team": "Milwaukee Brewers",
+        "bookmakers": [
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.94
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.87
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.94
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.87
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.91
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.92
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.92
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.93
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.91
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.91
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.89
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.99
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.99
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 2.02
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 2.02
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.91
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.91
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Milwaukee Brewers",
+                                "price": 1.89
+                            },
+                            {
+                                "name": "Texas Rangers",
+                                "price": 1.89
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "6c0933b69d08533b27b5a8757dd06bd2",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-10T01:39:00Z",
+        "home_team": "Los Angeles Angels",
+        "away_team": "Minnesota Twins",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.0
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.81
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.02
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.83
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.0
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.81
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.0
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.83
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.0
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.82
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.05
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.78
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.05
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.78
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.02
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.81
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.02
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.8
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.0
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.85
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.06
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.89
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Los Angeles Angels",
+                                "price": 2.12
+                            },
+                            {
+                                "name": "Minnesota Twins",
+                                "price": 1.94
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "a267818dc5718395684e4df9d6ad001d",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-10T01:41:00Z",
+        "home_team": "San Diego Padres",
+        "away_team": "Cincinnati Reds",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.62
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.62
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.51
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.53
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.55
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.53
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.55
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.53
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.65
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.48
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.7
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.48
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.78
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.55
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.82
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.57
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Cincinnati Reds",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "San Diego Padres",
+                                "price": 1.52
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "bd57d638bfb6f5132eeb6b0c87aa876b",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-10T01:41:00Z",
+        "home_team": "Seattle Mariners",
+        "away_team": "St. Louis Cardinals",
+        "bookmakers": [
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.48
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.75
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.47
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.45
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.78
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.5
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.65
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.48
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.65
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.48
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.48
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.48
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.47
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.65
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.5
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.51
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.86
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Seattle Mariners",
+                                "price": 1.54
+                            },
+                            {
+                                "name": "St. Louis Cardinals",
+                                "price": 2.98
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "cb5d3702e2130319f258dfec41e34745",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-10T01:46:00Z",
+        "home_team": "San Francisco Giants",
+        "away_team": "Arizona Diamondbacks",
+        "bookmakers": [
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.69
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.71
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.68
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.68
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.68
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.18
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.17
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.68
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.26
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.76
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Arizona Diamondbacks",
+                                "price": 2.32
+                            },
+                            {
+                                "name": "San Francisco Giants",
+                                "price": 1.77
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "37420126d03e5ac76027dfc0b8566a1a",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-10T02:06:00Z",
+        "home_team": "Oakland Athletics",
+        "away_team": "Boston Red Sox",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.89
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.91
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.91
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.92
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.92
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.9
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.9
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.91
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.88
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.92
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.89
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 2.02
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.96
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 2.04
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.99
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Boston Red Sox",
+                                "price": 1.92
+                            },
+                            {
+                                "name": "Oakland Athletics",
+                                "price": 1.92
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4fc9ecc9f90c827e677ca27eb53ce16b",
+        "sport_key": "baseball_mlb",
+        "sport_title": "MLB",
+        "commence_time": "2025-09-10T02:10:00Z",
+        "home_team": "Los Angeles Dodgers",
+        "away_team": "Colorado Rockies",
+        "bookmakers": [
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.65
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.55
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.65
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.28
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.5
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.31
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.66
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.29
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.6
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:40:47Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:47Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.6
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:04Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:04Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.65
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.29
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:03Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:03Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.65
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.29
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.8
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.33
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 4.1
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.36
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tab",
+                "title": "TAB",
+                "last_update": "2025-09-09T14:29:12Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:29:12Z",
+                        "outcomes": [
+                            {
+                                "name": "Colorado Rockies",
+                                "price": 3.6
+                            },
+                            {
+                                "name": "Los Angeles Dodgers",
+                                "price": 1.3
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

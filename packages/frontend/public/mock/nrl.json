@@ -1,0 +1,1022 @@
+[
+    {
+        "id": "e238dbcc80dfa8bb63eea12631155173",
+        "sport_key": "rugbyleague_nrl",
+        "sport_title": "NRL",
+        "commence_time": "2025-09-12T09:50:00Z",
+        "home_team": "Melbourne Storm",
+        "away_team": "Canterbury Bulldogs",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.61
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.55
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.51
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.55
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.49
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.5
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.53
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:41:02Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:02Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.92
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.51
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.96
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.52
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:39:19Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:39:19Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "boombet",
+                "title": "BoomBet",
+                "last_update": "2025-09-09T14:40:34Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:34Z",
+                        "outcomes": [
+                            {
+                                "name": "Canterbury Bulldogs",
+                                "price": 2.6
+                            },
+                            {
+                                "name": "Melbourne Storm",
+                                "price": 1.5
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "4cdbd89de37041b44006fe188bec5c85",
+        "sport_key": "rugbyleague_nrl",
+        "sport_title": "NRL",
+        "commence_time": "2025-09-13T06:05:00Z",
+        "home_team": "New Zealand Warriors",
+        "away_team": "Penrith Panthers",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.34
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.33
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.4
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.32
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.3
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.33
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.3
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.33
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.2
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.35
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:41:02Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:02Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.55
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.3
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.75
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.34
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.95
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.37
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.4
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.32
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.2
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.35
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:39:19Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:39:19Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.2
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.35
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "boombet",
+                "title": "BoomBet",
+                "last_update": "2025-09-09T14:40:34Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:34Z",
+                        "outcomes": [
+                            {
+                                "name": "New Zealand Warriors",
+                                "price": 3.2
+                            },
+                            {
+                                "name": "Penrith Panthers",
+                                "price": 1.35
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "9a5bff0848c96349780fbc65e44adfe3",
+        "sport_key": "rugbyleague_nrl",
+        "sport_title": "NRL",
+        "commence_time": "2025-09-13T09:50:00Z",
+        "home_team": "Cronulla Sutherland Sharks",
+        "away_team": "Sydney Roosters",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.74
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.74
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.67
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:41:02Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:02Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.15
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.7
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.8
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.26
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.84
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.11
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.73
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.73
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:39:19Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:39:19Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.1
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.73
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "boombet",
+                "title": "BoomBet",
+                "last_update": "2025-09-09T14:40:34Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:34Z",
+                        "outcomes": [
+                            {
+                                "name": "Cronulla Sutherland Sharks",
+                                "price": 2.14
+                            },
+                            {
+                                "name": "Sydney Roosters",
+                                "price": 1.71
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "ed16e07c939fd5acbdcc9fa9cce2b9f7",
+        "sport_key": "rugbyleague_nrl",
+        "sport_title": "NRL",
+        "commence_time": "2025-09-14T06:05:00Z",
+        "home_team": "Canberra Raiders",
+        "away_team": "Brisbane Broncos",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.26
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.64
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.67
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.62
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "tabtouch",
+                "title": "TABtouch",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.67
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.67
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:41:02Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:02Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.68
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.14
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.75
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.32
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.88
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:40:35Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:35Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.67
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:40:37Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:37Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.68
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:39:19Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:39:19Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.68
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "boombet",
+                "title": "BoomBet",
+                "last_update": "2025-09-09T14:40:34Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:40:34Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Broncos",
+                                "price": 2.2
+                            },
+                            {
+                                "name": "Canberra Raiders",
+                                "price": 1.66
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

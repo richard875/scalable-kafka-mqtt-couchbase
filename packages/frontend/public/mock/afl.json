@@ -1,0 +1,470 @@
+[
+    {
+        "id": "68939339626bf720e0060eee8915fd78",
+        "sport_key": "aussierules_afl",
+        "sport_title": "AFL",
+        "commence_time": "2025-09-12T09:40:42Z",
+        "home_team": "Adelaide Crows",
+        "away_team": "Hawthorn Hawks",
+        "bookmakers": [
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:42:00Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:42:00Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.79
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 1.98
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.8
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:41:08Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:08Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.87
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.12
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:41:08Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.89
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.16
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:41:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.75
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.81
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.85
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.77
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.05
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:41:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.77
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.05
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:41:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.82
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "boombet",
+                "title": "BoomBet",
+                "last_update": "2025-09-09T14:42:25Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:42:25Z",
+                        "outcomes": [
+                            {
+                                "name": "Adelaide Crows",
+                                "price": 1.8
+                            },
+                            {
+                                "name": "Hawthorn Hawks",
+                                "price": 2.0
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "8dcf46ddf50b6d628010745a41c0d2ee",
+        "sport_key": "aussierules_afl",
+        "sport_title": "AFL",
+        "commence_time": "2025-09-13T09:35:03Z",
+        "home_team": "Brisbane Lions",
+        "away_team": "Gold Coast Suns",
+        "bookmakers": [
+            {
+                "key": "sportsbet",
+                "title": "SportsBet",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.6
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.35
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "unibet",
+                "title": "Unibet",
+                "last_update": "2025-09-09T14:42:00Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:42:00Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.52
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.48
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "pointsbetau",
+                "title": "PointsBet (AU)",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.59
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.4
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "ladbrokes_au",
+                "title": "Ladbrokes",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.55
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.45
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "neds",
+                "title": "Neds",
+                "last_update": "2025-09-09T14:41:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.55
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.45
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betr_au",
+                "title": "Betr",
+                "last_update": "2025-09-09T14:41:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.57
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.4
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betfair_ex_au",
+                "title": "Betfair",
+                "last_update": "2025-09-09T14:41:08Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:08Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.63
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.56
+                            }
+                        ]
+                    },
+                    {
+                        "key": "h2h_lay",
+                        "last_update": "2025-09-09T14:41:08Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.64
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.6
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "betright",
+                "title": "Bet Right",
+                "last_update": "2025-09-09T14:41:06Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:06Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.6
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.34
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "playup",
+                "title": "PlayUp",
+                "last_update": "2025-09-09T14:41:05Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:41:05Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.6
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.35
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "boombet",
+                "title": "BoomBet",
+                "last_update": "2025-09-09T14:42:25Z",
+                "markets": [
+                    {
+                        "key": "h2h",
+                        "last_update": "2025-09-09T14:42:25Z",
+                        "outcomes": [
+                            {
+                                "name": "Brisbane Lions",
+                                "price": 1.6
+                            },
+                            {
+                                "name": "Gold Coast Suns",
+                                "price": 2.34
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
