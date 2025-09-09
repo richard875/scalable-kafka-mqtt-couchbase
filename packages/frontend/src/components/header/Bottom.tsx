@@ -5,13 +5,14 @@ const SPORTS_URL = "https://www.unibet.com.au/betting/sports/home";
 const RACING_URL = "https://www.unibet.com.au/racing";
 const PROMOTIONS_URL = "https://www.unibet.com.au/promotions";
 const FEATURES_URL = "https://www.unibet.com.au/product-features";
+const REGISTER_URL = "https://www.unibet.com.au/registration";
 
 const Bottom = () => {
   const goToLink = (url: string) => window.open(url, "_blank", "noopener,noreferrer");
 
   return (
     <div className="w-full h-16 bg-[#147B45] flex items-center">
-      <div className="w-full max-w-[1600px] m-auto">
+      <div className="w-full max-w-[1600px] m-auto flex justify-between">
         <div className="flex pl-8">
           <a href={WEB_URL} target="_blank" rel="noreferrer">
             <img src={unibet} alt="unibet" className="w-25 mr-16" />
@@ -37,7 +38,20 @@ const Bottom = () => {
             </span>
           </div>
         </div>
-        <div className="pr-8"></div>
+        <div className="pr-8 flex items-center gap-4">
+          <button
+            className="w-24 h-8 cursor-pointer bg-transparent border-2 border-white rounded-sm"
+            onClick={() => goToLink(PROMOTIONS_URL)}
+          >
+            Log in
+          </button>
+          <button
+            className="w-24 h-8 cursor-pointer text-[#111111] bg-[#FFE71F] border-2 border-[#FFE71F] rounded-sm"
+            onClick={() => goToLink(REGISTER_URL)}
+          >
+            Register
+          </button>
+        </div>
       </div>
     </div>
   );
