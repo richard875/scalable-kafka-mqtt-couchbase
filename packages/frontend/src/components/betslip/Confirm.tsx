@@ -23,7 +23,12 @@ const Confirm = () => {
           <span className="text-[#888888] text-xs font-normal">Potential payout:</span>
           <span className="text-white text-base font-normal">${potentialPayout.toFixed(2)}</span>
         </div>
-        <button className="w-43.5 h-14 flex items-center justify-center rounded-sm text-black text-base font-normal bg-[#ffe91f] cursor-pointer">
+        <button
+          disabled={
+            selectedBets.length === 0 || selectedBets.some(bet => !bet.amount || bet.amount <= 0)
+          }
+          className="w-43.5 h-14 flex items-center justify-center rounded-sm text-black text-base font-normal bg-[#ffe91f] cursor-pointer disabled:opacity-50 disabled:cursor-auto"
+        >
           Place bet
         </button>
       </div>
