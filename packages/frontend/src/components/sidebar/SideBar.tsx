@@ -1,9 +1,15 @@
+import { useEffect } from "react";
 import Sports from "@/constants/sports";
 import type { Sport } from "@/types/sport";
 import useSportStore from "@/store/sportStore";
 
 const SideBar = () => {
   const { sport: selectedSport, setSport, setOdds } = useSportStore();
+
+  useEffect(() => {
+    if (selectedSport) setOdds(selectedSport);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleClick = (sport: Sport) => {
     setSport(sport);
