@@ -14,6 +14,8 @@ type SportStore = {
   setSport: (sport: Sport) => void;
   setOdds: (sport: Sport) => Promise<void>;
   setSelectedBet: (bet: SlipItem) => void;
+  clearSelectedBets: () => void;
+  setBetAmount: (id: string, amount: number) => void;
 };
 
 const useSportStore = create<SportStore>(set => ({
@@ -32,6 +34,12 @@ const useSportStore = create<SportStore>(set => ({
       selectedBets: state.selectedBets.map(b => b.id).includes(bet.id)
         ? state.selectedBets.filter(b => b.id !== bet.id)
         : [...state.selectedBets, bet],
+    }));
+  },
+  clearSelectedBets: () => set(() => ({ selectedBets: [] })),
+  setBetAmount: (id: string, amount: number) => {
+    set(state => ({
+      selectedBets: state.selectedBets.map(bet => (bet.id === id ? { ...bet, amount } : bet)),
     }));
   },
 }));
