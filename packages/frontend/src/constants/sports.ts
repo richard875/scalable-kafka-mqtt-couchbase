@@ -3,14 +3,7 @@ import baseball from "@/assets/icons/baseball.svg";
 import football from "@/assets/icons/football.svg";
 import rugby from "@/assets/icons/rugby.svg";
 import soccer from "@/assets/icons/soccer.svg";
-
-export type Sport = {
-  key: string;
-  urlKey: string;
-  titleShort: string;
-  title: string;
-  icon: string;
-};
+import type { Sport } from "@/types/sport";
 
 const Sports: Sport[] = [
   {
