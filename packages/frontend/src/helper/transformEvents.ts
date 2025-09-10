@@ -1,3 +1,4 @@
+import SHA256 from "crypto-js/sha256";
 import type { Odds } from "@/types/odds";
 import type { GroupedOdds } from "@/types/groupedOdds";
 
@@ -19,11 +20,14 @@ const transformEvents = (data: Odds[]): GroupedOdds[] => {
   const grouped: Record<string, Odds[]> = {};
 
   for (const event of data) {
-    // Add unique IDs to all outcomes using flatMap
-    event.bookmakers
-      .flatMap(bookmaker => bookmaker.markets)
-      .flatMap(market => market.outcomes)
-      .forEach(outcome => (outcome.id = crypto.randomUUID()));
+    event.bookmakers.forEach(bookmaker => {
+      bookmaker.markets
+        .flatMap(market => market.outcomes)
+        .forEach(outcome => {
+          const hash = SHA256(`${event.id}-${bookmaker.key}-${outcome.name}`);
+          outcome.id = hash.toString();
+        });
+    });
 
     const localDate = new Date(event.commence_time);
     const compareDate = new Date(localDate);
