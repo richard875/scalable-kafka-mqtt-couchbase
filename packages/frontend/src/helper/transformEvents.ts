@@ -10,11 +10,24 @@ const transformEvents = (data: Odds[]): GroupedOdds[] => {
     timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone, // system local
   });
 
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+
   const grouped: Record<string, Odds[]> = {};
 
   for (const event of data) {
     const localDate = new Date(event.commence_time);
-    const formattedDate = formatter.format(localDate); // e.g. "12 September 2025"
+    const compareDate = new Date(localDate);
+    compareDate.setHours(0, 0, 0, 0);
+
+    let formattedDate: string;
+
+    if (compareDate.getTime() === today.getTime()) formattedDate = "Today";
+    else if (compareDate.getTime() === tomorrow.getTime()) formattedDate = "Tomorrow";
+    else formattedDate = formatter.format(localDate);
 
     if (!grouped[formattedDate]) grouped[formattedDate] = [];
     grouped[formattedDate].push(event);
