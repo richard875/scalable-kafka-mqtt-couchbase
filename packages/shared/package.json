@@ -1,0 +1,13 @@
+{
+    "name": "@fdj/shared",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "./sportsEnum.js",
+    "types": "./sportsEnum.d.ts",
+    "exports": {
+        "./sportsEnum": {
+            "import": "./sportsEnum.js",
+            "types": "./sportsEnum.d.ts"
+        }
+    }
+}
