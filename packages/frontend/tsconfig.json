@@ -21,7 +21,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@backend/*": ["../backend/src/*"],
+      "@betting-service/*": ["../betting-service/src/*"],
       "@frontend/*": ["./src/*"]
     }
   },

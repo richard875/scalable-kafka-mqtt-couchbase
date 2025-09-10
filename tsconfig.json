@@ -24,12 +24,12 @@
     /* Path Mapping for Monorepo */
     "baseUrl": ".",
     "paths": {
-      "@backend/*": ["./packages/backend/src/*"],
+      "@betting-service/*": ["packages/betting-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"]
     }
   },
   "include": [
-    "packages/backend/src/**/*",
+    "packages/betting-service/src/**/*",
     "packages/frontend/src/**/*",
     "packages/frontend/vite.config.ts"
   ],

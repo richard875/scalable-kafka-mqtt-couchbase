@@ -20,7 +20,7 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "../..",
     "paths": {
-      "@backend/*": ["./packages/backend/src/*"],
+      "@betting-service/*": ["./packages/betting-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"]
     }
   },
