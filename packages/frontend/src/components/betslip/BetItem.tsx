@@ -3,7 +3,7 @@ import close from "@/assets/icons/close.svg";
 import useSportStore from "@/store/sportStore";
 import type { SlipItem } from "@/types/slipItem";
 
-const BetItem = ({ bet }: { bet: SlipItem }) => {
+const BetItem = ({ bet, isFirst }: { bet: SlipItem; isFirst: boolean }) => {
   const [inputValue, setInputValue] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const { setSelectedBet, setBetAmount } = useSportStore();
@@ -28,7 +28,7 @@ const BetItem = ({ bet }: { bet: SlipItem }) => {
   };
 
   return (
-    <div className="w-full flex border-t border-[#333333]">
+    <div className={`w-full flex ${isFirst ? "" : "border-t border-[#333333]"}`}>
       <div
         onClick={() => setSelectedBet(bet)}
         className="w-9 flex items-center justify-center border-r border-[#333333] cursor-pointer"
