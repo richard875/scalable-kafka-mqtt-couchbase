@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import clock from "@/assets/icons/clock.svg";
 import type { Odds } from "@/types/odds";
 import useSportStore from "@/store/sportStore";
@@ -6,11 +6,6 @@ import formatIsoToLocalTime from "@/helper/formatIsoToLocalTime";
 
 const EventRow = ({ event }: { event: Odds }) => {
   const { selectedBets, setSelectedBet } = useSportStore();
-
-  useEffect(() => {
-    console.log(selectedBets);
-  }, [selectedBets]);
-
   const randomNum = useMemo(() => Math.floor(Math.random() * (900 - 100 + 1)) + 100, []);
 
   const unibet = event.bookmakers.find(bm => bm.key === "unibet");
@@ -22,6 +17,9 @@ const EventRow = ({ event }: { event: Odds }) => {
   const homeOdds = unibet.markets[0].outcomes.find(outcome => outcome.name === homeTeam);
   const awayOdds = unibet.markets[0].outcomes.find(outcome => outcome.name === awayTeam);
   if (!homeOdds || !awayOdds) return null;
+
+  const isHomeSelected = selectedBets.map(b => b.id).includes(homeOdds.id);
+  const isAwaySelected = selectedBets.map(b => b.id).includes(awayOdds.id);
 
   return (
     <div
@@ -45,15 +43,19 @@ const EventRow = ({ event }: { event: Odds }) => {
         </div>
         <div
           onClick={() => setSelectedBet({ ...homeOdds, team })}
-          className="w-16 h-9 rounded-xs flex items-center justify-center bg-[#147b45] hover:bg-[#00582c]"
+          className={`w-16 h-9 rounded-xs flex items-center justify-center ${isHomeSelected ? "bg-[#ffe71f] hover:bg-[#ffef6e]" : "bg-[#147b45] hover:bg-[#00582c]"}`}
         >
-          <span className="text-white text-sm font-bold">{homeOdds.price}</span>
+          <span className={`text-sm font-bold ${isHomeSelected ? "text-[#333333]" : "text-white"}`}>
+            {homeOdds.price}
+          </span>
         </div>
         <div
           onClick={() => setSelectedBet({ ...awayOdds, team })}
-          className="w-16 h-9 rounded-xs flex items-center justify-center bg-[#147b45] hover:bg-[#00582c]"
+          className={`w-16 h-9 rounded-xs flex items-center justify-center ${isAwaySelected ? "bg-[#ffe71f] hover:bg-[#ffef6e]" : "bg-[#147b45] hover:bg-[#00582c]"}`}
         >
-          <span className="text-white text-sm font-bold">{awayOdds.price}</span>
+          <span className={`text-sm font-bold ${isAwaySelected ? "text-[#333333]" : "text-white"}`}>
+            {awayOdds.price}
+          </span>
         </div>
         <div className="w-13 flex items-center justify-center">
           <span className="text-[#555555] text-xs font-normal mr-2">+{randomNum}</span>
