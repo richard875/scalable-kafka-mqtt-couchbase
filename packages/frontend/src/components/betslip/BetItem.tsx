@@ -1,9 +1,31 @@
+import { useState } from "react";
 import close from "@/assets/icons/close.svg";
 import useSportStore from "@/store/sportStore";
 import type { SlipItem } from "@/types/slipItem";
 
 const BetItem = ({ bet }: { bet: SlipItem }) => {
-  const { setSelectedBet } = useSportStore();
+  const [inputValue, setInputValue] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
+  const { setSelectedBet, setBetAmount } = useSportStore();
+
+  const formatAmount = (value: number | string): string => {
+    if (!value || value === "") return "";
+    const numValue = typeof value === "string" ? parseFloat(value) : value;
+    if (isNaN(numValue)) return "";
+    return numValue.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  };
+
+  const handleFocus = () => {
+    setIsEditing(true);
+    setInputValue(bet.amount?.toString() || "");
+  };
+
+  const handleBlur = () => {
+    setIsEditing(false);
+    const numValue = Number(inputValue);
+    if (inputValue && !isNaN(numValue)) setBetAmount(bet.id, numValue);
+    setInputValue("");
+  };
 
   return (
     <div className="w-full flex border-t border-[#333333]">
@@ -27,8 +49,12 @@ const BetItem = ({ bet }: { bet: SlipItem }) => {
         <div className="flex flex-col items-end">
           <span className="mr-1 mb-1.25 text-white text-sm font-bold">{bet.price}</span>
           <input
-            type="number"
-            placeholder="0.00"
+            type="text"
+            placeholder="$0.00"
+            value={isEditing ? inputValue : bet.amount ? formatAmount(bet.amount) : ""}
+            onChange={e => setInputValue(e.target.value.replace(/[^0-9.]/g, ""))}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             className="w-16.5 h-7.5 px-1 bg-white rounded-xs text-[#222222] text-sm font-bold text-right"
           />
         </div>
