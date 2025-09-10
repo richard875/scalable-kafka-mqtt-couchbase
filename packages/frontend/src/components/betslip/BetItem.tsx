@@ -17,13 +17,13 @@ const BetItem = ({ bet }: { bet: SlipItem }) => {
 
   const handleFocus = () => {
     setIsEditing(true);
-    setInputValue(bet.amount?.toString() || "");
+    if (bet.amount > 0) setInputValue(bet.amount?.toString() || "");
   };
 
   const handleBlur = () => {
     setIsEditing(false);
     const numValue = Number(inputValue);
-    if (inputValue && !isNaN(numValue)) setBetAmount(bet.id, numValue);
+    setBetAmount(bet.id, numValue);
     setInputValue("");
   };
 
