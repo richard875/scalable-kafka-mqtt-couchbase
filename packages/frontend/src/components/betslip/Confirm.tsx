@@ -1,5 +1,6 @@
 import Decimal from "decimal.js";
 import { toast } from "react-toastify";
+import { BETTING_URL } from "@/constants/api";
 import useSportStore from "@/store/sportStore";
 import formatAmount from "@/helper/formatAmount";
 
@@ -17,10 +18,15 @@ const Confirm = () => {
       const className =
         "!rounded-xs !bg-[#222222] shadow-2xl !text-white !text-sm !font-bold border-l-4 border-[#ffe91f] font-smoothing";
 
-      setTimeout(
-        () => toast(message, { closeButton: false, hideProgressBar: true, className }),
-        500 * index
-      );
+      setTimeout(() => {
+        fetch(`${BETTING_URL}/bet`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(bet),
+        });
+
+        toast(message, { closeButton: false, hideProgressBar: true, className });
+      }, 500 * index);
     });
 
     clearSelectedBets();
