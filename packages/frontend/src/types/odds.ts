@@ -1,5 +1,29 @@
 import { type UUID } from "crypto";
 
+export type Outcomes = {
+  id: UUID;
+  name: string;
+  price: number;
+  team?: string;
+};
+
+type Markets = {
+  key: string;
+  last_update: string;
+  outcomes: Outcomes[];
+  link: string;
+  sid: string;
+};
+
+type Bookmakers = {
+  key: string;
+  title: string;
+  last_update: string;
+  markets: Markets[];
+  link: string;
+  sid: string;
+};
+
 export type Odds = {
   id: string;
   sport_key: string;
@@ -7,22 +31,5 @@ export type Odds = {
   commence_time: string;
   home_team: string;
   away_team: string;
-  bookmakers: Array<{
-    key: string;
-    title: string;
-    last_update: string;
-    markets: Array<{
-      key: string;
-      last_update: string;
-      outcomes: Array<{
-        id: UUID;
-        name: string;
-        price: number;
-      }>;
-      link: string;
-      sid: string;
-    }>;
-    link: string;
-    sid: string;
-  }>;
+  bookmakers: Bookmakers[];
 };
