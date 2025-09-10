@@ -1,5 +1,7 @@
 {
   "name": "betting-service",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -10,7 +12,8 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.19.0",
-    "hono": "^4.9.6"
+    "hono": "^4.9.6",
+    "kafkajs": "^2.2.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",
