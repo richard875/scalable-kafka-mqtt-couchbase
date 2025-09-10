@@ -25,13 +25,15 @@
     "baseUrl": ".",
     "paths": {
       "@betting-service/*": ["packages/betting-service/src/*"],
-      "@frontend/*": ["./packages/frontend/src/*"]
+      "@frontend/*": ["./packages/frontend/src/*"],
+      "@fdj/shared/*": ["./packages/shared/*"]
     }
   },
   "include": [
     "packages/betting-service/src/**/*",
     "packages/frontend/src/**/*",
-    "packages/frontend/vite.config.ts"
+    "packages/frontend/vite.config.ts",
+    "packages/shared/**/*"
   ],
   "exclude": [
     "node_modules",

@@ -22,7 +22,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@betting-service/*": ["../betting-service/src/*"],
-      "@frontend/*": ["./src/*"]
+      "@frontend/*": ["./src/*"],
+      "@fdj/shared/*": ["../shared/*"]
     }
   },
   "include": ["src/**/*", "vite.config.ts"],

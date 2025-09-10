@@ -21,7 +21,8 @@
     "baseUrl": "../..",
     "paths": {
       "@betting-service/*": ["./packages/betting-service/src/*"],
-      "@frontend/*": ["./packages/frontend/src/*"]
+      "@frontend/*": ["./packages/frontend/src/*"],
+      "@fdj/shared/*": ["./packages/shared/*"]
     }
   },
   "include": ["src/**/*"],
