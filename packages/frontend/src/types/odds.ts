@@ -1,8 +1,4 @@
-export type Outcomes = {
-  id: string;
-  name: string;
-  price: number;
-};
+import type { Outcomes } from "./outcomes";
 
 type Markets = {
   key: string;
