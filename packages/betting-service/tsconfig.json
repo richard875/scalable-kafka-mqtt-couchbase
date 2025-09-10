@@ -22,7 +22,8 @@
     "paths": {
       "@betting-service/*": ["./packages/betting-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"],
-      "@fdj/shared/*": ["./packages/shared/*"]
+      "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
+      "@fdj/shared/types/*": ["./packages/shared/types/*"]
     }
   },
   "include": ["src/**/*"],

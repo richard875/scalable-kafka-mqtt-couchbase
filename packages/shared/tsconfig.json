@@ -8,8 +8,13 @@
     "declaration": true,
     "declarationMap": true,
     "outDir": "./dist",
-    "composite": true
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "./types/*": ["./types/*"],
+      "./enums/*": ["./enums/*"]
+    }
   },
-  "include": ["**/*.ts"],
+  "include": ["enums/**/*.ts", "types/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

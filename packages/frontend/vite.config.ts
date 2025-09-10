@@ -9,7 +9,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@fdj/shared": path.resolve(__dirname, "../shared"),
+      "@fdj/shared/enums": path.resolve(__dirname, "../shared/enums"),
+      "@fdj/shared/types": path.resolve(__dirname, "../shared/types"),
     },
   },
 });
