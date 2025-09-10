@@ -1,3 +1,4 @@
+import { ToastContainer } from "react-toastify";
 import Header from "@/components/header/Header";
 import Footer from "./components/footer/Footer";
 import SideBar from "./components/sidebar/SideBar";
@@ -22,6 +23,7 @@ const App = () => {
         <Footer />
       </div>
       <Betslip />
+      <ToastContainer position="top-right" />
     </>
   );
 };
