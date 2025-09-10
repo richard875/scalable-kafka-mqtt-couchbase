@@ -2,12 +2,18 @@
     "name": "@fdj/shared",
     "version": "1.0.0",
     "type": "module",
-    "main": "./sportsEnum.js",
-    "types": "./sportsEnum.d.ts",
     "exports": {
-        "./sportsEnum": {
-            "import": "./sportsEnum.js",
-            "types": "./sportsEnum.d.ts"
+        "./enums/sportsEnum": {
+            "import": "./enums/sportsEnum.js",
+            "types": "./enums/sportsEnum.d.ts"
+        },
+        "./types/outcomes": {
+            "import": "./types/outcomes.js",
+            "types": "./types/outcomes.d.ts"
+        },
+        "./types/slipItem": {
+            "import": "./types/slipItem.js",
+            "types": "./types/slipItem.d.ts"
         }
     }
 }
