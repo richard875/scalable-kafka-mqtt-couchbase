@@ -1,4 +1,4 @@
-export type Odds = Array<{
+export type Odds = {
   id: string;
   sport_key: string;
   sport_title: string;
@@ -22,4 +22,4 @@ export type Odds = Array<{
     link: string;
     sid: string;
   }>;
-}>;
+};

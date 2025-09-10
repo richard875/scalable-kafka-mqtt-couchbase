@@ -1,7 +1,7 @@
 import type { Odds } from "@/types/odds";
 import type { GoupedOdds } from "@/types/groupedOdds";
 
-const transformEvents = (data: Odds): GoupedOdds[] => {
+const transformEvents = (data: Odds[]): GoupedOdds[] => {
   // Intl formatter for pretty date (system local time)
   const formatter = new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
@@ -10,7 +10,7 @@ const transformEvents = (data: Odds): GoupedOdds[] => {
     timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone, // system local
   });
 
-  const grouped: Record<string, Odds> = {};
+  const grouped: Record<string, Odds[]> = {};
 
   for (const event of data) {
     const localDate = new Date(event.commence_time);
