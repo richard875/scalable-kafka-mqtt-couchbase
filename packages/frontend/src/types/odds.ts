@@ -1,7 +1,5 @@
-import { type UUID } from "crypto";
-
 export type Outcomes = {
-  id: UUID;
+  id: string;
   name: string;
   price: number;
   team?: string;
