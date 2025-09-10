@@ -5,7 +5,7 @@ import useSportStore from "@/store/sportStore";
 import formatIsoToLocalTime from "@/helper/formatIsoToLocalTime";
 
 const EventRow = ({ event }: { event: Odds }) => {
-  const { selectedBets, setSelectedBet } = useSportStore();
+  const { sport, selectedBets, setSelectedBet } = useSportStore();
   const randomNum = useMemo(() => Math.floor(Math.random() * (900 - 100 + 1)) + 100, []);
 
   const unibet = event.bookmakers.find(bm => bm.key === "unibet");
@@ -42,7 +42,7 @@ const EventRow = ({ event }: { event: Odds }) => {
           <img src={clock} alt="clock" className="w-3.5 h-3.5" />
         </div>
         <div
-          onClick={() => setSelectedBet({ ...homeOdds, team, amount: 0 })}
+          onClick={() => setSelectedBet({ ...homeOdds, team, amount: 0, key: sport.key })}
           className={`w-16 h-9 rounded-xs flex items-center justify-center ${isHomeSelected ? "bg-[#ffe71f] hover:bg-[#ffef6e]" : "bg-[#147b45] hover:bg-[#00582c]"}`}
         >
           <span className={`text-sm font-bold ${isHomeSelected ? "text-[#333333]" : "text-white"}`}>
@@ -50,7 +50,7 @@ const EventRow = ({ event }: { event: Odds }) => {
           </span>
         </div>
         <div
-          onClick={() => setSelectedBet({ ...awayOdds, team, amount: 0 })}
+          onClick={() => setSelectedBet({ ...awayOdds, team, amount: 0, key: sport.key })}
           className={`w-16 h-9 rounded-xs flex items-center justify-center ${isAwaySelected ? "bg-[#ffe71f] hover:bg-[#ffef6e]" : "bg-[#147b45] hover:bg-[#00582c]"}`}
         >
           <span className={`text-sm font-bold ${isAwaySelected ? "text-[#333333]" : "text-white"}`}>
