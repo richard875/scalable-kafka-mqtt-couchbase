@@ -24,7 +24,8 @@
       "@betting-service/*": ["../betting-service/src/*"],
       "@frontend/*": ["./src/*"],
       "@fdj/shared/enums/*": ["../shared/enums/*"],
-      "@fdj/shared/types/*": ["../shared/types/*"]
+      "@fdj/shared/types/*": ["../shared/types/*"],
+      "@fdj/shared/services/*": ["../shared/services/*"]
     }
   },
   "include": ["src/**/*", "vite.config.ts"],

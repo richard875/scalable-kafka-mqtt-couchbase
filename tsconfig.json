@@ -27,7 +27,8 @@
       "@betting-service/*": ["packages/betting-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"],
       "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
-      "@fdj/shared/types/*": ["./packages/shared/types/*"]
+      "@fdj/shared/types/*": ["./packages/shared/types/*"],
+      "@fdj/shared/services/*": ["./packages/shared/services/*"]
     }
   },
   "include": [

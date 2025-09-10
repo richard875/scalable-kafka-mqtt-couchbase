@@ -12,9 +12,10 @@
     "baseUrl": ".",
     "paths": {
       "./types/*": ["./types/*"],
-      "./enums/*": ["./enums/*"]
+      "./enums/*": ["./enums/*"],
+      "./services/*": ["./services/*"]
     }
   },
-  "include": ["enums/**/*.ts", "types/**/*.ts"],
+  "include": ["enums/**/*.ts", "types/**/*.ts", "services/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

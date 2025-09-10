@@ -11,6 +11,7 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
       "@fdj/shared/enums": path.resolve(__dirname, "../shared/enums"),
       "@fdj/shared/types": path.resolve(__dirname, "../shared/types"),
+      "@fdj/shared/services": path.resolve(__dirname, "../shared/services"),
     },
   },
 });

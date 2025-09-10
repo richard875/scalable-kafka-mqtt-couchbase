@@ -13,8 +13,7 @@
   "dependencies": {
     "@fdj/shared": "file:../shared",
     "@hono/node-server": "^1.19.0",
-    "hono": "^4.9.6",
-    "kafkajs": "^2.2.4"
+    "hono": "^4.9.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.0.0",

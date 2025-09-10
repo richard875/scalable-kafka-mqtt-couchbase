@@ -2,6 +2,9 @@
     "name": "@fdj/shared",
     "version": "1.0.0",
     "type": "module",
+    "dependencies": {
+        "kafkajs": "^2.2.4"
+    },
     "exports": {
         "./enums/sportsEnum": {
             "import": "./enums/sportsEnum.js",
@@ -14,6 +17,10 @@
         "./types/slipItem": {
             "import": "./types/slipItem.js",
             "types": "./types/slipItem.d.ts"
+        },
+        "./services/kafkaService": {
+            "import": "./services/kafkaService.js",
+            "types": "./services/kafkaService.d.ts"
         }
     }
 }
