@@ -2,18 +2,12 @@ import { useState } from "react";
 import close from "@/assets/icons/close.svg";
 import useSportStore from "@/store/sportStore";
 import type { SlipItem } from "@/types/slipItem";
+import formatAmount from "@/helper/formatAmount";
 
 const BetItem = ({ bet, isFirst }: { bet: SlipItem; isFirst: boolean }) => {
   const [inputValue, setInputValue] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const { setSelectedBet, setBetAmount } = useSportStore();
-
-  const formatAmount = (value: number | string): string => {
-    if (!value || value === "") return "";
-    const numValue = typeof value === "string" ? parseFloat(value) : value;
-    if (isNaN(numValue)) return "";
-    return numValue.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  };
 
   const handleFocus = () => {
     setIsEditing(true);
