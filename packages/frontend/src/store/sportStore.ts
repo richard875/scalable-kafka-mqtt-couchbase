@@ -1,7 +1,8 @@
 import { create } from "zustand";
 import Sports from "@/constants/sports";
+import type { Odds } from "@/types/odds";
 import type { Sport } from "@/types/sport";
-import type { Odds, Outcomes } from "@/types/odds";
+import type { SlipItem } from "@/types/slipItem";
 import type { GroupedOdds } from "@/types/groupedOdds";
 import transformEvents from "@/helper/transformEvents";
 
@@ -9,10 +10,10 @@ type SportStore = {
   sport: Sport;
   odds: Odds[];
   groupedOdds: GroupedOdds[];
-  selectedBets: Outcomes[];
+  selectedBets: SlipItem[];
   setSport: (sport: Sport) => void;
   setOdds: (sport: Sport) => Promise<void>;
-  setSelectedBet: (bet: Outcomes) => void;
+  setSelectedBet: (bet: SlipItem) => void;
 };
 
 const useSportStore = create<SportStore>(set => ({
@@ -26,7 +27,7 @@ const useSportStore = create<SportStore>(set => ({
     const groupedOdds: GroupedOdds[] = transformEvents(odds);
     set(() => ({ odds, groupedOdds }));
   },
-  setSelectedBet: (bet: Outcomes) => {
+  setSelectedBet: (bet: SlipItem) => {
     set(state => ({
       selectedBets: state.selectedBets.map(b => b.id).includes(bet.id)
         ? state.selectedBets.filter(b => b.id !== bet.id)

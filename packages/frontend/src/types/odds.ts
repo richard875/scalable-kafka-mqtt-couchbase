@@ -2,7 +2,6 @@ export type Outcomes = {
   id: string;
   name: string;
   price: number;
-  team?: string;
 };
 
 type Markets = {
