@@ -8,7 +8,7 @@ body {
     sans-serif;
 }
 
-.main-wrapper {
+.font-smoothing {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

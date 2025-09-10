@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="w-full bg-[#111111] py-8 px-4 text-white text-sm font-medium flex flex-col gap-3">
+    <div className="w-full bg-[#111111] py-8 px-4 text-white text-sm font-medium flex flex-col gap-3 font-smoothing">
       <span className="text-center">
         Disclaimer: This website is a non-commercial coding exercise and is not the official Unibet
         website.
