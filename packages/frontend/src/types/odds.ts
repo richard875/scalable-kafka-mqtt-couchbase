@@ -1,4 +1,4 @@
-import type { Outcomes } from "./outcomes";
+import type { Outcomes } from "@fdj/shared/types/outcomes";
 
 type Markets = {
   key: string;
