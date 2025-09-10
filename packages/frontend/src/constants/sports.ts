@@ -4,45 +4,46 @@ import football from "@/assets/icons/football.svg";
 import rugby from "@/assets/icons/rugby.svg";
 import soccer from "@/assets/icons/soccer.svg";
 import type { Sport } from "@/types/sport";
+import { SportsEnum } from "@/enums/sportsEnum";
 
 const Sports: Sport[] = [
   {
-    key: "premierLeague",
+    key: SportsEnum.PremierLeague,
     urlKey: "soccer_epl",
     titleShort: "Premier League",
     title: "English Premier League",
     icon: soccer,
   },
   {
-    key: "nfl",
+    key: SportsEnum.NFL,
     urlKey: "americanfootball_nfl",
     titleShort: "NFL",
     title: "National Football League",
     icon: football,
   },
   {
-    key: "mlb",
+    key: SportsEnum.MLB,
     urlKey: "baseball_mlb",
     titleShort: "MLB",
     title: "Major League Baseball",
     icon: baseball,
   },
   {
-    key: "nrl",
+    key: SportsEnum.NRL,
     urlKey: "rugbyleague_nrl",
     titleShort: "NRL",
     title: "National Rugby League",
     icon: rugby,
   },
   {
-    key: "afl",
+    key: SportsEnum.AFL,
     urlKey: "aussierules_afl",
     titleShort: "AFL",
     title: "Australian Football League",
     icon: aussie,
   },
   {
-    key: "mls",
+    key: SportsEnum.MLS,
     urlKey: "soccer_usa_mls",
     titleShort: "MLS",
     title: "Major League Soccer",
