@@ -1,5 +1,5 @@
 import kafkaService from "./kafkaService.js";
-import type { SlipItem } from "../types/slipItem.js";
+import type { SlipItem } from "@fdj/shared/types/slipItem";
 
 export const placeBetService = async (bet: SlipItem) => {
   try {
