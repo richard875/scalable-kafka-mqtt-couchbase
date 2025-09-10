@@ -1,8 +1,14 @@
 import Sports from "@/constants/sports";
+import type { Sport } from "@/types/sport";
 import useSportStore from "@/store/sportStore";
 
 const SideBar = () => {
-  const { sport: selectedSport, setSport } = useSportStore();
+  const { sport: selectedSport, setSport, setOdds } = useSportStore();
+
+  const handleClick = (sport: Sport) => {
+    setSport(sport);
+    setOdds(sport);
+  };
 
   return (
     <div className="w-full bg-[#222222]">
@@ -12,7 +18,7 @@ const SideBar = () => {
       {Sports.map(sport => (
         <div
           key={sport.key}
-          onClick={() => setSport(sport)}
+          onClick={() => handleClick(sport)}
           className="relative px-4 py-3.5 flex items-center gap-2 hover:bg-[#111111] cursor-pointer"
         >
           <img src={sport.icon} alt={sport.title} className="w-4 h-4" />
