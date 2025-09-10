@@ -1,7 +1,7 @@
 import type { Odds } from "@/types/odds";
-import type { GoupedOdds } from "@/types/groupedOdds";
+import type { GroupedOdds } from "@/types/groupedOdds";
 
-const transformEvents = (data: Odds[]): GoupedOdds[] => {
+const transformEvents = (data: Odds[]): GroupedOdds[] => {
   // Intl formatter for pretty date (system local time)
   const formatter = new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
