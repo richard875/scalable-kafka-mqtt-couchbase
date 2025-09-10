@@ -1,19 +1,34 @@
 import { useEffect } from "react";
+import { useQueryState } from "nuqs";
 import Sports from "@/constants/sports";
 import type { Sport } from "@/types/sport";
 import useSportStore from "@/store/sportStore";
 
 const SideBar = () => {
   const { sport: selectedSport, setSport, setOdds } = useSportStore();
+  const [sportKey, setSportKey] = useQueryState("sport", {
+    defaultValue: Sports[0].key,
+  });
 
   useEffect(() => {
-    if (selectedSport) setOdds(selectedSport);
+    // Find sport by query parameter or use default (first sport)
+    const sportFromQuery = Sports.find(sport => sport.key === sportKey) || Sports[0];
+
+    // Only update if the sport has changed
+    if (selectedSport.key !== sportFromQuery.key) {
+      setSport(sportFromQuery);
+      setOdds(sportFromQuery);
+    } else if (selectedSport) {
+      // Ensure odds are loaded for the current sport
+      setOdds(selectedSport);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [sportKey]);
 
   const handleClick = (sport: Sport) => {
     setSport(sport);
     setOdds(sport);
+    setSportKey(sport.key);
   };
 
   return (
