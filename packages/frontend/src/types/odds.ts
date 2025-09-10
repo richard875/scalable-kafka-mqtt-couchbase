@@ -1,3 +1,5 @@
+import { type UUID } from "crypto";
+
 export type Odds = {
   id: string;
   sport_key: string;
@@ -13,6 +15,7 @@ export type Odds = {
       key: string;
       last_update: string;
       outcomes: Array<{
+        id: UUID;
         name: string;
         price: number;
       }>;

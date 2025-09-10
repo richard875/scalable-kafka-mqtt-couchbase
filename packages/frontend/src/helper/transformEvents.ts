@@ -19,6 +19,12 @@ const transformEvents = (data: Odds[]): GroupedOdds[] => {
   const grouped: Record<string, Odds[]> = {};
 
   for (const event of data) {
+    // Add unique IDs to all outcomes using flatMap
+    event.bookmakers
+      .flatMap(bookmaker => bookmaker.markets)
+      .flatMap(market => market.outcomes)
+      .forEach(outcome => (outcome.id = crypto.randomUUID()));
+
     const localDate = new Date(event.commence_time);
     const compareDate = new Date(localDate);
     compareDate.setHours(0, 0, 0, 0);
