@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import useMqtt from "@/hooks/useMqtt";
 import SportsEnum from "@fdj/shared/enums/sportsEnum";
+import fadeAnimation from "@/constants/fadeAnimation";
 import type SlipItem from "@fdj/shared/types/slipItem";
 
 const Ticker = () => {
-  const [message, setMessage] = useState<string>("");
+  const [message, setMessage] = useState<string>("Waiting for updates...");
   const { isConnected, error } = useMqtt({
     topics: Object.values(SportsEnum),
     onMessage: (message: string) => {
@@ -27,13 +29,19 @@ const Ticker = () => {
         <div className="text-sm text-[#333333]">
           <span>Latest Updates:</span>
           <span>&nbsp;</span>
-          <span className="">{message}</span>
+          <AnimatePresence mode="wait">
+            <motion.span key={message} {...fadeAnimation}>
+              {message}
+            </motion.span>
+          </AnimatePresence>
         </div>
         <div className="flex items-center gap-1.5 select-none">
           <div className={`w-2 h-2 rounded-full ${isConnected ? "bg-green-500" : "bg-red-500"}`} />
-          <span className="text-xs text-[#808080]">
-            {isConnected ? "Connected" : error ? `Error: ${error}` : "Not Connected"}
-          </span>
+          <AnimatePresence mode="wait">
+            <motion.span key="con-status" {...fadeAnimation} className="text-xs text-[#808080]">
+              {isConnected ? "Connected" : error ? `Error: ${error}` : "Not Connected"}
+            </motion.span>
+          </AnimatePresence>
         </div>
       </div>
     </div>
