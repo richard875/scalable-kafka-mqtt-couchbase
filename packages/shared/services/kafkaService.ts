@@ -94,7 +94,7 @@ class KafkaService {
   }
 
   async startConsuming(
-    messageHandler: (topic: string, message: unknown) => void,
+    messageHandler: (topic: string, message: unknown) => Promise<void> | void,
     consumerGroupId = "unibet-group"
   ): Promise<void> {
     try {
@@ -113,9 +113,9 @@ class KafkaService {
           if (messageValue) {
             try {
               const parsedMessage = JSON.parse(messageValue);
-              messageHandler(topic, parsedMessage);
+              await messageHandler(topic, parsedMessage);
             } catch (error) {
-              console.error("Failed to parse message:", error);
+              console.error("Failed to handle message:", error);
             }
           }
         },
