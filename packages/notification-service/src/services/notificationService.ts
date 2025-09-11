@@ -1,10 +1,6 @@
 import SportsEnum from "@fdj/shared/enums/sportsEnum";
 import kafkaService from "@fdj/shared/services/kafkaService";
-
-const handleMessage = (topic: string, message: unknown): void => {
-  const msg = `[${new Date().toISOString()}] Received message from topic "${topic}": ${JSON.stringify(message)}`;
-  console.log(msg);
-};
+import { handleMessage } from "@notification-service/services/mqttService.js";
 
 export const subscribeToTopics = async (): Promise<void> => {
   console.log("Subscribing to sports topics...");
