@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   kafka:
     image: apache/kafka:latest
@@ -43,3 +41,31 @@ services:
       - "8080:8080"
     environment:
       KAFKA_BROKERS: kafka:9092
+
+  flashmq:
+    build:
+      context: https://github.com/halfgaar/FlashMQ.git#v1.23.0
+      dockerfile: Dockerfile
+      target: build
+    container_name: flashmq
+    ports:
+      - "1883:1883" # MQTT standard port
+      - "8883:8883" # MQTT over SSL/TLS port
+      - "8081:8080" # WebSocket port (avoid conflict with kafka-ui)
+    volumes:
+      - flashmq-config:/etc/flashmq
+      - flashmq-data:/var/lib/flashmq
+      - flashmq-logs:/var/log/flashmq
+    restart: unless-stopped
+    command: ["/usr/src/app/FlashMQBuildRelease/flashmq"]
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 1883 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+volumes:
+  flashmq-config:
+  flashmq-data:
+  flashmq-logs:
