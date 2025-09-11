@@ -1,10 +1,10 @@
-export const SportsEnum = {
-  PremierLeague: "premierLeague",
-  NFL: "nfl",
-  MLB: "mlb",
-  NRL: "nrl",
-  AFL: "afl",
-  MLS: "mls",
-} as const;
+enum SportsEnum {
+  PremierLeague = "premierLeague",
+  NFL = "nfl",
+  MLB = "mlb",
+  NRL = "nrl",
+  AFL = "afl",
+  MLS = "mls",
+}
 
-export type SportsEnum = (typeof SportsEnum)[keyof typeof SportsEnum];
+export default SportsEnum;

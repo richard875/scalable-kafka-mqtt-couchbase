@@ -4,7 +4,7 @@ import football from "@/assets/icons/football.svg";
 import rugby from "@/assets/icons/rugby.svg";
 import soccer from "@/assets/icons/soccer.svg";
 import type { Sport } from "@/types/sport";
-import { SportsEnum } from "@fdj/shared/enums/sportsEnum";
+import SportsEnum from "@fdj/shared/enums/sportsEnum";
 
 const Sports: Sport[] = [
   {

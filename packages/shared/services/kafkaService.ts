@@ -1,6 +1,6 @@
 import { Kafka, logLevel } from "kafkajs";
 import type { Admin, Producer, Consumer } from "kafkajs";
-import { SportsEnum } from "../enums/sportsEnum.js";
+import SportsEnum from "@fdj/shared/enums/sportsEnum";
 
 class KafkaService {
   private kafka: Kafka;
