@@ -45,7 +45,7 @@ const Ticker = () => {
           <div className={`w-2 h-2 rounded-full ${isConnected ? "bg-green-500" : "bg-red-500"}`} />
           <AnimatePresence mode="wait">
             <motion.span key="con-status" {...fadeAnimation} className="text-xs text-[#808080]">
-              {isConnected ? "Connected" : error ? `Error: ${error}` : "Not Connected"}
+              {isConnected ? "Markets Live" : error ? `Error: ${error}` : "Connecting..."}
             </motion.span>
           </AnimatePresence>
         </div>
