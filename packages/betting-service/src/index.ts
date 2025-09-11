@@ -2,7 +2,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import { placeBet } from "./controllers/bettingController.js";
+import { placeBet } from "@betting-service/controllers/bettingController.js";
 
 // Application instance
 const app = new Hono();
