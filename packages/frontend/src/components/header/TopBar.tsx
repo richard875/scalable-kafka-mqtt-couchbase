@@ -10,7 +10,7 @@ const TopBar = () => {
 
   return (
     <div className="w-full h-8 bg-[#00531D] flex">
-      <div className="w-full max-w-[1600px] px-4 m-auto flex justify-end items-center text-xs font-medium">
+      <div className="w-full max-w-[1600px] px-4 m-auto flex items-center justify-end text-xs font-medium">
         <span className="cursor-pointer" onClick={() => goToLink(HELP_URL)}>
           Help
         </span>
