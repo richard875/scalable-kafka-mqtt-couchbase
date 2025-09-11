@@ -57,7 +57,24 @@ services:
       - flashmq-data:/var/lib/flashmq
       - flashmq-logs:/var/log/flashmq
     restart: unless-stopped
-    command: ["/usr/src/app/FlashMQBuildRelease/flashmq"]
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cat > /etc/flashmq/flashmq.conf << 'EOF'
+        allow_anonymous true
+
+        listen {
+          port 1883
+          protocol mqtt
+        }
+
+        listen {
+          port 8080
+          protocol websockets
+        }
+        EOF
+        /usr/src/app/FlashMQBuildRelease/flashmq
     healthcheck:
       test: ["CMD-SHELL", "nc -z localhost 1883 || exit 1"]
       interval: 30s
