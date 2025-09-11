@@ -25,6 +25,7 @@
     "baseUrl": ".",
     "paths": {
       "@betting-service/*": ["packages/betting-service/src/*"],
+      "@notification-service/*": ["packages/notification-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"],
       "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
       "@fdj/shared/types/*": ["./packages/shared/types/*"],
@@ -33,6 +34,7 @@
   },
   "include": [
     "packages/betting-service/src/**/*",
+    "packages/notification-service/src/**/*",
     "packages/frontend/src/**/*",
     "packages/frontend/vite.config.ts",
     "packages/shared/**/*"

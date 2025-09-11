@@ -21,11 +21,12 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@betting-service/*": ["../betting-service/src/*"],
-      "@frontend/*": ["./src/*"],
-      "@fdj/shared/enums/*": ["../shared/enums/*"],
-      "@fdj/shared/types/*": ["../shared/types/*"],
-      "@fdj/shared/services/*": ["../shared/services/*"]
+      "@betting-service/*": ["./packages/betting-service/src/*"],
+      "@notification-service/*": ["./packages/notification-service/src/*"],
+      "@frontend/*": ["./packages/frontend/src/*"],
+      "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
+      "@fdj/shared/types/*": ["./packages/shared/types/*"],
+      "@fdj/shared/services/*": ["./packages/shared/services/*"]
     }
   },
   "include": ["src/**/*", "vite.config.ts"],
