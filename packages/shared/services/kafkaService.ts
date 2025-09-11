@@ -6,7 +6,7 @@ class KafkaService {
   private kafka: Kafka;
   private admin: Admin;
   private producer: Producer;
-  private consumer: Consumer;
+  private consumers: Map<string, Consumer> = new Map();
 
   constructor() {
     this.kafka = new Kafka({
@@ -17,7 +17,6 @@ class KafkaService {
 
     this.admin = this.kafka.admin();
     this.producer = this.kafka.producer();
-    this.consumer = this.kafka.consumer({ groupId: "unibet-group" });
   }
 
   async connect(): Promise<void> {
@@ -78,22 +77,38 @@ class KafkaService {
     }
   }
 
-  async subscribe(topic: string): Promise<void> {
+  async subscribe(topic: string, consumerGroupId = "unibet-group"): Promise<void> {
     try {
-      await this.consumer.subscribe({ topic, fromBeginning: true });
-      console.log(`Subscribed to topic: ${topic}`);
+      let consumer = this.consumers.get(consumerGroupId);
+      if (!consumer) {
+        consumer = this.kafka.consumer({ groupId: consumerGroupId });
+        this.consumers.set(consumerGroupId, consumer);
+      }
+
+      await consumer.subscribe({ topic, fromBeginning: true });
+      console.log(`Subscribed to topic: ${topic} with consumer group: ${consumerGroupId}`);
     } catch (error) {
       console.error(`Failed to subscribe to topic ${topic}:`, error);
       throw error;
     }
   }
 
-  async startConsuming(messageHandler: (topic: string, message: unknown) => void): Promise<void> {
+  async startConsuming(
+    messageHandler: (topic: string, message: unknown) => void,
+    consumerGroupId = "unibet-group"
+  ): Promise<void> {
     try {
-      await this.consumer.connect();
+      const consumer = this.consumers.get(consumerGroupId);
+      if (!consumer) {
+        throw new Error(
+          `Consumer for group ${consumerGroupId} not found. Make sure to subscribe to topics first.`
+        );
+      }
 
-      await this.consumer.run({
-        eachMessage: async ({ topic, message }) => {
+      await consumer.connect();
+
+      await consumer.run({
+        eachMessage: async ({ topic, message }: { topic: string; message: any }) => {
           const messageValue = message.value?.toString();
           if (messageValue) {
             try {
@@ -116,7 +131,14 @@ class KafkaService {
       console.log("Disconnecting from Kafka...");
       await this.admin.disconnect();
       await this.producer.disconnect();
-      await this.consumer.disconnect();
+
+      // Disconnect all consumers
+      for (const [groupId, consumer] of this.consumers) {
+        await consumer.disconnect();
+        console.log(`Disconnected consumer for group: ${groupId}`);
+      }
+      this.consumers.clear();
+
       console.log("Successfully disconnected from Kafka");
     } catch (error) {
       console.error("Failed to disconnect from Kafka:", error);
@@ -134,8 +156,8 @@ class KafkaService {
     return this.producer;
   }
 
-  getConsumer(): Consumer {
-    return this.consumer;
+  getConsumer(consumerGroupId = "unibet-group"): Consumer | undefined {
+    return this.consumers.get(consumerGroupId);
   }
 
   getAdmin(): Admin {
