@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx",
+    "outDir": "./dist",
+    "noEmit": false,
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "verbatimModuleSyntax": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": "../..",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@betting-service/*": ["./packages/betting-service/src/*"],
+      "@notification-service/*": ["./packages/notification-service/src/*"],
+      "@audit-service/*": ["./packages/audit-service/src/*"],
+      "@frontend/*": ["./packages/frontend/src/*"],
+      "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
+      "@fdj/shared/types/*": ["./packages/shared/types/*"],
+      "@fdj/shared/services/*": ["./packages/shared/services/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
