@@ -82,7 +82,31 @@ services:
       retries: 3
       start_period: 10s
 
+  couchbase:
+    image: couchbase:community
+    container_name: couchbase
+    ports:
+      - "8091-8097:8091-8097" # Couchbase Web Console and REST API ports
+      - "9123:9123" # Analytics query port
+      - "11207:11207" # Smart client library data port
+      - "11210:11210" # Smart client library/moxi proxy port
+      - "11280:11280" # Internal/external bucket port for SSL
+      - "18091-18097:18091-18097" # Couchbase Web Console and REST API ports (SSL)
+    environment:
+      - COUCHBASE_ADMINISTRATOR_USERNAME=Administrator
+      - COUCHBASE_ADMINISTRATOR_PASSWORD=password
+    volumes:
+      - couchbase-data:/opt/couchbase/var
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8091/pools || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
 volumes:
   flashmq-config:
   flashmq-data:
   flashmq-logs:
+  couchbase-data:
