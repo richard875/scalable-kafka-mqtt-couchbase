@@ -5,8 +5,10 @@ import SportsEnum from "@fdj/shared/enums/sportsEnum";
 import fadeAnimation from "@/constants/fadeAnimation";
 import type SlipItem from "@fdj/shared/types/slipItem";
 
+const DEFAULT_MESSAGE = "Waiting for updates...";
+
 const Ticker = () => {
-  const [message, setMessage] = useState<string>("Waiting for updates...");
+  const [message, setMessage] = useState<string>(DEFAULT_MESSAGE);
   const { isConnected, error } = useMqtt({
     topics: Object.values(SportsEnum),
     onMessage: (message: string) => {
@@ -30,7 +32,11 @@ const Ticker = () => {
           <span>Latest Updates:</span>
           <span>&nbsp;</span>
           <AnimatePresence mode="wait">
-            <motion.span key={message} {...fadeAnimation}>
+            <motion.span
+              key={message}
+              {...fadeAnimation}
+              className={message === DEFAULT_MESSAGE ? "animate-pulse" : ""}
+            >
               {message}
             </motion.span>
           </AnimatePresence>
