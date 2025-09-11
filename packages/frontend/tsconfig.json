@@ -23,6 +23,7 @@
       "@/*": ["./src/*"],
       "@betting-service/*": ["./packages/betting-service/src/*"],
       "@notification-service/*": ["./packages/notification-service/src/*"],
+      "@audit-service/*": ["./packages/audit-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"],
       "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
       "@fdj/shared/types/*": ["./packages/shared/types/*"],
