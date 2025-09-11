@@ -1,4 +1,4 @@
-import type { SlipItem } from "@fdj/shared/types/slipItem";
+import type SlipItem from "@fdj/shared/types/slipItem";
 import kafkaService from "@fdj/shared/services/kafkaService";
 
 export const placeBetService = async (bet: SlipItem) => {

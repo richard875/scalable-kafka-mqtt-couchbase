@@ -1,5 +1,5 @@
 import type { Context } from "hono";
-import type { SlipItem } from "@fdj/shared/types/slipItem";
+import type SlipItem from "@fdj/shared/types/slipItem";
 import { placeBetService } from "@betting-service/services/bettingService.js";
 
 export const placeBet = async (c: Context) => {

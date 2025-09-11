@@ -3,7 +3,7 @@ import Sports from "@/constants/sports";
 import type { Odds } from "@/types/odds";
 import type { Sport } from "@/types/sport";
 import type { GroupedOdds } from "@/types/groupedOdds";
-import type { SlipItem } from "@fdj/shared/types/slipItem";
+import type SlipItem from "@fdj/shared/types/slipItem";
 import transformEvents from "@/helper/transformEvents";
 
 type SportStore = {

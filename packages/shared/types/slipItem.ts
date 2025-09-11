@@ -1,7 +1,9 @@
 import type Outcomes from "./outcomes";
 
-export type SlipItem = Outcomes & {
+type SlipItem = Outcomes & {
   key: string;
   team: string;
   amount: number;
 };
+
+export default SlipItem;

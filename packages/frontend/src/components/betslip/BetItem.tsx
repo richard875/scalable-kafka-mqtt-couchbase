@@ -2,7 +2,7 @@ import { useState } from "react";
 import close from "@/assets/icons/close.svg";
 import useSportStore from "@/store/sportStore";
 import formatAmount from "@/helper/formatAmount";
-import type { SlipItem } from "@fdj/shared/types/slipItem";
+import type SlipItem from "@fdj/shared/types/slipItem";
 
 const BetItem = ({ bet, isFirst }: { bet: SlipItem; isFirst: boolean }) => {
   const [inputValue, setInputValue] = useState("");
