@@ -2,8 +2,14 @@
     "name": "@fdj/shared",
     "version": "1.0.0",
     "type": "module",
+    "scripts": {
+        "build": "tsc"
+    },
     "dependencies": {
         "kafkajs": "^2.2.4"
+    },
+    "devDependencies": {
+        "typescript": "^5.8.3"
     },
     "exports": {
         "./enums/sportsEnum": {
