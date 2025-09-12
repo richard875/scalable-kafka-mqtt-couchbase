@@ -1,11 +1,9 @@
 import mqtt from "mqtt";
+import { MQTT_URL } from "@notification-service/constants.js";
 
 // Create MQTT client connection to FlashMQ
-const mqttClient = mqtt.connect("mqtt://localhost:1883", {
-  clientId: `notification_service_${Math.random().toString(16).slice(2)}`,
-  clean: true,
-  reconnectPeriod: 1000,
-});
+const clientId = `notification_service_${Math.random().toString(16).slice(2)}`;
+const mqttClient = mqtt.connect(MQTT_URL, { clientId, clean: true, reconnectPeriod: 1000 });
 
 mqttClient.on("connect", () => console.log("Connected to FlashMQ MQTT broker"));
 mqttClient.on("error", error => console.error("MQTT connection error:", error));
