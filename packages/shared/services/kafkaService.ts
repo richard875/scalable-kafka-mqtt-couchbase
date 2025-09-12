@@ -11,7 +11,7 @@ class KafkaService {
   constructor() {
     this.kafka = new Kafka({
       clientId: "unibet",
-      brokers: ["localhost:9094"], // External port for host access
+      brokers: (process.env.KAFKA_BROKERS || "localhost:9094").split(","), // Use env var or fallback to localhost
       logLevel: logLevel.INFO,
     });
 
@@ -36,7 +36,7 @@ class KafkaService {
       console.log("Creating Kafka topics...");
 
       // Get all sports from the enum to create topics
-      const topics = Object.values(SportsEnum).map(sport => ({
+      const topics = Object.values(SportsEnum).map((sport: string) => ({
         topic: sport,
         numPartitions: 1, // Minimum amount of partitions
         replicationFactor: 1, // Single node setup
