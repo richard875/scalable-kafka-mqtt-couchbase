@@ -80,9 +80,4 @@ kafka-logs/
 # ===============================
 # Environment variables
 # ===============================
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env.production
+# We don't need to ignore .env files in this case, because this is a demo project.
