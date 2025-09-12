@@ -45,3 +45,10 @@ $COMPOSE_CMD -f docker-compose.production.yml down
 # docker rmi $(docker images | grep fdj | awk '{print $3}') 2>/dev/null || true
 
 print_status "✅ All services stopped successfully!"
+print_status ""
+print_status "ℹ️  To restart services:"
+print_status "  ./deploy.sh"
+print_status ""
+print_status "ℹ️  Previously running services were accessible at:"
+print_status "  🌐 Subdomains: api.localhost, ws.localhost, couchbase.localhost, kowl.localhost"
+print_status "  🏥 Health: http://localhost/health"
