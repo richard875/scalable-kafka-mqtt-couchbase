@@ -1,2 +1,2 @@
-export const BETTING_URL = "http://localhost:3000";
-export const BROKER_URL = "ws://localhost:8081";
+export const BETTING_URL = import.meta.env.VITE_BETTING_URL;
+export const BROKER_URL = import.meta.env.VITE_BROKER_URL;
