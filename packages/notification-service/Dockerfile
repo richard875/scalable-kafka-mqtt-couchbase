@@ -28,13 +28,15 @@ FROM node:20-alpine AS runtime
 
 WORKDIR /app
 
-# Copy built shared package
-COPY --from=shared-builder /app/shared ./node_modules/@fdj/shared
-
-# Copy built notification service
+# Copy built notification service first
 COPY --from=builder /app/notification-service/dist ./dist
-COPY --from=builder /app/notification-service/node_modules ./node_modules
 COPY --from=builder /app/notification-service/package.json ./package.json
+
+# Copy node_modules (excluding @fdj/shared which we'll replace)
+COPY --from=builder /app/notification-service/node_modules ./node_modules
+
+# Replace with our built shared package
+COPY --from=shared-builder /app/shared ./node_modules/@fdj/shared
 
 # Create a non-root user
 RUN addgroup -g 1001 -S nodejs
