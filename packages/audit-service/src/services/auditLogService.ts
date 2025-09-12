@@ -1,15 +1,6 @@
 import couchbase, { Bucket, Collection, Cluster } from "couchbase";
 import type SlipItem from "@fdj/shared/types/slipItem";
-import dotenv from "dotenv";
-
-// Load environment variables
-dotenv.config();
-
-// Config from environment variables
-const clusterConnStr = process.env.COUCHBASE_URL!;
-const username = process.env.COUCHBASE_USERNAME!;
-const password = process.env.COUCHBASE_PASSWORD!;
-const bucketName = process.env.COUCHBASE_BUCKET!;
+import { clusterConnStr, username, password, bucketName } from "@audit-service/constants.js";
 
 const initCouchbase = async (): Promise<Collection> => {
   const couchbaseClient: Cluster = await couchbase.connect(clusterConnStr, { username, password });
