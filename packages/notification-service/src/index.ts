@@ -3,7 +3,7 @@ import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
 import subscribeToTopics from "@fdj/shared/helpers/subscribeToTopics";
-import { handleMessage } from "@notification-service/services/mqttService.js";
+import { handleMessage } from "./services/mqttService.js";
 
 // Application instance
 const app = new Hono();

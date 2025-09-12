@@ -5,7 +5,7 @@ import {
   COUCHBASE_USERNAME,
   COUCHBASE_PASSWORD,
   COUCHBASE_BUCKET,
-} from "@audit-service/constants.js";
+} from "../constants.js";
 
 const initCouchbase = async (): Promise<Collection> => {
   const couchbaseCredentials = { username: COUCHBASE_USERNAME, password: COUCHBASE_PASSWORD };

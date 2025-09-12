@@ -1,6 +1,6 @@
 import type SlipItem from "@fdj/shared/types/slipItem";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import SlipItemSchema from "@betting-service/schemas/slipItemSchema.js";
+import SlipItemSchema from "../schemas/slipItemSchema.js";
 
 type BetResult = {
   success: boolean;

@@ -1,5 +1,5 @@
 import type { Context } from "hono";
-import { placeBetService } from "@betting-service/services/bettingService.js";
+import { placeBetService } from "../services/bettingService.js";
 
 export const placeBet = async (c: Context) => {
   try {

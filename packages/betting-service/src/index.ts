@@ -1,17 +1,13 @@
 import { Hono } from "hono";
-import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import { placeBet } from "@betting-service/controllers/bettingController.js";
+import { placeBet } from "./controllers/bettingController.js";
 
 // Application instance
 const app = new Hono();
 
 // Configuration
 const PORT = 3000;
-
-// Middleware
-app.use(cors());
 
 // Routes
 app.get("/", c => c.text("Betting Service is Healthy"));

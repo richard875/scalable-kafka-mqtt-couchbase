@@ -1,4 +1,4 @@
-import type Outcomes from "./outcomes";
+import type Outcomes from "./outcomes.js";
 
 type SlipItem = Outcomes & {
   key: string;

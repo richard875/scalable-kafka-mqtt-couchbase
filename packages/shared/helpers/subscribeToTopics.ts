@@ -1,5 +1,5 @@
-import SportsEnum from "@fdj/shared/enums/sportsEnum";
-import kafkaService from "@fdj/shared/services/kafkaService";
+import SportsEnum from "../enums/sportsEnum.js";
+import kafkaService from "../services/kafkaService.js";
 
 const subscribeToTopics = async (
   messageHandler: (topic: string, message: unknown) => Promise<void> | void,

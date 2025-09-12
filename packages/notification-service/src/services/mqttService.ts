@@ -1,5 +1,5 @@
 import mqtt from "mqtt";
-import { MQTT_URL } from "@notification-service/constants.js";
+import { MQTT_URL } from "../constants.js";
 
 // Create MQTT client connection to FlashMQ
 const clientId = `notification_service_${Math.random().toString(16).slice(2)}`;
