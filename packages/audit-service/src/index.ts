@@ -1,5 +1,4 @@
 import { Hono } from "hono";
-import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
 import subscribeToTopics from "@fdj/shared/helpers/subscribeToTopics";
@@ -10,9 +9,6 @@ const app = new Hono();
 
 // Configuration
 const PORT = 3002;
-
-// Middleware
-app.use(cors());
 
 // Routes
 app.get("/", c => c.text("Audit Service is Healthy"));
