@@ -1,7 +1,6 @@
 import { Kafka, logLevel } from "kafkajs";
 import type { Admin, Producer, Consumer } from "kafkajs";
 import SportsEnum from "@fdj/shared/enums/sportsEnum";
-import { KAFKA_BROKER_URL } from "@fdj/shared/constants";
 
 class KafkaService {
   private kafka: Kafka;
@@ -12,7 +11,7 @@ class KafkaService {
   constructor() {
     this.kafka = new Kafka({
       clientId: "unibet",
-      brokers: [KAFKA_BROKER_URL], // External port for host access
+      brokers: ["localhost:9094"], // External port for host access
       logLevel: logLevel.INFO,
     });
 
