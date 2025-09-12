@@ -1,4 +1,4 @@
-# FDJ Demo — Development & Deployment Guide
+# iGaming Demo — Development & Deployment Guide
 
 This repository contains a small demo microservice platform used for onboarding and experimentation. It includes a React frontend, three Node.js microservices (betting, notification, audit), and supporting infrastructure (Kafka, FlashMQ for MQTT, Couchbase, and Nginx). This README consolidates local development instructions, production-like Docker deployment steps, troubleshooting tips, and the onboarding task checklist.
 
