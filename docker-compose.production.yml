@@ -31,6 +31,8 @@ services:
       timeout: 10s
       retries: 10
       start_period: 40s
+    networks:
+      - app-network
 
   kafka-ui:
     image: redpandadata/console:latest
@@ -42,6 +44,8 @@ services:
       - "8080:8080"
     environment:
       KAFKA_BROKERS: kafka:9092
+    networks:
+      - app-network
 
   flashmq:
     build:
@@ -82,6 +86,8 @@ services:
       timeout: 10s
       retries: 3
       start_period: 10s
+    networks:
+      - app-network
 
   couchbase:
     image: couchbase:community
@@ -105,6 +111,8 @@ services:
       timeout: 10s
       retries: 5
       start_period: 60s
+    networks:
+      - app-network
 
   # Application services
   betting-service:
