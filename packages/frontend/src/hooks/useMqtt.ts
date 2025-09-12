@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import mqtt from "mqtt";
-
-const BROKER_URL = "ws://localhost:8081";
+import { BROKER_URL } from "@/constants/api";
 
 type UseMqttProps = {
   topics?: string[];
