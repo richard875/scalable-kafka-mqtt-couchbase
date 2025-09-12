@@ -2,7 +2,8 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import { subscribeToTopics } from "@audit-service/services/auditService.js";
+import subscribeToTopics from "@fdj/shared/helpers/subscribeToTopics";
+import { handleMessage } from "@audit-service/services/auditLogService.js";
 
 // Application instance
 const app = new Hono();
@@ -21,7 +22,7 @@ const startServer = async (): Promise<void> => {
   try {
     console.log("Initializing Kafka service...");
     await kafkaService.initialize();
-    await subscribeToTopics();
+    await subscribeToTopics(handleMessage, "audit-service-group");
 
     serve({ fetch: app.fetch, port: PORT }, info => {
       console.log(`Audit service is running on http://localhost:${info.port}`);

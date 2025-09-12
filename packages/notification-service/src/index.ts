@@ -2,7 +2,8 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import { subscribeToTopics } from "@notification-service/services/notificationService.js";
+import subscribeToTopics from "@fdj/shared/helpers/subscribeToTopics";
+import { handleMessage } from "@notification-service/services/mqttService.js";
 
 // Application instance
 const app = new Hono();
@@ -21,7 +22,7 @@ const startServer = async (): Promise<void> => {
   try {
     console.log("Initializing Kafka service...");
     await kafkaService.initialize();
-    await subscribeToTopics();
+    await subscribeToTopics(handleMessage, "notification-service-group");
 
     serve({ fetch: app.fetch, port: PORT }, info => {
       console.log(`Notification service is running on http://localhost:${info.port}`);
