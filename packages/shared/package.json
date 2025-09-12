@@ -9,28 +9,29 @@
         "kafkajs": "^2.2.4"
     },
     "devDependencies": {
+        "@types/node": "^20.19.13",
         "typescript": "^5.8.3"
     },
     "exports": {
         "./enums/sportsEnum": {
-            "import": "./enums/sportsEnum.js",
-            "types": "./enums/sportsEnum.d.ts"
+            "import": "./dist/enums/sportsEnum.js",
+            "types": "./dist/enums/sportsEnum.d.ts"
         },
         "./helpers/subscribeToTopics": {
-            "import": "./helpers/subscribeToTopics.js",
-            "types": "./helpers/subscribeToTopics.d.ts"
+            "import": "./dist/helpers/subscribeToTopics.js",
+            "types": "./dist/helpers/subscribeToTopics.d.ts"
         },
         "./types/outcomes": {
-            "import": "./types/outcomes.js",
-            "types": "./types/outcomes.d.ts"
+            "import": "./dist/types/outcomes.js",
+            "types": "./dist/types/outcomes.d.ts"
         },
         "./types/slipItem": {
-            "import": "./types/slipItem.js",
-            "types": "./types/slipItem.d.ts"
+            "import": "./dist/types/slipItem.js",
+            "types": "./dist/types/slipItem.d.ts"
         },
         "./services/kafkaService": {
-            "import": "./services/kafkaService.js",
-            "types": "./services/kafkaService.d.ts"
+            "import": "./dist/services/kafkaService.js",
+            "types": "./dist/services/kafkaService.d.ts"
         }
     }
 }
