@@ -13,9 +13,10 @@
     "paths": {
       "./types/*": ["./types/*"],
       "./enums/*": ["./enums/*"],
-      "./services/*": ["./services/*"]
+      "./services/*": ["./services/*"],
+      "./helpers/*": ["./helpers/*"]
     }
   },
-  "include": ["enums/**/*.ts", "types/**/*.ts", "services/**/*.ts"],
+  "include": ["enums/**/*.ts", "types/**/*.ts", "services/**/*.ts", "helpers/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

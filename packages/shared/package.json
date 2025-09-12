@@ -10,6 +10,10 @@
             "import": "./enums/sportsEnum.js",
             "types": "./enums/sportsEnum.d.ts"
         },
+        "./helpers/subscribeToTopics": {
+            "import": "./helpers/subscribeToTopics.js",
+            "types": "./helpers/subscribeToTopics.d.ts"
+        },
         "./types/outcomes": {
             "import": "./types/outcomes.js",
             "types": "./types/outcomes.d.ts"

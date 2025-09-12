@@ -27,7 +27,8 @@
       "@frontend/*": ["./packages/frontend/src/*"],
       "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
       "@fdj/shared/types/*": ["./packages/shared/types/*"],
-      "@fdj/shared/services/*": ["./packages/shared/services/*"]
+      "@fdj/shared/services/*": ["./packages/shared/services/*"],
+      "@fdj/shared/helpers/*": ["./packages/shared/helpers/*"]
     }
   },
   "include": ["src/**/*"],
