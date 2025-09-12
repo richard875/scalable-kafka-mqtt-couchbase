@@ -17,3 +17,10 @@ Note:
 
 - try spinning up FlashMQ in a container, and then try to push a message to it using node.js. that's more than enough.
 - other than that, try spinning up a Couchbase docker container, and try their web UI
+
+## Port Lists
+
+- ws://localhost:8081 (for MQTT from client)
+- http://localhost:3000 (Betting Service Route)
+- http://localhost:8091 (Couchbase Web UI)
+- http://localhost:8080 (Kowl - Kafka UI)
