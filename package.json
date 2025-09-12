@@ -16,7 +16,8 @@
     "build:betting-service": "npm --workspace betting-service run build",
     "build:notification-service": "npm --workspace notification-service run build",
     "build:audit-service": "npm --workspace audit-service run build",
-    "build": "npm run build:frontend && npm run build:betting-service && npm run build:notification-service && npm run build:audit-service",
+    "build:shared": "npm --workspace @fdj/shared run build",
+    "build": "npm run build:shared && npm run build:frontend && npm run build:betting-service && npm run build:notification-service && npm run build:audit-service",
     "start:frontend": "npm --workspace frontend run preview",
     "start:betting-service": "npm --workspace betting-service run start",
     "start:notification-service": "npm --workspace notification-service run start",
@@ -28,7 +29,15 @@
     "lint:audit-service": "npm --workspace audit-service run lint",
     "lint": "npm run lint:frontend && npm run lint:betting-service && npm run lint:notification-service && npm run lint:audit-service",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "docker:build": "docker-compose -f docker-compose.production.yml build",
+    "docker:up": "docker-compose -f docker-compose.production.yml up -d",
+    "docker:down": "docker-compose -f docker-compose.production.yml down",
+    "docker:logs": "docker-compose -f docker-compose.production.yml logs -f",
+    "docker:deploy": "./deploy.sh",
+    "docker:stop": "./stop.sh",
+    "infra:dev": "docker-compose -f packages/kafka-config/docker-compose.yml up -d",
+    "infra:dev:down": "docker-compose -f packages/kafka-config/docker-compose.yml down"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",
