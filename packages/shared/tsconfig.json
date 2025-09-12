@@ -10,6 +10,7 @@
     "outDir": "./dist",
     "composite": true,
     "baseUrl": ".",
+    "types": ["node"],
     "paths": {
       "./types/*": ["./types/*"],
       "./enums/*": ["./enums/*"],

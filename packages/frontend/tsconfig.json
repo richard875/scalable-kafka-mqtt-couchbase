@@ -5,7 +5,6 @@
     "module": "ESNext",
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
     "jsx": "react-jsx",
@@ -25,10 +24,10 @@
       "@notification-service/*": ["./packages/notification-service/src/*"],
       "@audit-service/*": ["./packages/audit-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"],
-      "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
-      "@fdj/shared/types/*": ["./packages/shared/types/*"],
-      "@fdj/shared/services/*": ["./packages/shared/services/*"],
-      "@fdj/shared/helpers/*": ["./packages/shared/helpers/*"]
+      "@fdj/shared/enums/*": ["./packages/shared/dist/enums/*"],
+      "@fdj/shared/types/*": ["./packages/shared/dist/types/*"],
+      "@fdj/shared/services/*": ["./packages/shared/dist/services/*"],
+      "@fdj/shared/helpers/*": ["./packages/shared/dist/helpers/*"]
     }
   },
   "include": ["src/**/*", "vite.config.ts"],
