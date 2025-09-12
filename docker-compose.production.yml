@@ -1,0 +1,198 @@
+services:
+  # Infrastructure services (Kafka, MQTT, Couchbase)
+  kafka:
+    image: apache/kafka:latest
+    container_name: kafka
+    ports:
+      - "9094:9094" # external (host) access
+      - "9092:9092" # internal (container network)
+    environment:
+      # KRaft mode settings (no ZooKeeper)
+      KAFKA_NODE_ID: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093,EXTERNAL://:9094
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,EXTERNAL://localhost:9094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT,EXTERNAL:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+
+      # Single-node development-friendly settings
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "/opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka:9092 --list || exit 1",
+        ]
+      interval: 20s
+      timeout: 10s
+      retries: 10
+      start_period: 40s
+
+  kafka-ui:
+    image: redpandadata/console:latest
+    container_name: kafka-ui
+    depends_on:
+      kafka:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      KAFKA_BROKERS: kafka:9092
+
+  flashmq:
+    build:
+      context: https://github.com/halfgaar/FlashMQ.git#v1.23.0
+      dockerfile: Dockerfile
+      target: build
+    container_name: flashmq
+    ports:
+      - "1883:1883" # MQTT standard port
+      - "8883:8883" # MQTT over SSL/TLS port
+      - "8081:8080" # WebSocket port (avoid conflict with kafka-ui)
+    volumes:
+      - flashmq-config:/etc/flashmq
+      - flashmq-data:/var/lib/flashmq
+      - flashmq-logs:/var/log/flashmq
+    restart: unless-stopped
+    command:
+      - /bin/sh
+      - -c
+      - |
+        cat > /etc/flashmq/flashmq.conf << 'EOF'
+        allow_anonymous true
+
+        listen {
+          port 1883
+          protocol mqtt
+        }
+
+        listen {
+          port 8080
+          protocol websockets
+        }
+        EOF
+        /usr/src/app/FlashMQBuildRelease/flashmq
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 1883 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  couchbase:
+    image: couchbase:community
+    container_name: couchbase
+    ports:
+      - "8091-8097:8091-8097" # Couchbase Web Console and REST API ports
+      - "9123:9123" # Analytics query port
+      - "11207:11207" # Smart client library data port
+      - "11210:11210" # Smart client library/moxi proxy port
+      - "11280:11280" # Internal/external bucket port for SSL
+      - "18091-18097:18091-18097" # Couchbase Web Console and REST API ports (SSL)
+    environment:
+      - COUCHBASE_ADMINISTRATOR_USERNAME=Administrator
+      - COUCHBASE_ADMINISTRATOR_PASSWORD=password
+    volumes:
+      - couchbase-data:/opt/couchbase/var
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8091/pools || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+  # Application services
+  betting-service:
+    build:
+      context: .
+      dockerfile: packages/betting-service/Dockerfile
+    container_name: betting-service
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=production
+      - KAFKA_BROKERS=kafka:9092
+    restart: unless-stopped
+    expose:
+      - "3000"
+    networks:
+      - app-network
+
+  audit-service:
+    build:
+      context: .
+      dockerfile: packages/audit-service/Dockerfile
+    container_name: audit-service
+    depends_on:
+      kafka:
+        condition: service_healthy
+      couchbase:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=production
+      - KAFKA_BROKERS=kafka:9092
+      - COUCHBASE_CONNECTION_STRING=couchbase://couchbase
+      - COUCHBASE_USERNAME=Administrator
+      - COUCHBASE_PASSWORD=password
+    restart: unless-stopped
+    expose:
+      - "3002"
+    networks:
+      - app-network
+
+  notification-service:
+    build:
+      context: .
+      dockerfile: packages/notification-service/Dockerfile
+    container_name: notification-service
+    depends_on:
+      kafka:
+        condition: service_healthy
+      flashmq:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=production
+      - KAFKA_BROKERS=kafka:9092
+      - MQTT_BROKER_URL=mqtt://flashmq:1883
+    restart: unless-stopped
+    expose:
+      - "3001"
+    networks:
+      - app-network
+
+  # Nginx reverse proxy
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - betting-service
+      - audit-service
+      - notification-service
+      - kafka-ui
+      - flashmq
+      - couchbase
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    restart: unless-stopped
+    networks:
+      - app-network
+
+volumes:
+  flashmq-config:
+  flashmq-data:
+  flashmq-logs:
+  couchbase-data:
+
+networks:
+  app-network:
+    driver: bridge
