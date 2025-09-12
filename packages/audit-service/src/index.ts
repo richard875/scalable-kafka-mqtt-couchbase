@@ -2,7 +2,11 @@ import { Hono } from "hono";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
 import subscribeToTopics from "@fdj/shared/helpers/subscribeToTopics";
-import { handleMessage } from "./services/auditLogService.js";
+import {
+  handleMessage,
+  initializeAuditService,
+  cleanupAuditService,
+} from "./services/auditLogService.js";
 
 // Application instance
 const app = new Hono();
@@ -16,6 +20,9 @@ app.get("/", c => c.text("Audit Service is Healthy"));
 // Initialize Kafka service and subscribe to all sports topics
 const startServer = async (): Promise<void> => {
   try {
+    console.log("Initializing Audit service...");
+    await initializeAuditService();
+
     console.log("Initializing Kafka service...");
     await kafkaService.initialize();
     await subscribeToTopics(handleMessage, "audit-service-group");
@@ -33,6 +40,7 @@ const startServer = async (): Promise<void> => {
 const cleanup = async (): Promise<void> => {
   try {
     console.log("Cleaning up resources...");
+    await cleanupAuditService();
     await kafkaService.disconnect();
   } catch (error) {
     console.error("Error during cleanup:", error);

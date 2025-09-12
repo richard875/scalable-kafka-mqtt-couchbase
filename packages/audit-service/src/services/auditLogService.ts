@@ -7,10 +7,26 @@ import {
   COUCHBASE_BUCKET,
 } from "../constants.js";
 
+// Global variables to store the Couchbase connection
+let couchbaseCluster: Cluster | null = null;
+let couchbaseCollection: Collection | null = null;
+
 const initCouchbase = async (): Promise<Collection> => {
-  const couchbaseCredentials = { username: COUCHBASE_USERNAME, password: COUCHBASE_PASSWORD };
-  const couchbaseClient: Cluster = await couchbase.connect(COUCHBASE_URL, couchbaseCredentials);
-  const bucketMgr = couchbaseClient.buckets();
+  if (couchbaseCollection) return couchbaseCollection;
+
+  const couchbaseCredentials = {
+    username: COUCHBASE_USERNAME,
+    password: COUCHBASE_PASSWORD,
+    // Add connection timeout configuration
+    timeouts: {
+      connectTimeout: 10000, // 10 seconds
+      kvTimeout: 5000, // 5 seconds
+      queryTimeout: 75000, // 75 seconds
+    },
+  };
+
+  couchbaseCluster = await couchbase.connect(COUCHBASE_URL, couchbaseCredentials);
+  const bucketMgr = couchbaseCluster.buckets();
 
   try {
     await bucketMgr.createBucket({ name: COUCHBASE_BUCKET, ramQuotaMB: 100, flushEnabled: true });
@@ -21,17 +37,55 @@ const initCouchbase = async (): Promise<Collection> => {
     } else throw err;
   }
 
-  const bucket: Bucket = couchbaseClient.bucket(COUCHBASE_BUCKET);
-  const collection: Collection = bucket.defaultCollection();
+  const bucket: Bucket = couchbaseCluster.bucket(COUCHBASE_BUCKET);
+  couchbaseCollection = bucket.defaultCollection();
 
   console.log(`📦 Couchbase initialized, bucket: ${COUCHBASE_BUCKET}`);
-  return collection;
+  return couchbaseCollection;
 };
 
-export const handleMessage = async (_: string, message: unknown): Promise<void> => {
-  const collection = await initCouchbase();
-  if (!collection) throw new Error("Couchbase not initialized");
+// Initialize Couchbase connection once
+export const initializeAuditService = async (): Promise<void> => {
+  await initCouchbase();
+};
 
-  const docId = (message as SlipItem).id || crypto.randomUUID();
-  await collection.upsert(docId, message);
+// Clean up Couchbase connection
+export const cleanupAuditService = async (): Promise<void> => {
+  if (couchbaseCluster) {
+    await couchbaseCluster.close();
+    couchbaseCluster = null;
+    couchbaseCollection = null;
+    console.log("🔌 Couchbase connection closed");
+  }
+};
+
+export const handleMessage = async (topic: string, message: unknown): Promise<void> => {
+  if (!couchbaseCollection) {
+    throw new Error("Couchbase not initialized. Call initializeAuditService() first.");
+  }
+
+  try {
+    const docId = (message as SlipItem).id || crypto.randomUUID();
+
+    // Add timeout to the upsert operation
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error("Upsert operation timed out")), 5000);
+    });
+
+    const auditDocument = {
+      ...(message as Record<string, unknown>),
+      topic,
+      timestamp: new Date().toISOString(),
+      auditId: docId,
+    };
+
+    const upsertPromise = couchbaseCollection.upsert(docId, auditDocument);
+
+    await Promise.race([upsertPromise, timeoutPromise]);
+    console.log(`📝 Audit log saved for topic ${topic}: ${docId}`);
+  } catch (error) {
+    console.error(`Failed to save audit log for topic ${topic}:`, error);
+    // Don't re-throw the error to prevent message processing from stopping
+    // Instead, log the error and continue processing other messages
+  }
 };
