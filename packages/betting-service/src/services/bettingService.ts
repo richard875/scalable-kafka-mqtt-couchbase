@@ -1,14 +1,24 @@
-import type { Odds } from "@fdj/shared/types/odds";
 import type SlipItem from "@fdj/shared/types/slipItem";
 import type BetResult from "@fdj/shared/types/betResult";
-import kafkaService from "@fdj/shared/services/kafkaService";
 import SlipItemSchema from "../schemas/slipItemSchema.js";
+import kafkaService from "@fdj/shared/services/kafkaService";
 import getLiveData from "@betting-service/helper/getLiveData.js";
 import getMockData from "@betting-service/helper/getMockData.js";
 
-export const getOddsData = async (sport: string, live: string): Promise<Odds[]> => {
-  const isLive = live === "true";
-  return isLive ? await getLiveData(sport) : await getMockData(sport);
+export const getOddsData = async (sport: string, live: string): Promise<BetResult> => {
+  try {
+    const isLive = live === "true";
+    const result: BetResult = isLive ? await getLiveData(sport) : await getMockData(sport);
+
+    if (!result.success) {
+      return { success: false, error: result.error || "Error fetching odds data" };
+    }
+
+    return { success: true, data: result.data };
+  } catch (error) {
+    console.error("Error fetching odds data:", error);
+    return { success: false, error: "Failed to fetch odds data" };
+  }
 };
 
 export const placeBets = async (bet: unknown): Promise<BetResult> => {
