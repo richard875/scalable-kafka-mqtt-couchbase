@@ -11,11 +11,13 @@ type SportStore = {
   odds: Odds[];
   groupedOdds: GroupedOdds[];
   selectedBets: SlipItem[];
+  isLiveDataEnabled: boolean;
   setSport: (sport: Sport) => void;
   setOdds: (sport: Sport) => Promise<void>;
   setSelectedBet: (bet: SlipItem) => void;
   clearSelectedBets: () => void;
   setBetAmount: (id: string, amount: number) => void;
+  toggleLiveData: () => void;
 };
 
 const useSportStore = create<SportStore>(set => ({
@@ -23,6 +25,7 @@ const useSportStore = create<SportStore>(set => ({
   odds: [],
   groupedOdds: [],
   selectedBets: [],
+  isLiveDataEnabled: false,
   setSport: (sport: Sport) => set(() => ({ sport })),
   setOdds: async (sport: Sport) => {
     const odds: Odds[] = await fetch(`/mock/${sport.urlKey}.json`).then(res => res.json());
@@ -42,6 +45,7 @@ const useSportStore = create<SportStore>(set => ({
       selectedBets: state.selectedBets.map(bet => (bet.id === id ? { ...bet, amount } : bet)),
     }));
   },
+  toggleLiveData: () => set(state => ({ isLiveDataEnabled: !state.isLiveDataEnabled })),
 }));
 
 export default useSportStore;
