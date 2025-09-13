@@ -2,6 +2,7 @@ import { create } from "zustand";
 import Sports from "@/constants/sports";
 import type { Odds } from "@/types/odds";
 import type { Sport } from "@/types/sport";
+import { BETTING_URL } from "@/constants/api";
 import type { GroupedOdds } from "@/types/groupedOdds";
 import type SlipItem from "@fdj/shared/types/slipItem";
 import transformEvents from "@/helper/transformEvents";
@@ -29,7 +30,9 @@ const useSportStore = create<SportStore>(set => ({
   setSport: (sport: Sport) => set(() => ({ sport })),
   setOdds: async (sport: Sport) => {
     set(() => ({ odds: [], groupedOdds: [] }));
-    const odds: Odds[] = await fetch(`/mock/${sport.urlKey}.json`).then(res => res.json());
+    const currentState = useSportStore.getState();
+    const url = `${BETTING_URL}/odds?sport=${sport.urlKey}&live=${currentState.liveData}`;
+    const odds: Odds[] = await fetch(url).then(res => res.json());
     const groupedOdds: GroupedOdds[] = transformEvents(odds);
     set(() => ({ odds, groupedOdds }));
   },
