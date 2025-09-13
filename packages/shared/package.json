@@ -21,6 +21,10 @@
             "import": "./dist/helpers/subscribeToTopics.js",
             "types": "./dist/helpers/subscribeToTopics.d.ts"
         },
+        "./types/betResult": {
+            "import": "./dist/types/betResult.js",
+            "types": "./dist/types/betResult.d.ts"
+        },
         "./types/odds": {
             "import": "./dist/types/odds.js",
             "types": "./dist/types/odds.d.ts"

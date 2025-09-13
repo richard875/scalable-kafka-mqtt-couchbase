@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import { BETTING_URL } from "@/constants/api";
 import useSportStore from "@/store/sportStore";
 import formatAmount from "@/helper/formatAmount";
+import type BetResult from "@fdj/shared/types/betResult";
 
 const Confirm = () => {
   const { selectedBets, clearSelectedBets } = useSportStore();
@@ -38,7 +39,7 @@ const Confirm = () => {
           continue;
         }
 
-        const data: { success: boolean } = await result.json();
+        const data: BetResult = await result.json();
         if (!data.success) {
           toast.error("Error placing bet", toastConfig);
           continue;
