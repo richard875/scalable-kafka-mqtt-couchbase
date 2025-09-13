@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import type { Sport } from "@/types/sport";
 import useSportStore from "@/store/sportStore";
 import signalIcon from "@/assets/icons/signal.svg";
@@ -6,10 +5,10 @@ import signalIcon from "@/assets/icons/signal.svg";
 const LiveData = ({ handleChange }: { handleChange: (sport: Sport) => void }) => {
   const { sport: selectedSport, liveData, toggleLiveData } = useSportStore();
 
-  useEffect(() => {
+  const handleClick = () => {
+    toggleLiveData();
     handleChange(selectedSport);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [liveData]);
+  };
 
   return (
     <div className="w-full bg-[#222222]">
@@ -22,7 +21,7 @@ const LiveData = ({ handleChange }: { handleChange: (sport: Sport) => void }) =>
           <span className="text-[#dddddd] text-xs font-normal">Use Live Data</span>
         </div>
         <div
-          onClick={toggleLiveData}
+          onClick={handleClick}
           className={`relative w-7.5 h-4.5 rounded-full cursor-pointer transition-colors duration-300 ${
             liveData ? "bg-green-500" : "bg-[#777777]"
           }`}
