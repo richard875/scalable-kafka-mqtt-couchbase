@@ -1,3 +1,4 @@
+import { ODDS_API_KEY } from "../constants.js";
 import type { Odds } from "@fdj/shared/types/odds";
 import type BetResult from "@fdj/shared/types/betResult";
 
@@ -5,7 +6,7 @@ const BASE_URL = "https://api.the-odds-api.com/v4/sports/";
 
 const getLiveData = async (sport: string): Promise<BetResult> => {
   try {
-    const url = `${BASE_URL}${sport}/odds/?apiKey=90a3dea2a972443b535cd90230273ea8&regions=au`;
+    const url = `${BASE_URL}${sport}/odds/?apiKey=${ODDS_API_KEY}&regions=au`;
     const response = await fetch(url);
 
     if (!response.ok) {
