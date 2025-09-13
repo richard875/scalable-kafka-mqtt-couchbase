@@ -6,6 +6,7 @@ import type { Odds } from "@fdj/shared/types/odds";
 import type { GroupedOdds } from "@/types/groupedOdds";
 import type SlipItem from "@fdj/shared/types/slipItem";
 import transformEvents from "@/helper/transformEvents";
+import type BetResult from "@fdj/shared/types/betResult";
 
 type SportStore = {
   sport: Sport;
@@ -32,7 +33,8 @@ const useSportStore = create<SportStore>(set => ({
     set(() => ({ odds: [], groupedOdds: [] }));
     const currentState = useSportStore.getState();
     const url = `${BETTING_URL}/odds?sport=${sport.urlKey}&live=${currentState.liveData}`;
-    const odds: Odds[] = await fetch(url).then(res => res.json());
+    const result: BetResult = await fetch(url).then(res => res.json());
+    const odds: Odds[] = result.success && result.data ? (result.data as Odds[]) : [];
     const groupedOdds: GroupedOdds[] = transformEvents(odds);
     set(() => ({ odds, groupedOdds }));
   },
