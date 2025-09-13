@@ -12,24 +12,43 @@ const Confirm = () => {
     new Decimal(0)
   );
 
-  const handleClick = () => {
-    selectedBets.forEach((bet, index) => {
+  const handleClick = async () => {
+    clearSelectedBets();
+
+    for (let index = 0; index < selectedBets.length; index++) {
+      const bet = selectedBets[index];
       const message = `Placed $${formatAmount(bet.amount || 0)} bet on ${bet.name} @ ${formatAmount(bet.price || 0)}`;
       const className =
         "!rounded-xs !bg-[#222222] shadow-2xl !text-white !text-sm !font-bold border-l-4 border-[#ffe91f] font-smoothing";
+      const toastConfig = { closeButton: false, hideProgressBar: true, className };
 
-      setTimeout(() => {
-        fetch(`${BETTING_URL}/bet`, {
+      // Wait for the delay before placing the bet
+      if (index > 0) await new Promise(resolve => setTimeout(resolve, 1000));
+
+      try {
+        const result = await fetch(`${BETTING_URL}/bet`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(bet),
         });
 
-        toast(message, { closeButton: false, hideProgressBar: true, className });
-      }, 500 * index);
-    });
+        if (!result.ok) {
+          const errorMessage = await result.text();
+          toast.error(`Error placing bet: ${errorMessage}`, toastConfig);
+          continue;
+        }
 
-    clearSelectedBets();
+        const data: { success: boolean } = await result.json();
+        if (!data.success) {
+          toast.error("Error placing bet", toastConfig);
+          continue;
+        }
+
+        toast(message, toastConfig);
+      } catch (error) {
+        toast.error(`Error placing bet: ${error}`, toastConfig);
+      }
+    }
   };
 
   return (
