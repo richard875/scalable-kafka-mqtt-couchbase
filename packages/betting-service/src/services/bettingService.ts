@@ -1,6 +1,8 @@
 import type SlipItem from "@fdj/shared/types/slipItem";
 import kafkaService from "@fdj/shared/services/kafkaService";
 import SlipItemSchema from "../schemas/slipItemSchema.js";
+import getLiveData from "@betting-service/helper/getLiveData.js";
+import getMockData from "@betting-service/helper/getMockData.js";
 
 type BetResult = {
   success: boolean;
@@ -8,7 +10,12 @@ type BetResult = {
   validationErrors?: string[];
 };
 
-export const placeBetService = async (bet: unknown): Promise<BetResult> => {
+export const getOddsData = async (sport: string, live: string): Promise<unknown[]> => {
+  const isLive = live === "true";
+  return isLive ? await getLiveData(sport) : await getMockData(sport);
+};
+
+export const placeBets = async (bet: unknown): Promise<BetResult> => {
   try {
     // Validate the bet using Zod schema
     const validationResult = SlipItemSchema.safeParse(bet);
