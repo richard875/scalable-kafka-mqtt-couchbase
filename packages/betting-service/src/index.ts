@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import { placeBet } from "./controllers/bettingController.js";
+import { getOdds, placeBet } from "./controllers/bettingController.js";
 
 // Application instance
 const app = new Hono();
@@ -11,6 +11,7 @@ const PORT = 3000;
 
 // Routes
 app.get("/", c => c.text("Betting Service is Healthy"));
+app.get("/odds", getOdds);
 app.post("/bet", placeBet);
 
 // Initialize Kafka service
