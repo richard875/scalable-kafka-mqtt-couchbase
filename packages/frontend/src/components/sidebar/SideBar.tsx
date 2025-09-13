@@ -26,6 +26,11 @@ const SideBar = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sportKey]);
 
+  useEffect(() => {
+    handleClick(selectedSport);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [liveData]);
+
   const handleClick = (sport: Sport) => {
     setSport(sport);
     setOdds(sport);
