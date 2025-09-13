@@ -1,6 +1,14 @@
-const getMockData = async (sport: string) => {
-  const data = await import(`../mock/${sport}.json`);
-  return data.default;
+import type { Odds } from "@fdj/shared/types/odds";
+import type BetResult from "@fdj/shared/types/betResult";
+
+const getMockData = async (sport: string): Promise<BetResult> => {
+  try {
+    const data: { default: Odds[] } = await import(`../mock/${sport}.json`);
+    return { success: true, data: data.default };
+  } catch (error) {
+    console.error("Error loading mock data:", error);
+    return { success: false, error: "Failed to load mock data" };
+  }
 };
 
 export default getMockData;
