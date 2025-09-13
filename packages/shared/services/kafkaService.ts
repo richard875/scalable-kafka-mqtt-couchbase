@@ -51,10 +51,8 @@ class KafkaService {
 
       if (topicsToCreate.length > 0) {
         await this.admin.createTopics({ topics: topicsToCreate });
-        console.log(
-          "Successfully created topics:",
-          topicsToCreate.map(t => t.topic)
-        );
+        const topicsCreated = topicsToCreate.map(t => t.topic);
+        console.log("Successfully created topics:", topicsCreated);
       } else {
         console.log("All topics already exist");
       }
@@ -66,10 +64,8 @@ class KafkaService {
 
   async publishMessage(topic: string, message: unknown): Promise<void> {
     try {
-      await this.producer.send({
-        topic,
-        messages: [{ value: JSON.stringify(message), timestamp: Date.now().toString() }],
-      });
+      const messages = [{ value: JSON.stringify(message), timestamp: Date.now().toString() }];
+      await this.producer.send({ topic, messages });
       console.log(`Message published to topic ${topic}`);
     } catch (error) {
       console.error(`Failed to publish message to topic ${topic}:`, error);
