@@ -145,6 +145,7 @@ services:
     environment:
       - NODE_ENV=production
       - KAFKA_BROKERS=kafka:9092
+      - ODDS_API_KEY=90a3dea2a972443b535cd90230273ea8
     restart: unless-stopped
     expose:
       - "3000"
