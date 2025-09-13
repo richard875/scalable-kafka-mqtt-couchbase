@@ -17,7 +17,7 @@ export const getOdds = async (c: Context): Promise<Response> => {
 
     // Fetch odds from the service layer
     const odds = await getOddsData(sport, live);
-    const successResponse: BetResult = { success: true, data: odds };
+    const successResponse: BetResult = { success: true, data: odds.data || [] };
     return c.json(successResponse, 200);
   } catch (error) {
     console.error("Error fetching odds:", error);
