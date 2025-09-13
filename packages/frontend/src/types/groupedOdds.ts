@@ -1,4 +1,4 @@
-import type { Odds } from "./odds";
+import type { Odds } from "@fdj/shared/types/odds";
 
 export type GroupedOdds = {
   date: string;

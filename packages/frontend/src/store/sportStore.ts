@@ -1,8 +1,8 @@
 import { create } from "zustand";
 import Sports from "@/constants/sports";
-import type { Odds } from "@/types/odds";
 import type { Sport } from "@/types/sport";
 import { BETTING_URL } from "@/constants/api";
+import type { Odds } from "@fdj/shared/types/odds";
 import type { GroupedOdds } from "@/types/groupedOdds";
 import type SlipItem from "@fdj/shared/types/slipItem";
 import transformEvents from "@/helper/transformEvents";

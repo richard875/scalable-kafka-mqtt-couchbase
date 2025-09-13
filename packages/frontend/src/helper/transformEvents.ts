@@ -1,5 +1,5 @@
 import SHA256 from "crypto-js/sha256";
-import type { Odds } from "@/types/odds";
+import type { Odds } from "@fdj/shared/types/odds";
 import type { GroupedOdds } from "@/types/groupedOdds";
 
 const transformEvents = (data: Odds[]): GroupedOdds[] => {

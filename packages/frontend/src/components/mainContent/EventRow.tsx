@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import clock from "@/assets/icons/clock.svg";
-import type { Odds } from "@/types/odds";
 import useSportStore from "@/store/sportStore";
+import type { Odds } from "@fdj/shared/types/odds";
 import formatIsoToLocalTime from "@/helper/formatIsoToLocalTime";
 
 const EventRow = ({ event }: { event: Odds }) => {
