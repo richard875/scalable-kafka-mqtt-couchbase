@@ -34,19 +34,27 @@ Assumptions/notes:
 
 1. Start infrastructure (Kafka, MQTT, Couchbase):
 
+```
    npm run infra:dev
+```
 
 2. Install dependencies:
 
+```
    npm install
+```
 
 3. Build the shared package:
 
+```
    npm run build:shared
+```
 
 4. Start all services and frontend:
 
+```
    npm run dev
+```
 
 After these steps the main URLs are available on the local machine (see Services & ports below).
 
@@ -328,7 +336,7 @@ Value: [server_ip]
 
 - Nginx binds ports 80 and 443 on the host in production mode. Ensure those ports are free or adjust the compose file.
 
-## Onboarding task checklist (from `task.md`)
+## Onboarding task checklist
 
 This checklist is a compact set of hands-on exercises useful for onboarding:
 
@@ -471,7 +479,9 @@ The repository contains multiple packages and infra config. Key items:
         └── docker-compose.yml
 ```
 
-For per-service details, see the `packages/*` directories.## Support
+For per-service details, see the `packages/*` directories.
+
+## Support
 
 If you run into issues:
 
