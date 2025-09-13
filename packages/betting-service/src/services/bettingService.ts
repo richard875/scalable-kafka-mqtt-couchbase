@@ -1,3 +1,4 @@
+import type { Odds } from "@fdj/shared/types/odds";
 import type SlipItem from "@fdj/shared/types/slipItem";
 import kafkaService from "@fdj/shared/services/kafkaService";
 import SlipItemSchema from "../schemas/slipItemSchema.js";
@@ -10,7 +11,7 @@ type BetResult = {
   validationErrors?: string[];
 };
 
-export const getOddsData = async (sport: string, live: string): Promise<unknown[]> => {
+export const getOddsData = async (sport: string, live: string): Promise<Odds[]> => {
   const isLive = live === "true";
   return isLive ? await getLiveData(sport) : await getMockData(sport);
 };
