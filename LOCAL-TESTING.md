@@ -39,7 +39,7 @@ Add these lines:
 ### Step 3: Start Services
 
 ```bash
-docker-compose -f docker-compose.production.yml up -d
+docker compose -f docker-compose.production.yml up -d
 ```
 
 ### Step 4: Test HTTPS Endpoints
@@ -101,7 +101,7 @@ Same as Method 1:
 sudo vim /etc/hosts
 
 # Start services
-docker-compose -f docker-compose.production.yml up -d
+docker compose -f docker-compose.production.yml up -d
 ```
 
 Now you can access HTTPS URLs without browser warnings!
@@ -240,7 +240,7 @@ mv nginx/conf.d/default.conf nginx/conf.d/default-https.conf
 mv nginx/conf.d/default-http.conf nginx/conf.d/default.conf
 
 # Start services
-docker-compose -f docker-compose.production.yml up -d
+docker compose -f docker-compose.production.yml up -d
 ```
 
 Test HTTP endpoints:
@@ -258,7 +258,7 @@ mv nginx/conf.d/default.conf nginx/conf.d/default-http.conf
 mv nginx/conf.d/default-https.conf nginx/conf.d/default.conf
 
 # Restart nginx
-docker-compose -f docker-compose.production.yml restart nginx
+docker compose -f docker-compose.production.yml restart nginx
 ```
 
 ## Testing WebSocket Connections
@@ -317,7 +317,7 @@ Save as `websocket-test.html` and open in browser.
 1. **Certificate errors**: Use `mkcert` for trusted local certificates
 2. **Port conflicts**: Stop any existing web servers on ports 80/443
 3. **DNS not resolving**: Verify `/etc/hosts` entries
-4. **Services not starting**: Check logs with `docker-compose logs`
+4. **Services not starting**: Check logs with `docker compose logs`
 
 ### Debug Commands
 
@@ -327,16 +327,16 @@ sudo lsof -i :80
 sudo lsof -i :443
 
 # Test nginx configuration
-docker-compose -f docker-compose.production.yml exec nginx nginx -t
+docker compose -f docker-compose.production.yml exec nginx nginx -t
 
 # View nginx logs
-docker-compose -f docker-compose.production.yml logs nginx
+docker compose -f docker-compose.production.yml logs nginx
 
 # Test certificate
 openssl x509 -in ./ssl/certs/fullchain.pem -text -noout
 
 # Check service status
-docker-compose -f docker-compose.production.yml ps
+docker compose -f docker-compose.production.yml ps
 ```
 
 ## Recommendations

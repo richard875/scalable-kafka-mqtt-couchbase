@@ -216,23 +216,23 @@ cd ../..
 2. Build Docker images from the root:
 
 ```bash
-docker-compose -f docker-compose.production.yml build
+docker compose -f docker-compose.production.yml build
 ```
 
 3. Start services:
 
 ```bash
-docker-compose -f docker-compose.production.yml up -d
+docker compose -f docker-compose.production.yml up -d
 ```
 
 4. Verify deployment:
 
 ```bash
 # Check service status
-docker-compose -f docker-compose.production.yml ps
+docker compose -f docker-compose.production.yml ps
 
 # View logs
-docker-compose -f docker-compose.production.yml logs -f [service-name]
+docker compose -f docker-compose.production.yml logs -f [service-name]
 ```
 
 ### Configuration
@@ -263,13 +263,13 @@ Services start in this order:
 
 ````bash
 # Check all service status
-docker-compose -f docker-compose.production.yml ps
+docker compose -f docker-compose.production.yml ps
 
 # Monitor service logs
-docker-compose -f docker-compose.production.yml logs -f
+docker compose -f docker-compose.production.yml logs -f
 
 # Check specific service
-docker-compose -f docker-compose.production.yml logs -f betting-service
+docker compose -f docker-compose.production.yml logs -f betting-service
 ```## Nginx, DNS, and routing notes
 
 ### Nginx Configuration
@@ -326,13 +326,13 @@ Value: [server_ip]
 
 ### Service Routing Table
 
-| Service        | Local URL               | AWS URL                         | Description                     |
-| -------------- | ----------------------- | ------------------------------- | ------------------------------- |
-| Betting API    | `http://localhost:3000` | `http://api.[aws_domain]`       | REST API for betting operations |
-| MQTT WebSocket | `ws://localhost:8081`   | `ws://ws.[aws_domain]`          | WebSocket for real-time updates |
-| Couchbase UI   | `http://localhost:8091` | `http://couchbase.[aws_domain]` | Database administration         |
-| Kafka UI       | `http://localhost:8080` | `http://kowl.[aws_domain]`      | Kafka topic management          |
-| Health Check   | N/A                     | `http://[aws_domain]/health`    | Main service health status      |
+| Service        | Local URL               | AWS URL                             | Description                     |
+| -------------- | ----------------------- | ----------------------------------- | ------------------------------- |
+| Betting API    | `http://localhost:3000` | `http://api.[aws_domain]`           | REST API for betting operations |
+| MQTT WebSocket | `ws://localhost:8081`   | `ws://ws.unibet.richardeverley.com` | WebSocket for real-time updates |
+| Couchbase UI   | `http://localhost:8091` | `http://couchbase.[aws_domain]`.    | Database administration         |
+| Kafka UI       | `http://localhost:8080` | `http://kowl.[aws_domain]`          | Kafka topic management          |
+| Health Check   | N/A                     | `http://[aws_domain]/health`        | Main service health status      |
 
 - Nginx binds ports 80 and 443 on the host in production mode. Ensure those ports are free or adjust the compose file.
 
@@ -364,7 +364,7 @@ This set of exercises covers a large portion of the demo stack (message broker, 
 ps aux | grep node
 
 # Docker mode
-docker-compose -f docker-compose.production.yml ps
+docker compose -f docker-compose.production.yml ps
 ```
 
 ### View Logs
@@ -375,7 +375,7 @@ docker-compose -f docker-compose.production.yml ps
 # Docker mode
 npm run docker:logs
 # or for specific service:
-docker-compose -f docker-compose.production.yml logs -f betting-service
+docker compose -f docker-compose.production.yml logs -f betting-service
 ```
 
 ### Port Conflicts
@@ -411,7 +411,7 @@ npm run dev
 ### Common Issues
 
 1. **Port Conflicts**: Check what's using a port with `lsof -i :80`
-2. **Service Not Starting**: Check service logs with `docker-compose logs service-name`
+2. **Service Not Starting**: Check service logs with `docker compose logs service-name`
 3. **Memory Issues**: Check Docker memory usage with `docker stats`
 
 If a service fails to start, check its logs and verify that Kafka, FlashMQ, and Couchbase are healthy first — many services depend on them.## Security & production checklist

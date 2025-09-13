@@ -30,14 +30,14 @@
     "lint": "npm run lint:frontend && npm run lint:betting-service && npm run lint:notification-service && npm run lint:audit-service",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "docker:build": "docker-compose -f docker-compose.production.yml build",
-    "docker:up": "docker-compose -f docker-compose.production.yml up -d",
-    "docker:down": "docker-compose -f docker-compose.production.yml down",
-    "docker:logs": "docker-compose -f docker-compose.production.yml logs -f",
+    "docker:build": "docker compose -f docker-compose.production.yml build",
+    "docker:up": "docker compose -f docker-compose.production.yml up -d",
+    "docker:down": "docker compose -f docker-compose.production.yml down",
+    "docker:logs": "docker compose -f docker-compose.production.yml logs -f",
     "docker:deploy": "./deploy.sh",
     "docker:stop": "./stop.sh",
-    "infra:dev": "docker-compose -f packages/kafka-config/docker-compose.yml up -d",
-    "infra:dev:down": "docker-compose -f packages/kafka-config/docker-compose.yml down"
+    "infra:dev": "docker compose -f packages/kafka-config/docker-compose.yml up -d",
+    "infra:dev:down": "docker compose -f packages/kafka-config/docker-compose.yml down"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",

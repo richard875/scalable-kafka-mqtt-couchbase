@@ -25,12 +25,8 @@ print_error() {
     echo -e "${RED}[ERROR]${NC} $1"
 }
 
-# Determine the compose command
-if command -v docker-compose &> /dev/null; then
-    COMPOSE_CMD="docker-compose"
-else
-    COMPOSE_CMD="docker compose"
-fi
+# Use the modern docker compose command
+COMPOSE_CMD="docker compose"
 
 # Stop services
 print_status "Stopping all services..."

@@ -23,7 +23,7 @@ usage() {
     echo "Usage: $0 -d DOMAIN -e EMAIL [OPTIONS]"
     echo ""
     echo "Required:"
-    echo "  -d DOMAIN     Primary domain (e.g., yourdomain.com)"
+    echo "  -d DOMAIN     Primary domain (e.g., unibet.richardeverley.com)"
     echo "  -e EMAIL      Email for Let's Encrypt registration"
     echo ""
     echo "Options:"
@@ -32,8 +32,8 @@ usage() {
     echo "  -h            Show this help message"
     echo ""
     echo "Example:"
-    echo "  $0 -d yourdomain.com -e admin@yourdomain.com"
-    echo "  $0 -d yourdomain.com -e admin@yourdomain.com -s  # staging"
+    echo "  $0 -d unibet.richardeverley.com -e admin@unibet.richardeverley.com"
+    echo "  $0 -d unibet.richardeverley.com -e admin@unibet.richardeverley.com -s  # staging"
     exit 1
 }
 

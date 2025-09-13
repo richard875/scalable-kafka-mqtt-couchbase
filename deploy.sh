@@ -33,20 +33,16 @@ fi
 
 print_status "Docker is running ✓"
 
-# Check if docker-compose is available
-if ! command -v docker-compose &> /dev/null && ! docker compose version &> /dev/null; then
+# Check if docker compose is available
+if ! docker compose version &> /dev/null; then
     print_error "Docker Compose is not available. Please install Docker Compose and try again."
     exit 1
 fi
 
 print_status "Docker Compose is available ✓"
 
-# Determine the compose command
-if command -v docker-compose &> /dev/null; then
-    COMPOSE_CMD="docker-compose"
-else
-    COMPOSE_CMD="docker compose"
-fi
+# Use the modern docker compose command
+COMPOSE_CMD="docker compose"
 
 print_status "Using compose command: $COMPOSE_CMD"
 
@@ -86,17 +82,17 @@ print_status ""
 print_status "🎉 Your services are now available at:"
 print_status ""
 print_status "🌐 SUBDOMAIN ACCESS (requires DNS/hosts setup):"
-print_status "  📊 Kafka UI (Kowl): http://kowl.localhost"
-print_status "  🗄️  Couchbase UI: http://couchbase.localhost"
-print_status "  🔔 WebSocket (MQTT): ws://ws.localhost"
-print_status "  🎲 Betting API: http://api.localhost"
+print_status "  📊 Kafka UI (Kowl): https://kowl.unibet.richardeverley.com"
+print_status "  🗄️ Couchbase UI: https://couchbase.unibet.richardeverley.com"
+print_status "  🔔 WebSocket (MQTT): ws://ws.unibet.richardeverley.com"
+print_status "  🎲 Betting API: https://api.unibet.richardeverley.com"
 print_status ""
 print_status "🏥 MAIN DOMAIN:"
-print_status "  Health Check: http://localhost/health"
+print_status "  💓 Health Check: https://unibet.richardeverley.com/health"
 print_status ""
 print_status "⚙️  DIRECT PORT ACCESS (development):"
 print_status "  📊 Kafka UI: http://localhost:8080"
-print_status "  🗄️  Couchbase UI: http://localhost:8091"
+print_status "  🗄️ Couchbase UI: http://localhost:8091"
 print_status "  🔔 MQTT WebSocket: ws://localhost:8081"
 print_status ""
 

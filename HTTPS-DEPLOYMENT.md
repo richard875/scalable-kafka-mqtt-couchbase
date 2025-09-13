@@ -21,11 +21,11 @@ This guide explains how to deploy your application with HTTPS/SSL certificates o
 Before deploying, configure your DNS records to point to your Lightsail instance:
 
 ```
-A    yourdomain.com        →  YOUR_LIGHTSAIL_IP
-A    api.yourdomain.com    →  YOUR_LIGHTSAIL_IP
-A    ws.yourdomain.com     →  YOUR_LIGHTSAIL_IP
-A    couchbase.yourdomain.com →  YOUR_LIGHTSAIL_IP
-A    kowl.yourdomain.com   →  YOUR_LIGHTSAIL_IP
+A    unibet.richardeverley.com        →  YOUR_LIGHTSAIL_IP
+A    api.unibet.richardeverley.com    →  YOUR_LIGHTSAIL_IP
+A    ws.unibet.richardeverley.com     →  YOUR_LIGHTSAIL_IP
+A    couchbase.unibet.richardeverley.com →  YOUR_LIGHTSAIL_IP
+A    kowl.unibet.richardeverley.com   →  YOUR_LIGHTSAIL_IP
 ```
 
 ## Deployment Steps
@@ -49,9 +49,8 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sh get-docker.sh
 sudo usermod -aG docker $USER
 
-# Install Docker Compose
-sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
+# Docker Compose comes with Docker Engine by default now
+# No separate installation needed
 
 # Log out and back in for group changes to take effect
 exit
@@ -79,13 +78,13 @@ Run the SSL certificate script to obtain Let's Encrypt certificates:
 chmod +x ./ssl/obtain-ssl-cert.sh
 
 # Obtain certificates (replace with your domain and email)
-./ssl/obtain-ssl-cert.sh -d yourdomain.com -e admin@yourdomain.com
+./ssl/obtain-ssl-cert.sh -d unibet.richardeverley.com -e admin@unibet.richardeverley.com
 ```
 
 For testing, use the staging server first:
 
 ```bash
-./ssl/obtain-ssl-cert.sh -d yourdomain.com -e admin@yourdomain.com -s
+./ssl/obtain-ssl-cert.sh -d unibet.richardeverley.com -e admin@unibet.richardeverley.com -s
 ```
 
 ### 4. Start the Services
@@ -93,7 +92,7 @@ For testing, use the staging server first:
 After obtaining certificates, start all services:
 
 ```bash
-docker-compose -f docker-compose.production.yml up -d
+docker compose -f docker-compose.production.yml up -d
 ```
 
 ### 5. Verify HTTPS Setup
@@ -102,25 +101,25 @@ Test your HTTPS endpoints:
 
 ```bash
 # Main domain health check
-curl https://yourdomain.com/health
+curl https://unibet.richardeverley.com/health
 
 # API endpoint
-curl https://api.yourdomain.com/health
+curl https://api.unibet.richardeverley.com/health
 
 # Check other services
-curl -k https://couchbase.yourdomain.com
-curl -k https://kowl.yourdomain.com
+curl -k https://couchbase.unibet.richardeverley.com
+curl -k https://kowl.unibet.richardeverley.com
 ```
 
 ## Service URLs (After Deployment)
 
-| Service        | HTTPS URL                          | Description                            |
-| -------------- | ---------------------------------- | -------------------------------------- |
-| Health Check   | `https://yourdomain.com/health`    | Main service health status             |
-| Betting API    | `https://api.yourdomain.com`       | REST API for betting operations        |
-| MQTT WebSocket | `wss://ws.yourdomain.com`          | Secure WebSocket for real-time updates |
-| Couchbase UI   | `https://couchbase.yourdomain.com` | Database administration                |
-| Kafka UI       | `https://kowl.yourdomain.com`      | Kafka topic management                 |
+| Service        | HTTPS URL                                     | Description                            |
+| -------------- | --------------------------------------------- | -------------------------------------- |
+| Health Check   | `https://unibet.richardeverley.com/health`    | Main service health status             |
+| Betting API    | `https://api.unibet.richardeverley.com`       | REST API for betting operations        |
+| MQTT WebSocket | `ws://ws.unibet.richardeverley.com`           | WebSocket for real-time updates        |
+| Couchbase UI   | `https://couchbase.unibet.richardeverley.com` | Database administration                |
+| Kafka UI       | `https://kowl.unibet.richardeverley.com`      | Kafka topic management                 |
 
 ## Certificate Renewal
 
@@ -167,13 +166,13 @@ Monitor your services:
 
 ```bash
 # Check all services status
-docker-compose -f docker-compose.production.yml ps
+docker compose -f docker-compose.production.yml ps
 
 # Monitor logs
-docker-compose -f docker-compose.production.yml logs -f
+docker compose -f docker-compose.production.yml logs -f
 
 # Check nginx logs specifically
-docker-compose -f docker-compose.production.yml logs -f nginx
+docker compose -f docker-compose.production.yml logs -f nginx
 
 # Check SSL certificate status
 openssl x509 -in ./ssl/certs/fullchain.pem -text -noout | grep -A 2 "Validity"
@@ -208,10 +207,10 @@ openssl x509 -in ./ssl/certs/fullchain.pem -text -noout | grep -A 2 "Validity"
 openssl s509 -in ./ssl/certs/fullchain.pem -text -noout
 
 # Check nginx configuration
-docker-compose -f docker-compose.production.yml exec nginx nginx -t
+docker compose -f docker-compose.production.yml exec nginx nginx -t
 
 # View detailed logs
-docker-compose -f docker-compose.production.yml logs nginx --tail=50
+docker compose -f docker-compose.production.yml logs nginx --tail=50
 ```
 
 ## Security Considerations
