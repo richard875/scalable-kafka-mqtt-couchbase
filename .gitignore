@@ -80,4 +80,14 @@ kafka-logs/
 # ===============================
 # Environment variables
 # ===============================
-packages/frontend/.env
+.env
+.env.local
+.env.*.local
+.env.production
+.env.*.production
+.env.development
+.env.*.development
+.env.test
+.env.*.test
+.env.staging
+.env.*.staging
