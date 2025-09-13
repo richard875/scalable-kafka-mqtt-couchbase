@@ -25,9 +25,10 @@ const useSportStore = create<SportStore>(set => ({
   odds: [],
   groupedOdds: [],
   selectedBets: [],
-  liveData: false,
+  liveData: true,
   setSport: (sport: Sport) => set(() => ({ sport })),
   setOdds: async (sport: Sport) => {
+    set(() => ({ odds: [], groupedOdds: [] }));
     const odds: Odds[] = await fetch(`/mock/${sport.urlKey}.json`).then(res => res.json());
     const groupedOdds: GroupedOdds[] = transformEvents(odds);
     set(() => ({ odds, groupedOdds }));
