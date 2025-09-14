@@ -4,18 +4,17 @@ This repository contains a small demo microservice platform used for onboarding 
 
 ## Table of contents
 
-- Introduction
-- Quick start (development)
-- Services & ports
-- Local development (detailed)
-- Production-like Docker deployment
-- Nginx, DNS, and networking notes
-- Tasks and onboarding checklist
-- Troubleshooting & common commands
-- Security & production checklist
-- AWS Lightsail / container deployment notes
-- File structure
-- Support
+- [Introduction](#introduction)
+- [Quick start (development)](#quick-start-development---recommended)
+- [Services & ports](#services--ports)
+- [Local development (detailed)](#local-development-detailed)
+- [Production-like Docker deployment](#production-like-docker-deployment)
+- [Configuration](#configuration)
+- [Tasks and onboarding checklist](#onboarding-task-checklist)
+- [Troubleshooting & common commands](#troubleshooting--common-commands)
+- [AWS Lightsail / container deployment notes](#aws-lightsail--container-deployment-notes)
+- [File structure](#file-structure-detailed-overview)
+- [Support](#support)
 
 ## Introduction
 
