@@ -4,6 +4,10 @@ This repository contains a small demo microservice platform used for onboarding 
 
 ![Repo Banner](./doc/banner.jpg)
 
+## System Diagram
+
+![System Design Diagram](./doc/design.png)
+
 ## Table of contents
 
 - [Demo](#demo)
