@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(0, 137, 68)" class="size-6">
+  <!-- Small arc -->
+  <path stroke-linecap="round" stroke-linejoin="round" d="M9.348 14.652a3.75 3.75 0 0 1 0-5.304m5.304 0a3.75 3.75 0 0 1 0 5.304">
+    <animate attributeName="opacity" values="1;0;0;1;1" dur="1s" repeatCount="indefinite" begin="0s"/>
+  </path>
+  
+  <!-- Medium arc -->
+  <path stroke-linecap="round" stroke-linejoin="round" d="M7.227 16.773a6.75 6.75 0 0 1 0-9.546m9.546 0a6.75 6.75 0 0 1 0 9.546">
+    <animate attributeName="opacity" values="1;1;0;0;1" dur="1s" repeatCount="indefinite" begin="0s"/>
+  </path>
+  
+  <!-- Large arc -->
+  <path stroke-linecap="round" stroke-linejoin="round" d="M5.106 18.894c-3.808-3.807-3.808-9.98 0-13.788m13.788 0c3.808 3.807 3.808 9.98 0 13.788">
+    <animate attributeName="opacity" values="1;1;1;0;0" dur="1s" repeatCount="indefinite" begin="0s"/>
+  </path>
+  
+  <!-- Dot in center -->
+  <circle cx="12" cy="12" r="0.5" fill="rgb(0, 137, 68)"/>
+</svg>
