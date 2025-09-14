@@ -13,7 +13,7 @@ const SportSelect = ({ handleChange }: { handleChange: (sport: Sport) => void })
       {Sports.map(sport => (
         <div
           key={sport.key}
-          onClick={() => handleChange(sport)}
+          onClick={() => sport.key !== selectedSport.key && handleChange(sport)}
           className="relative px-4 py-3.5 flex items-center gap-2 hover:bg-[#111111] cursor-pointer"
         >
           <img src={sport.icon} alt={sport.title} className="w-4 h-4" />
