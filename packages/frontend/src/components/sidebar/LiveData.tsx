@@ -1,17 +1,23 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useQueryState, parseAsBoolean } from "nuqs";
 import type { Sport } from "@/types/sport";
 import useSportStore from "@/store/sportStore";
 import signalIcon from "@/assets/icons/signal.svg";
+import signalLoopIcon from "@/assets/icons/signal-loop.svg";
 
 const LiveData = ({ handleChange }: { handleChange: (sport: Sport) => void }) => {
   const { sport: selectedSport, liveData, toggleLiveData } = useSportStore();
   const [live, setLive] = useQueryState("live", parseAsBoolean.withDefault(true));
+  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     toggleLiveData(live);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    setTimeout(() => setHover(false), 3000);
+  }, [hover]);
 
   const handleClick = () => {
     setLive(!live);
@@ -24,9 +30,17 @@ const LiveData = ({ handleChange }: { handleChange: (sport: Sport) => void }) =>
       <div className="px-4 h-11 flex items-center">
         <span className="text-[#aaaaaa] text-[10px] font-medium uppercase italic">Live Data</span>
       </div>
-      <div className="px-4 py-3.5 flex items-center justify-between">
+      <div
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        className="px-4 py-3.5 flex items-center justify-between"
+      >
         <div className="flex items-center gap-2">
-          <img src={signalIcon} alt="Signal" className="w-4 h-4" />
+          {hover ? (
+            <img src={signalLoopIcon} alt="Signal" className="w-4 h-4" />
+          ) : (
+            <img src={signalIcon} alt="Signal" className="w-4 h-4" />
+          )}
           <span className="text-[#dddddd] text-xs font-normal">Use Live Data</span>
         </div>
         <div
