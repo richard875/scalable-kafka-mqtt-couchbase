@@ -1,9 +1,9 @@
+import getLiveData from "../helper/getLiveData.js";
+import getMockData from "../helper/getMockData.js";
 import type SlipItem from "@fdj/shared/types/slipItem";
 import type BetResult from "@fdj/shared/types/betResult";
 import SlipItemSchema from "../schemas/slipItemSchema.js";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import getLiveData from "@betting-service/helper/getLiveData.js";
-import getMockData from "@betting-service/helper/getMockData.js";
 
 export const getOddsData = async (sport: string, live: string): Promise<BetResult> => {
   try {
