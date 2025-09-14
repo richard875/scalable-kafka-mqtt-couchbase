@@ -1,11 +1,20 @@
+import { useEffect } from "react";
+import { useQueryState, parseAsBoolean } from "nuqs";
 import type { Sport } from "@/types/sport";
 import useSportStore from "@/store/sportStore";
 import signalIcon from "@/assets/icons/signal.svg";
 
 const LiveData = ({ handleChange }: { handleChange: (sport: Sport) => void }) => {
   const { sport: selectedSport, liveData, toggleLiveData } = useSportStore();
+  const [live, setLive] = useQueryState("live", parseAsBoolean.withDefault(true));
+
+  useEffect(() => {
+    toggleLiveData(live);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleClick = () => {
+    setLive(!live);
     toggleLiveData();
     handleChange(selectedSport);
   };

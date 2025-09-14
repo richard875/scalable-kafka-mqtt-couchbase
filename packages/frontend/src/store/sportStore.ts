@@ -19,7 +19,7 @@ type SportStore = {
   setSelectedBet: (bet: SlipItem) => void;
   clearSelectedBets: () => void;
   setBetAmount: (id: string, amount: number) => void;
-  toggleLiveData: () => void;
+  toggleLiveData: (live?: boolean) => void;
 };
 
 const useSportStore = create<SportStore>(set => ({
@@ -51,7 +51,8 @@ const useSportStore = create<SportStore>(set => ({
       selectedBets: state.selectedBets.map(bet => (bet.id === id ? { ...bet, amount } : bet)),
     }));
   },
-  toggleLiveData: () => set(state => ({ liveData: !state.liveData })),
+  toggleLiveData: (live?: boolean) =>
+    set(state => ({ liveData: live !== undefined ? live : !state.liveData })),
 }));
 
 export default useSportStore;
