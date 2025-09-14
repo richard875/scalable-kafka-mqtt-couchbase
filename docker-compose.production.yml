@@ -122,8 +122,8 @@ services:
     restart: unless-stopped
 
     # Memory limits for Couchbase
-    mem_limit: 900m
-    memswap_limit: 900m
+    mem_limit: 1500m
+    memswap_limit: 1500m
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8091/pools || exit 1"]
       interval: 30s
