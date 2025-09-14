@@ -2,8 +2,11 @@
 
 This repository contains a small demo microservice platform used for onboarding and experimentation. It includes a React frontend, three Node.js microservices (betting, notification, audit), and supporting infrastructure (Kafka, FlashMQ for MQTT, Couchbase, and Nginx). This README consolidates local development instructions, production-like Docker deployment steps, troubleshooting tips, and the onboarding task checklist.
 
+![Repo Banner](./doc/banner.jpg)
+
 ## Table of contents
 
+- [Demo](#demo)
 - [Introduction](#introduction)
 - [Quick start (development)](#quick-start-development---recommended)
 - [Services & ports](#services--ports)
@@ -15,6 +18,18 @@ This repository contains a small demo microservice platform used for onboarding 
 - [AWS Lightsail / container deployment notes](#aws-lightsail--container-deployment-notes)
 - [File structure](#file-structure-detailed-overview)
 - [Support](#support)
+
+## Demo
+
+- Frontend (Cloudflare)
+- Kafka UI (Kowl)
+- Couchbase UI
+
+![Frontend (Cloudflare)](./doc/screenshot-1.png)
+
+![Kafka UI (Kowl)](./doc/screenshot-2.png)
+
+![Couchbase UI](./doc/screenshot-3.png)
 
 ## Introduction
 
