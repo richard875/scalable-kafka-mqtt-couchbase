@@ -13,7 +13,7 @@
   "dependencies": {
     "@fdj/shared": "file:../shared",
     "@hono/node-server": "^1.19.0",
-    "ajv": "^6.12.6",
+    "ajv": "^8.17.1",
     "dotenv": "^17.2.2",
     "hono": "^4.9.6",
     "zod": "^4.1.7"
