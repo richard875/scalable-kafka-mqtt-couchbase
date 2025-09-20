@@ -25,6 +25,10 @@
             "import": "./dist/types/*.js",
             "types": "./dist/types/*.d.ts"
         },
+        "./types/kafka/*": {
+            "import": "./dist/types/kafka/*.js",
+            "types": "./dist/types/kafka/*.d.ts"
+        },
         "./services/*": {
             "import": "./dist/services/*.js",
             "types": "./dist/services/*.d.ts"

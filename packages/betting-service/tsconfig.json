@@ -27,6 +27,7 @@
       "@frontend/*": ["./packages/frontend/src/*"],
       "@fdj/shared/enums/*": ["./packages/shared/dist/enums/*"],
       "@fdj/shared/types/*": ["./packages/shared/dist/types/*"],
+      "@fdj/shared/types/kafka/*": ["./packages/shared/dist/types/kafka/*"],
       "@fdj/shared/services/*": ["./packages/shared/dist/services/*"],
       "@fdj/shared/helpers/*": ["./packages/shared/dist/helpers/*"]
     }
