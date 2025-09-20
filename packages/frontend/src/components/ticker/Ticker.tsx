@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import useMqtt from "@/hooks/useMqtt";
 import SportsEnum from "@fdj/shared/enums/sportsEnum";
 import fadeAnimation from "@/constants/fadeAnimation";
-import type BetV1 from "@fdj/shared/types/kafka/betV1";
+import type BetV2 from "@fdj/shared/types/kafka/betV2";
 import betVersionValidation from "@/helper/betVersionValidation";
 
 const DEFAULT_MESSAGE = "Waiting for updates...";
@@ -14,7 +14,7 @@ const Ticker = () => {
     topics: Object.values(SportsEnum),
     onMessage: (message: string) => {
       try {
-        const payload = JSON.parse(message) as BetV1;
+        const payload = JSON.parse(message) as BetV2;
         const msg = betVersionValidation(payload);
         if (msg) setMessage(msg);
       } catch (err) {
