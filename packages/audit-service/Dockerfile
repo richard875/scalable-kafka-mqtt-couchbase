@@ -13,14 +13,14 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy the built shared package
-COPY --from=shared-builder /app/shared ./shared
+# Copy the built shared package to the correct relative location
+COPY --from=shared-builder /app/shared ./packages/shared
 
 # Copy audit service
-COPY packages/audit-service ./audit-service
+COPY packages/audit-service ./packages/audit-service
 
 # Install dependencies and build audit service
-WORKDIR /app/audit-service
+WORKDIR /app/packages/audit-service
 RUN npm install && npm run build
 
 # Production stage
@@ -29,11 +29,11 @@ FROM node:20-alpine AS runtime
 WORKDIR /app
 
 # Copy built audit service first
-COPY --from=builder /app/audit-service/dist ./dist
-COPY --from=builder /app/audit-service/package.json ./package.json
+COPY --from=builder /app/packages/audit-service/dist ./dist
+COPY --from=builder /app/packages/audit-service/package.json ./package.json
 
 # Copy node_modules (excluding @fdj/shared which we'll replace)
-COPY --from=builder /app/audit-service/node_modules ./node_modules
+COPY --from=builder /app/packages/audit-service/node_modules ./node_modules
 
 # Replace with our built shared package
 COPY --from=shared-builder /app/shared ./node_modules/@fdj/shared

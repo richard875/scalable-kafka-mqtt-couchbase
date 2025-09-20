@@ -13,14 +13,14 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy the built shared package
-COPY --from=shared-builder /app/shared ./shared
+# Copy the built shared package to the correct relative location
+COPY --from=shared-builder /app/shared ./packages/shared
 
 # Copy betting service
-COPY packages/betting-service ./betting-service
+COPY packages/betting-service ./packages/betting-service
 
 # Install dependencies and build betting service
-WORKDIR /app/betting-service
+WORKDIR /app/packages/betting-service
 RUN npm install && npm run build
 
 # Production stage
@@ -29,11 +29,11 @@ FROM node:20-alpine AS runtime
 WORKDIR /app
 
 # Copy built betting service first
-COPY --from=builder /app/betting-service/dist ./dist
-COPY --from=builder /app/betting-service/package.json ./package.json
+COPY --from=builder /app/packages/betting-service/dist ./dist
+COPY --from=builder /app/packages/betting-service/package.json ./package.json
 
 # Copy node_modules (excluding @fdj/shared which we'll replace)
-COPY --from=builder /app/betting-service/node_modules ./node_modules
+COPY --from=builder /app/packages/betting-service/node_modules ./node_modules
 
 # Replace with our built shared package
 COPY --from=shared-builder /app/shared ./node_modules/@fdj/shared
