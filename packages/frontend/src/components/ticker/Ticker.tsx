@@ -3,7 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import useMqtt from "@/hooks/useMqtt";
 import SportsEnum from "@fdj/shared/enums/sportsEnum";
 import fadeAnimation from "@/constants/fadeAnimation";
-import type SlipItem from "@fdj/shared/types/slipItem";
+import type BetV1 from "@fdj/shared/types/kafka/betV1";
+import betVersionValidation from "@/helper/betVersionValidation";
 
 const DEFAULT_MESSAGE = "Waiting for updates...";
 
@@ -13,9 +14,9 @@ const Ticker = () => {
     topics: Object.values(SportsEnum),
     onMessage: (message: string) => {
       try {
-        const payload = JSON.parse(message) as SlipItem;
-        const msg = `Bet placed on ${payload.team}: $${payload.amount} on ${payload.name} at odds of ${payload.price} 🎯`;
-        setMessage(msg);
+        const payload = JSON.parse(message) as BetV1;
+        const msg = betVersionValidation(payload);
+        if (msg) setMessage(msg);
       } catch (err) {
         console.log("MQTT message parse error:", message, "Error:", err);
       }
