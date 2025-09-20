@@ -13,33 +13,21 @@
         "typescript": "^5.8.3"
     },
     "exports": {
-        "./enums/sportsEnum": {
-            "import": "./dist/enums/sportsEnum.js",
-            "types": "./dist/enums/sportsEnum.d.ts"
+        "./enums/*": {
+            "import": "./dist/enums/*.js",
+            "types": "./dist/enums/*.d.ts"
         },
-        "./helpers/subscribeToTopics": {
-            "import": "./dist/helpers/subscribeToTopics.js",
-            "types": "./dist/helpers/subscribeToTopics.d.ts"
+        "./helpers/*": {
+            "import": "./dist/helpers/*.js",
+            "types": "./dist/helpers/*.d.ts"
         },
-        "./types/betResult": {
-            "import": "./dist/types/betResult.js",
-            "types": "./dist/types/betResult.d.ts"
+        "./types/*": {
+            "import": "./dist/types/*.js",
+            "types": "./dist/types/*.d.ts"
         },
-        "./types/odds": {
-            "import": "./dist/types/odds.js",
-            "types": "./dist/types/odds.d.ts"
-        },
-        "./types/outcomes": {
-            "import": "./dist/types/outcomes.js",
-            "types": "./dist/types/outcomes.d.ts"
-        },
-        "./types/slipItem": {
-            "import": "./dist/types/slipItem.js",
-            "types": "./dist/types/slipItem.d.ts"
-        },
-        "./services/kafkaService": {
-            "import": "./dist/services/kafkaService.js",
-            "types": "./dist/services/kafkaService.d.ts"
+        "./services/*": {
+            "import": "./dist/services/*.js",
+            "types": "./dist/services/*.d.ts"
         }
     }
 }
