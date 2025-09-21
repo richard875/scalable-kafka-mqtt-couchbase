@@ -26,6 +26,7 @@
       "@betting-service/*": ["packages/betting-service/src/*"],
       "@notification-service/*": ["packages/notification-service/src/*"],
       "@audit-service/*": ["packages/audit-service/src/*"],
+      "@email-service/*": ["packages/email-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"],
       "@fdj/shared/enums/*": ["./packages/shared/enums/*"],
       "@fdj/shared/types/*": ["./packages/shared/types/*"],
@@ -37,6 +38,7 @@
     "packages/betting-service/src/**/*",
     "packages/notification-service/src/**/*",
     "packages/audit-service/src/**/*",
+    "packages/email-service/src/**/*",
     "packages/frontend/src/**/*",
     "packages/frontend/vite.config.ts",
     "packages/shared/**/*"

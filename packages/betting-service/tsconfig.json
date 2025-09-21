@@ -24,6 +24,7 @@
       "@betting-service/*": ["./packages/betting-service/src/*"],
       "@notification-service/*": ["./packages/notification-service/src/*"],
       "@audit-service/*": ["./packages/audit-service/src/*"],
+      "@email-service/*": ["./packages/email-service/src/*"],
       "@frontend/*": ["./packages/frontend/src/*"],
       "@fdj/shared/enums/*": ["./packages/shared/dist/enums/*"],
       "@fdj/shared/types/*": ["./packages/shared/dist/types/*"],

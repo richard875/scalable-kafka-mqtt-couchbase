@@ -1,6 +1,6 @@
 # iGaming Demo — Development & Deployment Guide
 
-This repository contains a small demo microservice platform used for onboarding and experimentation. It includes a React frontend, three Node.js microservices (betting, notification, audit), and supporting infrastructure (Kafka, FlashMQ for MQTT, Couchbase, and Nginx). This README consolidates local development instructions, production-like Docker deployment steps, troubleshooting tips, and the onboarding task checklist.
+This repository contains a small demo microservice platform used for onboarding and experimentation. It includes a React frontend, three Node.js microservices (betting, notification, audit, email), and supporting infrastructure (Kafka, FlashMQ for MQTT, Couchbase, and Nginx). This README consolidates local development instructions, production-like Docker deployment steps, troubleshooting tips, and the onboarding task checklist.
 
 ![Repo Banner](./doc/banner.jpg)
 
@@ -84,6 +84,7 @@ Development mode (direct access):
 - Betting service (API): http://localhost:3000
 - Notification service: http://localhost:3001
 - Audit service: http://localhost:3002
+- Email service: http://localhost:3003
 - Kafka UI (Kowl/console): http://localhost:8080
 - Couchbase UI: http://localhost:8091
 - MQTT WebSocket (FlashMQ): ws://localhost:8081
@@ -123,6 +124,7 @@ npm run dev:frontend             # Start frontend only
 npm run dev:betting-service      # Start betting service only
 npm run dev:notification-service # Start notification service only
 npm run dev:audit-service       # Start audit service only
+npm run dev:email-service       # Start email service only
 npm run dev                     # Start all services
 ```
 
@@ -134,6 +136,7 @@ npm run build:frontend          # Build frontend
 npm run build:betting-service   # Build betting service
 npm run build:notification-service # Build notification service
 npm run build:audit-service     # Build audit service
+npm run build:email-service     # Build email service
 npm run build                   # Build everything
 ```
 
@@ -262,6 +265,7 @@ Each service has its own environment configuration:
 - `packages/betting-service/.env.production`
 - `packages/audit-service/.env.production`
 - `packages/notification-service/.env.production`
+- `packages/email-service/.env.production`
 
 #### Service Dependencies
 
@@ -269,7 +273,7 @@ Services start in this order:
 
 1. Kafka
 2. Couchbase, FlashMQ
-3. Application services (betting, audit, notification)
+3. Application services (betting, audit, notification, email)
 4. Nginx
 
 ### Health Checks
@@ -487,6 +491,10 @@ The repository contains multiple packages and infra config. Key items:
     │   ├── .dockerignore
     │   └── .env.production
     ├── notification-service/
+    │   ├── Dockerfile
+    │   ├── .dockerignore
+    │   └── .env.production
+    ├── email-service/
     │   ├── Dockerfile
     │   ├── .dockerignore
     │   └── .env.production

@@ -67,7 +67,7 @@ sleep 30
 # Check service health
 print_status "Checking service health..."
 
-services=("betting-service" "audit-service" "notification-service" "kafka" "kafka-ui" "flashmq" "couchbase" "nginx-proxy")
+services=("betting-service" "audit-service" "notification-service" "email-service" "kafka" "kafka-ui" "flashmq" "couchbase" "nginx-proxy")
 
 for service in "${services[@]}"; do
     if $COMPOSE_CMD -f docker-compose.production.yml ps | grep -q "$service.*Up"; then

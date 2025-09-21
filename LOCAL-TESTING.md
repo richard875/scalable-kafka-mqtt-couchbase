@@ -131,6 +131,10 @@ upstream notification_service {
     server notification-service:3001 max_fails=3 fail_timeout=30s;
 }
 
+upstream email_service {
+    server email-service:3003 max_fails=3 fail_timeout=30s;
+}
+
 upstream kafka_ui {
     server kafka-ui:8080 max_fails=3 fail_timeout=30s;
 }

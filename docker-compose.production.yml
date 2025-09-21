@@ -208,6 +208,29 @@ services:
     networks:
       - app-network
 
+  email-service:
+    build:
+      context: .
+      dockerfile: packages/email-service/Dockerfile
+    container_name: email-service
+    depends_on:
+      kafka:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=production
+      - KAFKA_BROKERS=kafka:9092
+      - KAFKAJS_NO_PARTITIONER_WARNING=1
+      - RESEND_API_KEY=${RESEND_API_KEY}
+    restart: unless-stopped
+    expose:
+      - "3003"
+
+    # Memory limits for Node.js service
+    mem_limit: 150m
+    memswap_limit: 150m
+    networks:
+      - app-network
+
   # Nginx reverse proxy
   nginx:
     image: nginx:alpine
@@ -219,6 +242,7 @@ services:
       - betting-service
       - audit-service
       - notification-service
+      - email-service
       - kafka-ui
       - flashmq
       - couchbase
