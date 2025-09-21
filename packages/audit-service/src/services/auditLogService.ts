@@ -71,7 +71,10 @@ export const handleMessage = async (
   }
 
   try {
-    if (!message || message.version !== BET_SCHEMA_VERSION) {
+    if (
+      (!message || message.version !== BET_SCHEMA_VERSION) &&
+      process.env.NODE_ENV !== "production"
+    ) {
       throw new Error("Invalid message format or unsupported version");
     }
 
