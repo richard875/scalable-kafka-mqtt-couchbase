@@ -115,8 +115,8 @@ services:
       - "11280:11280" # Internal/external bucket port for SSL
       - "18091-18097:18091-18097" # Couchbase Web Console and REST API ports (SSL)
     environment:
-      - COUCHBASE_ADMINISTRATOR_USERNAME=Administrator
-      - COUCHBASE_ADMINISTRATOR_PASSWORD=password
+      - COUCHBASE_ADMINISTRATOR_USERNAME=${COUCHBASE_USERNAME}
+      - COUCHBASE_ADMINISTRATOR_PASSWORD=${COUCHBASE_PASSWORD}
     volumes:
       - couchbase-data:/opt/couchbase/var
     restart: unless-stopped
@@ -145,7 +145,7 @@ services:
     environment:
       - NODE_ENV=production
       - KAFKA_BROKERS=kafka:9092
-      - ODDS_API_KEY=90a3dea2a972443b535cd90230273ea8
+      - ODDS_API_KEY=${ODDS_API_KEY}
     restart: unless-stopped
     expose:
       - "3000"
@@ -170,10 +170,10 @@ services:
       - NODE_ENV=production
       - KAFKA_BROKERS=kafka:9092
       - KAFKAJS_NO_PARTITIONER_WARNING=1
-      - COUCHBASE_URL=couchbase://couchbase
-      - COUCHBASE_USERNAME=Administrator
-      - COUCHBASE_PASSWORD=password
-      - COUCHBASE_BUCKET=Unibet
+      - COUCHBASE_URL=${COUCHBASE_URL}
+      - COUCHBASE_USERNAME=${COUCHBASE_USERNAME}
+      - COUCHBASE_PASSWORD=${COUCHBASE_PASSWORD}
+      - COUCHBASE_BUCKET=${COUCHBASE_BUCKET}
     restart: unless-stopped
     expose:
       - "3002"

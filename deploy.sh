@@ -58,7 +58,7 @@ print_status "Building and starting all services..."
 $COMPOSE_CMD -f docker-compose.production.yml build --no-cache
 
 print_status "Starting services..."
-$COMPOSE_CMD -f docker-compose.production.yml up -d
+$COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml up -d
 
 # Wait for services to be healthy
 print_status "Waiting for services to be healthy..."
