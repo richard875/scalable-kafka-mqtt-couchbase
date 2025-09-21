@@ -81,6 +81,7 @@ SUBDOMAINS=(
     "api.$DOMAIN"
     "ws.$DOMAIN"
     "couchbase.$DOMAIN"
+    "redis.$DOMAIN"
     "kowl.$DOMAIN"
 )
 

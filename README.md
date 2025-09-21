@@ -1,6 +1,6 @@
 # iGaming Demo — Development & Deployment Guide
 
-This repository contains a small demo microservice platform used for onboarding and experimentation. It includes a React frontend, three Node.js microservices (betting, notification, audit, email), and supporting infrastructure (Kafka, FlashMQ for MQTT, Couchbase, and Nginx). This README consolidates local development instructions, production-like Docker deployment steps, troubleshooting tips, and the onboarding task checklist.
+This repository contains a small demo microservice platform used for onboarding and experimentation. It includes a React frontend, three Node.js microservices (betting, notification, audit, email), and supporting infrastructure (Kafka, FlashMQ for MQTT, Couchbase, Redis UI, and Nginx). This README consolidates local development instructions, production-like Docker deployment steps, troubleshooting tips, and the onboarding task checklist.
 
 ![Repo Banner](./doc/banner.jpg)
 
@@ -28,6 +28,7 @@ This repository contains a small demo microservice platform used for onboarding 
 - Frontend (Cloudflare)
 - Kafka UI (Kowl)
 - Couchbase UI
+- Redis UI
 
 ![Frontend (Cloudflare)](./doc/screenshot-1.png)
 
@@ -35,13 +36,15 @@ This repository contains a small demo microservice platform used for onboarding 
 
 ![Couchbase UI](./doc/screenshot-3.png)
 
+![Redis UI](./doc/screenshot-4.png)
+
 ## Introduction
 
 This repo is intended to make it easy to spin up a realistic, containerized microservice stack locally or in a production-like environment. The main goals are:
 
-- Let developers run the stack locally with minimal friction (Kafka, MQTT, Couchbase, services, and frontend).
+- Let developers run the stack locally with minimal friction (Kafka, MQTT, Couchbase, Redis UI, services, and frontend).
 - Provide a Docker-based production-like deployment with Nginx reverse proxy and subdomain routing.
-- Provide simple exercises (send a message via Kafka, push MQTT messages to FlashMQ, inspect Couchbase) to understand the platform.
+- Provide simple exercises (send a message via Kafka, push MQTT messages to FlashMQ, inspect Couchbase, explore Redis UI) to understand the platform.
 
 Assumptions/notes:
 
@@ -50,7 +53,7 @@ Assumptions/notes:
 
 ## Quick start (development - recommended)
 
-1. Start infrastructure (Kafka, MQTT, Couchbase):
+1. Start infrastructure (Kafka, MQTT, Couchbase, Redis UI):
 
 ```
    npm run infra:dev
@@ -87,6 +90,7 @@ Development mode (direct access):
 - Email service: http://localhost:3003
 - Kafka UI (Kowl/console): http://localhost:8080
 - Couchbase UI: http://localhost:8091
+- Redis UI: http://localhost:5540
 - MQTT WebSocket (FlashMQ): ws://localhost:8081
 
 Docker mode (via Nginx proxy + subdomains):
@@ -96,6 +100,7 @@ For subdomain access you can add entries to `/etc/hosts`:
 127.0.0.1 api.localhost
 127.0.0.1 ws.localhost
 127.0.0.1 couchbase.localhost
+127.0.0.1 redis.localhost
 127.0.0.1 kowl.localhost
 
 Then:
@@ -103,6 +108,7 @@ Then:
 - Betting API: http://api.localhost
 - MQTT WebSocket: ws://ws.localhost
 - Couchbase UI: http://couchbase.localhost
+- Redis UI: http://redis.localhost
 - Kafka UI: http://kowl.localhost
 - Health check (root): http://localhost/health
 
@@ -201,6 +207,11 @@ ws.onmessage = msg => console.log("Message:", msg.data);
 - Username: Administrator
 - Password: password
 
+#### Test Redis UI
+
+- Development: http://localhost:5540
+- Docker: http://redis.localhost (requires /etc/hosts entry)
+
 ## Production-like Docker deployment
 
 This repository includes a production-like Docker Compose file and an Nginx reverse proxy to expose services on subdomains. Use this mode for end-to-end integration testing or demo deployments.
@@ -272,7 +283,7 @@ Each service has its own environment configuration:
 Services start in this order:
 
 1. Kafka
-2. Couchbase, FlashMQ
+2. Kowl, Couchbase, FlashMQ, Redis UI
 3. Application services (betting, audit, notification, email)
 4. Nginx
 
@@ -309,6 +320,7 @@ For local testing with subdomains, add to `/etc/hosts`:
 127.0.0.1 api.localhost
 127.0.0.1 ws.localhost
 127.0.0.1 couchbase.localhost
+127.0.0.1 redis.localhost
 127.0.0.1 kowl.localhost
 ````
 
@@ -334,6 +346,10 @@ Name: couchbase.[domain]
 Value: [server_ip]
 
 Type: A (or CNAME)
+Name: redis.[domain]
+Value: [server_ip]
+
+Type: A (or CNAME)
 Name: kowl.[domain]
 Value: [server_ip]
 ```
@@ -353,6 +369,7 @@ Value: [server_ip]
 | Betting API    | `http://localhost:3000` | `http://api.[aws_domain]`           | REST API for betting operations |
 | MQTT WebSocket | `ws://localhost:8081`   | `ws://ws.unibet.richardeverley.com` | WebSocket for real-time updates |
 | Couchbase UI   | `http://localhost:8091` | `http://couchbase.[aws_domain]`.    | Database administration         |
+| Redis UI       | `http://localhost:5540` | `http://redis.[aws_domain]`         | Redis database management       |
 | Kafka UI       | `http://localhost:8080` | `http://kowl.[aws_domain]`          | Kafka topic management          |
 | Health Check   | N/A                     | `http://[aws_domain]/health`        | Main service health status      |
 
@@ -365,6 +382,7 @@ This checklist is a compact set of hands-on exercises useful for onboarding:
 - Use Docker Compose to run Kafka and a Kafka UI (Kowl or similar).
 - From Node.js, produce and consume a message using kafkajs.
 - Spin up a Couchbase container and explore the web UI.
+- Setup a Redis UI container and connect to the Redis instance.
 - Run FlashMQ (an MQTT broker) in a container and use MQTT.js from Node to publish a message.
 - From the frontend, connect using MQTT.js over WebSocket to verify messages are routed to the client.
 
@@ -373,6 +391,7 @@ Notes and useful ports (development):
 - MQTT WebSocket: ws://localhost:8081
 - Betting API: http://localhost:3000
 - Couchbase UI: http://localhost:8091
+- Redis UI: http://localhost:5540
 - Kafka UI: http://localhost:8080
 
 This set of exercises covers a large portion of the demo stack (message broker, realtime push, persistence, and UI).
@@ -436,7 +455,7 @@ npm run dev
 2. **Service Not Starting**: Check service logs with `docker compose logs service-name`
 3. **Memory Issues**: Check Docker memory usage with `docker stats`
 
-If a service fails to start, check its logs and verify that Kafka, FlashMQ, and Couchbase are healthy first — many services depend on them.## Security & production checklist
+If a service fails to start, check its logs and verify that Kafka, FlashMQ, Couchbase, and Redis UI are healthy first — many services depend on them.## Security & production checklist
 
 Before deploying to production consider the following:
 
@@ -512,6 +531,6 @@ For per-service details, see the `packages/*` directories.
 If you run into issues:
 
 1. Check service logs first.
-2. Verify dependencies (Kafka, FlashMQ, Couchbase) are running.
+2. Verify dependencies (Kafka, FlashMQ, Couchbase, Redis UI) are running.
 3. Check Docker resource allocation if containers fail to start.
 4. If you need help, open an issue or contact the repository owner.

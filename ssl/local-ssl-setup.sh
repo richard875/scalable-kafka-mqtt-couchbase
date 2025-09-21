@@ -52,6 +52,7 @@ DNS.3 = api.localhost
 DNS.4 = ws.localhost
 DNS.5 = couchbase.localhost
 DNS.6 = kowl.localhost
+DNS.7 = redis.localhost
 IP.1 = 127.0.0.1
 IP.2 = ::1
 EOF
@@ -78,6 +79,7 @@ echo -e "   ${YELLOW}127.0.0.1 localhost${NC}"
 echo -e "   ${YELLOW}127.0.0.1 api.localhost${NC}"
 echo -e "   ${YELLOW}127.0.0.1 ws.localhost${NC}"
 echo -e "   ${YELLOW}127.0.0.1 couchbase.localhost${NC}"
+echo -e "   ${YELLOW}127.0.0.1 redis.localhost${NC}"
 echo -e "   ${YELLOW}127.0.0.1 kowl.localhost${NC}"
 echo ""
 echo -e "2. Start the services with:"
@@ -87,6 +89,7 @@ echo -e "3. Test HTTPS endpoints (accept the self-signed certificate warning):"
 echo -e "   ${YELLOW}https://localhost/health${NC}"
 echo -e "   ${YELLOW}https://api.localhost${NC}"
 echo -e "   ${YELLOW}https://couchbase.localhost${NC}"
+echo -e "   ${YELLOW}https://redis.localhost${NC}"
 echo -e "   ${YELLOW}https://kowl.localhost${NC}"
 echo ""
 echo -e "${RED}Note: Your browser will show a security warning for self-signed certificates.${NC}"

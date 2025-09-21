@@ -121,9 +121,9 @@ services:
       retries: 5
       start_period: 20s
 
-  redisinsight:
+  redis-ui:
     image: redis/redisinsight:latest
-    container_name: redisinsight
+    container_name: redis-ui
     depends_on:
       redis:
         condition: service_healthy
@@ -132,7 +132,7 @@ services:
     environment:
       - REDIS_HOSTS=local:redis:6379
     volumes:
-      - redisinsight-data:/data
+      - redis-ui-data:/data
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5540/api/health/ || exit 1"]
@@ -147,4 +147,4 @@ volumes:
   flashmq-logs:
   couchbase-data:
   redis-data:
-  redisinsight-data:
+  redis-ui-data:

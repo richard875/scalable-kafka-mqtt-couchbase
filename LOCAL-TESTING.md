@@ -33,6 +33,7 @@ Add these lines:
 127.0.0.1 api.localhost
 127.0.0.1 ws.localhost
 127.0.0.1 couchbase.localhost
+127.0.0.1 redis.localhost
 127.0.0.1 kowl.localhost
 ```
 
@@ -49,6 +50,7 @@ Open your browser and test these URLs (you'll need to accept the self-signed cer
 - `https://localhost/health` - Main health check
 - `https://api.localhost` - Betting API service
 - `https://couchbase.localhost` - Couchbase admin interface
+- `https://redis.localhost` - Redis UI
 - `https://kowl.localhost` - Kafka UI
 - `wss://ws.localhost` - WebSocket connection (test with browser dev tools)
 
@@ -86,7 +88,7 @@ mkcert -install
 
 # Generate certificates for local domains
 mkcert -cert-file ./ssl/certs/fullchain.pem -key-file ./ssl/certs/privkey.pem \
-  localhost api.localhost ws.localhost couchbase.localhost kowl.localhost
+  localhost api.localhost ws.localhost couchbase.localhost redis.localhost kowl.localhost
 
 # Generate dhparam
 openssl dhparam -out ./ssl/certs/dhparam.pem 2048
@@ -141,6 +143,10 @@ upstream kafka_ui {
 
 upstream couchbase_ui {
     server couchbase:8091 max_fails=3 fail_timeout=30s;
+}
+
+upstream redis_ui {
+    server redis-ui:5540 max_fails=3 fail_timeout=30s;
 }
 
 upstream flashmq_ws {
@@ -218,6 +224,20 @@ server {
     }
 }
 
+# Redis UI subdomain
+server {
+    listen 80;
+    server_name redis.localhost;
+
+    location / {
+        proxy_pass http://redis_ui;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+
 # Kafka UI subdomain
 server {
     listen 80;
@@ -252,6 +272,7 @@ Test HTTP endpoints:
 - `http://localhost/health`
 - `http://api.localhost`
 - `http://couchbase.localhost`
+- `http://redis.localhost`
 - `http://kowl.localhost`
 
 ### Switch Back to HTTPS Config

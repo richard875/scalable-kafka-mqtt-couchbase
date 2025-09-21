@@ -1,5 +1,5 @@
 services:
-  # Infrastructure services (Kafka, MQTT, Couchbase)
+  # Infrastructure services (Kafka, MQTT, Couchbase, Redis)
   kafka:
     image: apache/kafka:latest
     container_name: kafka
@@ -155,9 +155,9 @@ services:
     networks:
       - app-network
 
-  redisinsight:
+  redis-ui:
     image: redis/redisinsight:latest
-    container_name: redisinsight
+    container_name: redis-ui
     depends_on:
       redis:
         condition: service_healthy
@@ -166,10 +166,10 @@ services:
     environment:
       - REDIS_HOSTS=local:redis:6379
     volumes:
-      - redisinsight-data:/data
+      - redis-ui-data:/data
     restart: unless-stopped
 
-    # Memory limits for RedisInsight
+    # Memory limits for Redis UI
     mem_limit: 200m
     memswap_limit: 200m
     healthcheck:
@@ -294,6 +294,8 @@ services:
       - kafka-ui
       - flashmq
       - couchbase
+      - redis
+      - redis-ui
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ./nginx/conf.d:/etc/nginx/conf.d:ro
@@ -309,7 +311,7 @@ volumes:
   flashmq-logs:
   couchbase-data:
   redis-data:
-  redisinsight-data:
+  redis-ui-data:
 
 networks:
   app-network:

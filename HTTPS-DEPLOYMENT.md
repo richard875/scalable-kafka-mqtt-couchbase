@@ -25,6 +25,7 @@ A    unibet.richardeverley.com        →  YOUR_LIGHTSAIL_IP
 A    api.unibet.richardeverley.com    →  YOUR_LIGHTSAIL_IP
 A    ws.unibet.richardeverley.com     →  YOUR_LIGHTSAIL_IP
 A    couchbase.unibet.richardeverley.com →  YOUR_LIGHTSAIL_IP
+A    redis.unibet.richardeverley.com →  YOUR_LIGHTSAIL_IP
 A    kowl.unibet.richardeverley.com   →  YOUR_LIGHTSAIL_IP
 ```
 
@@ -108,18 +109,22 @@ curl https://api.unibet.richardeverley.com/health
 
 # Check other services
 curl -k https://couchbase.unibet.richardeverley.com
+
 curl -k https://kowl.unibet.richardeverley.com
+
+curl -k https://redis.unibet.richardeverley.com
 ```
 
 ## Service URLs (After Deployment)
 
-| Service        | HTTPS URL                                     | Description                            |
-| -------------- | --------------------------------------------- | -------------------------------------- |
-| Health Check   | `https://unibet.richardeverley.com/health`    | Main service health status             |
-| Betting API    | `https://api.unibet.richardeverley.com`       | REST API for betting operations        |
-| MQTT WebSocket | `ws://ws.unibet.richardeverley.com`           | WebSocket for real-time updates        |
-| Couchbase UI   | `https://couchbase.unibet.richardeverley.com` | Database administration                |
-| Kafka UI       | `https://kowl.unibet.richardeverley.com`      | Kafka topic management                 |
+| Service        | HTTPS URL                                     | Description                     |
+| -------------- | --------------------------------------------- | ------------------------------- |
+| Health Check   | `https://unibet.richardeverley.com/health`    | Main service health status      |
+| Betting API    | `https://api.unibet.richardeverley.com`       | REST API for betting operations |
+| MQTT WebSocket | `ws://ws.unibet.richardeverley.com`           | WebSocket for real-time updates |
+| Couchbase UI   | `https://couchbase.unibet.richardeverley.com` | Database administration         |
+| Redis UI       | `https://redis.unibet.richardeverley.com`     | Redis database management       |
+| Kafka UI       | `https://kowl.unibet.richardeverley.com`      | Kafka topic management          |
 
 ## Certificate Renewal
 

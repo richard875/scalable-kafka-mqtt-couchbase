@@ -67,7 +67,7 @@ sleep 30
 # Check service health
 print_status "Checking service health..."
 
-services=("betting-service" "audit-service" "notification-service" "email-service" "kafka" "kafka-ui" "flashmq" "couchbase" "nginx-proxy")
+services=("betting-service" "audit-service" "notification-service" "email-service" "kafka" "kafka-ui" "flashmq" "couchbase" "redis" "redis-ui" "nginx-proxy")
 
 for service in "${services[@]}"; do
     if $COMPOSE_CMD -f docker-compose.production.yml ps | grep -q "$service.*Up"; then
@@ -84,6 +84,7 @@ print_status ""
 print_status "🌐 SUBDOMAIN ACCESS (requires DNS/hosts setup):"
 print_status "  📊 Kafka UI (Kowl): https://kowl.unibet.richardeverley.com"
 print_status "  🗄️ Couchbase UI: https://couchbase.unibet.richardeverley.com"
+print_status "  🧮 Redis UI: https://redis.unibet.richardeverley.com"
 print_status "  🔔 WebSocket (MQTT): ws://ws.unibet.richardeverley.com"
 print_status "  🎲 Betting API: https://api.unibet.richardeverley.com"
 print_status ""
@@ -93,16 +94,17 @@ print_status ""
 print_status "⚙️  DIRECT PORT ACCESS (development):"
 print_status "  📊 Kafka UI: http://localhost:8080"
 print_status "  🗄️ Couchbase UI: http://localhost:8091"
+print_status "  🧮 Redis UI: http://localhost:5540"
 print_status "  🔔 MQTT WebSocket: ws://localhost:8081"
 print_status ""
 
 # Check if hosts entries already exist
-if ! grep -q "api.localhost ws.localhost couchbase.localhost kowl.localhost" /etc/hosts; then
+if ! grep -q "api.localhost ws.localhost couchbase.localhost redis.localhost kowl.localhost" /etc/hosts; then
     print_warning "For subdomain access, add to /etc/hosts:"
-    print_warning "127.0.0.1 api.localhost ws.localhost couchbase.localhost kowl.localhost"
+    print_warning "127.0.0.1 api.localhost ws.localhost couchbase.localhost redis.localhost kowl.localhost"
     print_status ""
     print_status "You can run this command to add them automatically:"
-    print_status "sudo sh -c 'echo \"127.0.0.1 api.localhost ws.localhost couchbase.localhost kowl.localhost\" >> /etc/hosts'"
+    print_status "sudo sh -c 'echo \"127.0.0.1 api.localhost ws.localhost couchbase.localhost redis.localhost kowl.localhost\" >> /etc/hosts'"
 else
     print_status "✓ Subdomain entries are already configured in /etc/hosts"
 fi
