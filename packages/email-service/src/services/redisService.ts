@@ -3,20 +3,28 @@ import { REDIS_HOSTS } from "../constants.js";
 import type BetV2 from "@fdj/shared/types/kafka/betV2.js";
 import { listKey, ttlKey } from "../helper/formatKeys.js";
 
-const GAP_WINDOW = 600;
+const GAP_WINDOW = 5000; // 5 seconds
+const FALLBACK_URL = "localhost:6379";
 
 class RedisService {
   private client: ReturnType<typeof createClient>;
+  private subscriberClient: ReturnType<typeof createClient>;
 
   constructor() {
-    this.client = createClient({ url: `redis://${REDIS_HOSTS || "localhost:6379"}` });
+    // Regular operations client
+    this.client = createClient({ url: `redis://${REDIS_HOSTS || FALLBACK_URL}` });
     this.client.on("error", err => console.error("Redis Client Error", err));
+
+    // Dedicated subscriber client
+    this.subscriberClient = createClient({ url: `redis://${REDIS_HOSTS || FALLBACK_URL}` });
+    this.subscriberClient.on("error", err => console.error("Redis Subscriber Client Error", err));
   }
 
   async connect(): Promise<void> {
     try {
       console.log("Connecting to Redis...");
       await this.client.connect();
+      await this.subscriberClient.connect();
       console.log("Successfully connected to Redis");
     } catch (error) {
       console.error("Failed to connect to Redis:", error);
@@ -28,6 +36,7 @@ class RedisService {
     try {
       console.log("Disconnecting from Redis...");
       await this.client.quit();
+      await this.subscriberClient.quit();
       console.log("Successfully disconnected from Redis");
     } catch (error) {
       console.error("Failed to disconnect from Redis:", error);
@@ -60,7 +69,7 @@ class RedisService {
   }
 
   async expiredKeyListener(callback: (expiredKey: string) => Promise<void>): Promise<void> {
-    return await this.client.subscribe("__keyevent@0__:expired", callback);
+    return await this.subscriberClient.subscribe("__keyevent@0__:expired", callback);
   }
 }
 
