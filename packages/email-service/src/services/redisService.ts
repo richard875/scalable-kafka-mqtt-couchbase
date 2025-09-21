@@ -1,7 +1,9 @@
 import { createClient } from "redis";
 import { REDIS_HOSTS } from "../constants.js";
-import { listKey } from "../helper/formatKeys.js";
 import type BetV2 from "@fdj/shared/types/kafka/betV2.js";
+import { listKey, ttlKey } from "../helper/formatKeys.js";
+
+const GAP_WINDOW = 600;
 
 class RedisService {
   private client: ReturnType<typeof createClient>;
@@ -43,8 +45,22 @@ class RedisService {
     }
   }
 
+  async resetBetTimer(userId: string): Promise<void> {
+    try {
+      const key = ttlKey(userId);
+      await this.client.set(key, "1", { expiration: { type: "PX", value: GAP_WINDOW } });
+    } catch (error) {
+      console.error(`Failed to reset bet timer for user ${userId}:`, error);
+      throw error;
+    }
+  }
+
   multi() {
     return this.client.multi();
+  }
+
+  async expiredKeyListener(callback: (expiredKey: string) => Promise<void>): Promise<void> {
+    return await this.client.subscribe("__keyevent@0__:expired", callback);
   }
 }
 
