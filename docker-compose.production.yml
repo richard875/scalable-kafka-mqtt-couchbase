@@ -271,6 +271,7 @@ services:
       - KAFKA_BROKERS=kafka:9092
       - KAFKAJS_NO_PARTITIONER_WARNING=1
       - RESEND_API_KEY=${RESEND_API_KEY}
+      - REDIS_HOSTS=redis:6379
     restart: unless-stopped
     expose:
       - "3003"
