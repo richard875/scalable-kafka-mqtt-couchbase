@@ -1,6 +1,7 @@
 import { Kafka, logLevel } from "kafkajs";
 import type { Admin, Producer, Consumer } from "kafkajs";
 import SportsEnum from "../enums/sportsEnum.js";
+import type BatEnvelope from "../types/kafka/batEnvelope.js";
 
 class KafkaService {
   private kafka: Kafka;
@@ -90,7 +91,7 @@ class KafkaService {
   }
 
   async startConsuming(
-    messageHandler: (topic: string, message: unknown) => Promise<void> | void,
+    messageHandler: (topic: string, message: BatEnvelope<unknown>) => Promise<void> | void,
     consumerGroupId = "unibet-group"
   ): Promise<void> {
     try {

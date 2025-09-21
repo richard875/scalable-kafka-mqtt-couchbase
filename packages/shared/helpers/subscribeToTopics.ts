@@ -1,8 +1,9 @@
 import SportsEnum from "../enums/sportsEnum.js";
 import kafkaService from "../services/kafkaService.js";
+import type BatEnvelope from "../types/kafka/batEnvelope.js";
 
 const subscribeToTopics = async (
-  messageHandler: (topic: string, message: unknown) => Promise<void> | void,
+  messageHandler: (topic: string, message: BatEnvelope<unknown>) => Promise<void> | void,
   consumerGroupId: string
 ): Promise<void> => {
   console.log("Subscribing to sports topics...");
