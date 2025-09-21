@@ -272,6 +272,8 @@ services:
       - KAFKAJS_NO_PARTITIONER_WARNING=1
       - RESEND_API_KEY=${RESEND_API_KEY}
       - REDIS_HOSTS=redis:6379
+      - FROM_EMAIL=${FROM_EMAIL}
+      - TO_EMAIL=${TO_EMAIL}
     restart: unless-stopped
     expose:
       - "3003"
