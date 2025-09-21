@@ -30,11 +30,11 @@ COMPOSE_CMD="docker compose"
 
 # Stop services
 print_status "Stopping all services..."
-$COMPOSE_CMD -f docker-compose.production.yml down
+$COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml down
 
 # Optional: Remove volumes (uncomment if you want to reset all data)
 # print_warning "Removing volumes..."
-# $COMPOSE_CMD -f docker-compose.production.yml down -v
+# $COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml down -v
 
 # Optional: Remove images (uncomment if you want to remove built images)
 # print_warning "Removing built images..."

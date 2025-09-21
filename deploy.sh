@@ -109,5 +109,5 @@ else
     print_status "✓ Subdomain entries are already configured in /etc/hosts"
 fi
 print_status ""
-print_status "To view logs: $COMPOSE_CMD -f docker-compose.production.yml logs -f [service-name]"
-print_status "To stop services: $COMPOSE_CMD -f docker-compose.production.yml down"
+print_status "To view logs: $COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml logs -f [service-name]"
+print_status "To stop services: $COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml down"

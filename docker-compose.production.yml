@@ -107,6 +107,8 @@ services:
   couchbase:
     image: couchbase:community
     container_name: couchbase
+    env_file:
+      - .env.production
     ports:
       - "8091-8097:8091-8097" # Couchbase Web Console and REST API ports
       - "9123:9123" # Analytics query port
@@ -189,6 +191,8 @@ services:
       context: .
       dockerfile: packages/betting-service/Dockerfile
     container_name: betting-service
+    env_file:
+      - .env.production
     depends_on:
       kafka:
         condition: service_healthy
@@ -211,6 +215,8 @@ services:
       context: .
       dockerfile: packages/audit-service/Dockerfile
     container_name: audit-service
+    env_file:
+      - .env.production
     depends_on:
       kafka:
         condition: service_healthy
@@ -263,6 +269,8 @@ services:
       context: .
       dockerfile: packages/email-service/Dockerfile
     container_name: email-service
+    env_file:
+      - .env.production
     depends_on:
       kafka:
         condition: service_healthy
