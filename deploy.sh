@@ -55,7 +55,7 @@ cd ../..
 
 # Build and start services
 print_status "Building and starting all services..."
-$COMPOSE_CMD -f docker-compose.production.yml build --no-cache
+$COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml build --no-cache
 
 print_status "Starting services..."
 $COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml up -d
@@ -70,7 +70,7 @@ print_status "Checking service health..."
 services=("betting-service" "audit-service" "notification-service" "email-service" "kafka" "kafka-ui" "flashmq" "couchbase" "redis" "redis-ui" "nginx-proxy")
 
 for service in "${services[@]}"; do
-    if $COMPOSE_CMD -f docker-compose.production.yml ps | grep -q "$service.*Up"; then
+    if $COMPOSE_CMD --env-file .env.production -f docker-compose.production.yml ps | grep -q "$service.*Up"; then
         print_status "$service is running ✓"
     else
         print_warning "$service is not running properly"
