@@ -66,14 +66,18 @@ export const NotificationEmail = ({ companyName, bets }: NotificationEmailProps)
       <Preview>Thank you for choosing {companyName}!</Preview>
       <Tailwind config={{ presets: [pixelBasedPreset] }}>
         <Body className="font-sans bg-[#EEEEEE] m-0 p-0 w-full max-w-full antialiased">
-          <Container className="w-full max-w-full h-24 bg-[#147B45] flex items-center justify-center">
-            <Container className="max-w-[700px] w-[700px] m-auto">
-              <Img
-                src="https://www.unibet.com.au/kwp-bundle-store/global-navigation/0.173.0/assets/icons/unibet_desktop.svg"
-                alt="Logo"
-                width="160"
-              />
-            </Container>
+          <Container className="w-full max-w-full bg-[#147B45] text-center py-6">
+            <table width="100%" cellPadding={0} cellSpacing={0} border={0}>
+              <tr>
+                <td align="center" valign="middle">
+                  <Img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Unibet_logo.svg/512px-Unibet_logo.svg.png"
+                    alt="Logo"
+                    width="160"
+                  />
+                </td>
+              </tr>
+            </table>
           </Container>
           <Container className="max-w-full w-full py-14">
             <Container className="max-w-[760px] h-1.5 bg-[#bbbbbb]" />
