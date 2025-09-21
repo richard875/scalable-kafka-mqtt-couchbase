@@ -18,6 +18,8 @@ const Confirm = () => {
 
     for (let index = 0; index < selectedBets.length; index++) {
       const bet = selectedBets[index];
+      if (index === selectedBets.length - 1) bet.isLast = true;
+
       const message = `Placed $${formatAmount(bet.amount || 0)} bet on ${bet.name} @ ${formatAmount(bet.price || 0)}`;
       const className =
         "!rounded-xs !bg-[#222222] shadow-2xl !text-white !text-sm !font-bold border-l-4 border-[#ffe91f] font-smoothing";

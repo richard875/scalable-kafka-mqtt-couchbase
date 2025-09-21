@@ -2,9 +2,13 @@ import { useMemo } from "react";
 import clock from "@/assets/icons/clock.svg";
 import useSportStore from "@/store/sportStore";
 import type { Odds } from "@fdj/shared/types/odds";
+import type SlipItem from "@fdj/shared/types/slipItem";
+import type Outcomes from "@fdj/shared/types/outcomes";
+import useFingerprint from "@/hooks/useFingerprint";
 import formatIsoToLocalTime from "@/helper/formatIsoToLocalTime";
 
 const EventRow = ({ event }: { event: Odds }) => {
+  const userId = useFingerprint();
   const { sport, selectedBets, setSelectedBet } = useSportStore();
   const randomNum = useMemo(() => Math.floor(Math.random() * (900 - 100 + 1)) + 100, []);
 
@@ -20,6 +24,11 @@ const EventRow = ({ event }: { event: Odds }) => {
 
   const isHomeSelected = selectedBets.map(b => b.id).includes(homeOdds.id);
   const isAwaySelected = selectedBets.map(b => b.id).includes(awayOdds.id);
+
+  const handleSelect = (outcome: Outcomes) => {
+    const data: SlipItem = { ...outcome, team, amount: 0, key: sport.key, userId, isLast: false };
+    setSelectedBet(data);
+  };
 
   return (
     <div
@@ -42,7 +51,7 @@ const EventRow = ({ event }: { event: Odds }) => {
           <img src={clock} alt="clock" className="w-3.5 h-3.5" />
         </div>
         <div
-          onClick={() => setSelectedBet({ ...homeOdds, team, amount: 0, key: sport.key })}
+          onClick={() => handleSelect(homeOdds)}
           className={`w-16 h-9 rounded-xs flex items-center justify-center ${isHomeSelected ? "bg-[#ffe71f] hover:bg-[#ffef6e]" : "bg-[#147b45] hover:bg-[#00582c]"}`}
         >
           <span className={`text-sm font-bold ${isHomeSelected ? "text-[#333333]" : "text-white"}`}>
@@ -50,7 +59,7 @@ const EventRow = ({ event }: { event: Odds }) => {
           </span>
         </div>
         <div
-          onClick={() => setSelectedBet({ ...awayOdds, team, amount: 0, key: sport.key })}
+          onClick={() => handleSelect(awayOdds)}
           className={`w-16 h-9 rounded-xs flex items-center justify-center ${isAwaySelected ? "bg-[#ffe71f] hover:bg-[#ffef6e]" : "bg-[#147b45] hover:bg-[#00582c]"}`}
         >
           <span className={`text-sm font-bold ${isAwaySelected ? "text-[#333333]" : "text-white"}`}>
