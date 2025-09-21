@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import type BetV2 from "@fdj/shared/types/kafka/betV2.js";
 import { RESEND_API_KEY, FROM_EMAIL, TO_EMAIL } from "../constants.js";
-import NotificationEmail from "@email-service/templates/NotificationEmail.js";
+import NotificationEmail from "../templates/NotificationEmail.js";
 
 const sendBetslipEmail = async (bets: BetV2[]) => {
   try {
