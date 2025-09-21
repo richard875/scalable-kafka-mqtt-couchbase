@@ -133,6 +133,54 @@ services:
     networks:
       - app-network
 
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    command: redis-server --save 60 1 --loglevel warning
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+
+    # Memory limits for Redis
+    mem_limit: 300m
+    memswap_limit: 300m
+    healthcheck:
+      test: ["CMD-SHELL", "redis-cli ping | grep PONG || exit 1"]
+      interval: 20s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    networks:
+      - app-network
+
+  redisinsight:
+    image: redis/redisinsight:latest
+    container_name: redisinsight
+    depends_on:
+      redis:
+        condition: service_healthy
+    ports:
+      - "5540:5540"
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    volumes:
+      - redisinsight-data:/data
+    restart: unless-stopped
+
+    # Memory limits for RedisInsight
+    mem_limit: 200m
+    memswap_limit: 200m
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:5540/api/health/ || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - app-network
+
   # Application services
   betting-service:
     build:
@@ -260,6 +308,8 @@ volumes:
   flashmq-data:
   flashmq-logs:
   couchbase-data:
+  redis-data:
+  redisinsight-data:
 
 networks:
   app-network:
