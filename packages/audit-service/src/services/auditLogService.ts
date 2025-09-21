@@ -1,11 +1,14 @@
 import couchbase, { Bucket, Collection, Cluster } from "couchbase";
-import type SlipItem from "@fdj/shared/types/slipItem";
+import type BetV1 from "@fdj/shared/types/kafka/betV1.js";
+import type BatEnvelope from "@fdj/shared/types/kafka/batEnvelope.js";
 import {
   COUCHBASE_URL,
   COUCHBASE_USERNAME,
   COUCHBASE_PASSWORD,
   COUCHBASE_BUCKET,
 } from "../constants.js";
+
+const BET_SCHEMA_VERSION = "v1";
 
 // Global variables to store the Couchbase connection
 let couchbaseCluster: Cluster | null = null;
@@ -59,13 +62,21 @@ export const cleanupAuditService = async (): Promise<void> => {
   }
 };
 
-export const handleMessage = async (topic: string, message: unknown): Promise<void> => {
+export const handleMessage = async (
+  topic: string,
+  message: BatEnvelope<unknown>
+): Promise<void> => {
   if (!couchbaseCollection) {
     throw new Error("Couchbase not initialized. Call initializeAuditService() first.");
   }
 
   try {
-    const docId = (message as SlipItem).id || crypto.randomUUID();
+    if (!message || message.version !== BET_SCHEMA_VERSION) {
+      throw new Error("Invalid message format or unsupported version");
+    }
+
+    const localMessage = message as BetV1;
+    const docId = localMessage.payload.id || crypto.randomUUID();
 
     // Add timeout to the upsert operation
     const timeoutPromise = new Promise((_, reject) => {
@@ -73,7 +84,7 @@ export const handleMessage = async (topic: string, message: unknown): Promise<vo
     });
 
     const auditDocument = {
-      ...(message as Record<string, unknown>),
+      ...localMessage,
       topic,
       timestamp: new Date().toISOString(),
       auditId: docId,
