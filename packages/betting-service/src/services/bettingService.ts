@@ -52,8 +52,8 @@ export const placeBets = async (bet: unknown): Promise<BetResult> => {
     const betV2: BetV2 = {
       version: "v2",
       payload: {
-        meta: { id: validatedBet.id, key: validatedBet.key },
-        info: { name: validatedBet.name, team: validatedBet.team },
+        meta: { id: validatedBet.id, key: validatedBet.key, userId: validatedBet.userId },
+        info: { name: validatedBet.name, team: validatedBet.team, isLast: validatedBet.isLast },
         stats: { price: validatedBet.price, amount: validatedBet.amount },
       },
     };

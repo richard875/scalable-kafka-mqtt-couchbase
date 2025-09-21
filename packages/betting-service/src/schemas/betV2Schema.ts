@@ -13,8 +13,9 @@ const BetV2Schema: JSONSchemaType<BetV2> = {
           properties: {
             id: { type: "string" },
             key: { type: "string" },
+            userId: { type: "string" },
           },
-          required: ["id", "key"],
+          required: ["id", "key", "userId"],
           additionalProperties: false,
         },
         info: {
@@ -22,8 +23,9 @@ const BetV2Schema: JSONSchemaType<BetV2> = {
           properties: {
             name: { type: "string" },
             team: { type: "string" },
+            isLast: { type: "boolean" },
           },
-          required: ["name", "team"],
+          required: ["name", "team", "isLast"],
           additionalProperties: false,
         },
         stats: {
