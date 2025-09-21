@@ -7,7 +7,7 @@
     "skipLibCheck": true,
     "types": ["node"],
     "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
+    "jsxImportSource": "react",
     "outDir": "./dist",
     "noEmit": false,
     "composite": true,
