@@ -1,8 +1,9 @@
 import { Hono } from "hono";
 import { serve } from "@hono/node-server";
 import redisService from "./services/redisService.js";
+import handleMessage from "./services/messageService.js";
 import kafkaService from "@fdj/shared/services/kafkaService";
-import { handleMessage } from "./services/sendEmailService.js";
+import expiredKeyListener from "./helper/expiredKeyListener.js";
 import subscribeToTopics from "@fdj/shared/helpers/subscribeToTopics";
 
 // Application instance
@@ -17,11 +18,12 @@ app.get("/", c => c.text("Email Service is Healthy"));
 // Initialize Kafka service and subscribe to all sports topics
 const startServer = async (): Promise<void> => {
   try {
-    console.log("Initializing Redis service...");
-    await redisService.connect();
-
     console.log("Initializing Kafka service...");
     await kafkaService.initialize();
+
+    console.log("Initializing Redis service...");
+    await redisService.connect();
+    await redisService.expiredKeyListener(expiredKeyListener);
 
     console.log("Initializing Email service...");
     await subscribeToTopics(handleMessage, "email-service-group");
