@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { serve } from "@hono/node-server";
 import kafkaService from "@fdj/shared/services/kafkaService";
 import { getOdds, placeBet } from "./controllers/bettingController.js";
@@ -9,8 +10,11 @@ const app = new Hono();
 // Configuration
 const PORT = 3000;
 
+// Middleware
+if (process.env.NODE_ENV !== "production") app.use(cors());
+
 // Routes
-app.get("/", c => c.text("Betting Service is Healthy"));
+app.get("/", c => c.text(`Betting Service is Healthy, running in ${process.env.NODE_ENV} mode.`));
 app.get("/odds", getOdds);
 app.post("/bet", placeBet);
 
