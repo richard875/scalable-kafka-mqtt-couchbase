@@ -36,8 +36,8 @@
     "docker:logs": "docker compose -f docker-compose.production.yml logs -f",
     "docker:deploy": "./deploy.sh",
     "docker:stop": "./stop.sh",
-    "infra:dev": "docker compose -f packages/kafka-config/docker-compose.yml up -d",
-    "infra:dev:down": "docker compose -f packages/kafka-config/docker-compose.yml down",
+    "infra:dev": "docker compose -f packages/infrastructure-dev/docker-compose.yml up -d",
+    "infra:dev:down": "docker compose -f packages/infrastructure-dev/docker-compose.yml down",
     "postinstall": "npm run build:shared"
   },
   "devDependencies": {

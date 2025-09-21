@@ -493,7 +493,7 @@ The repository contains multiple packages and infra config. Key items:
     ├── shared/
     │   ├── Dockerfile
     │   └── .dockerignore
-    └── kafka-config/
+    └── infrastructure-dev/
         └── docker-compose.yml
 ```
 
