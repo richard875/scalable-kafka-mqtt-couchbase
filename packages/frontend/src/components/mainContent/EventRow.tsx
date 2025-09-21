@@ -8,8 +8,8 @@ import useFingerprint from "@/hooks/useFingerprint";
 import formatIsoToLocalTime from "@/helper/formatIsoToLocalTime";
 
 const EventRow = ({ event }: { event: Odds }) => {
-  const userId = useFingerprint();
   const { sport, selectedBets, setSelectedBet } = useSportStore();
+  const { hash: userId, isLoading: fingerprintLoading } = useFingerprint();
   const randomNum = useMemo(() => Math.floor(Math.random() * (900 - 100 + 1)) + 100, []);
 
   const unibet = event.bookmakers.find(bm => bm.key === "unibet");
@@ -26,6 +26,8 @@ const EventRow = ({ event }: { event: Odds }) => {
   const isAwaySelected = selectedBets.map(b => b.id).includes(awayOdds.id);
 
   const handleSelect = (outcome: Outcomes) => {
+    if (fingerprintLoading || !userId) return;
+
     const data: SlipItem = { ...outcome, team, amount: 0, key: sport.key, userId, isLast: false };
     setSelectedBet(data);
   };

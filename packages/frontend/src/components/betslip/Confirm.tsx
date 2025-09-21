@@ -3,10 +3,12 @@ import { toast } from "react-toastify";
 import { BETTING_URL } from "@/constants/api";
 import useSportStore from "@/store/sportStore";
 import formatAmount from "@/helper/formatAmount";
+import useFingerprint from "@/hooks/useFingerprint";
 import type BetResult from "@fdj/shared/types/betResult";
 
 const Confirm = () => {
   const { selectedBets, clearSelectedBets } = useSportStore();
+  const { hash: currentUserId } = useFingerprint();
   const totalStake = selectedBets.reduce((acc, bet) => acc.plus(bet.amount || 0), new Decimal(0));
   const potentialPayout = selectedBets.reduce(
     (acc, bet) => acc.plus(new Decimal(bet.amount || 0).mul(new Decimal(bet.price || 0))),
@@ -14,13 +16,26 @@ const Confirm = () => {
   );
 
   const handleClick = async () => {
+    // Ensure we have a valid userId before proceeding
+    if (!currentUserId) {
+      toast.error("User identification is still loading. Please wait a moment and try again.", {
+        closeButton: false,
+        hideProgressBar: true,
+        className:
+          "!rounded-xs !bg-[#222222] shadow-2xl !text-white !text-sm !font-bold border-l-4 border-red-500 font-smoothing",
+      });
+      return;
+    }
+
     clearSelectedBets();
 
     for (let index = 0; index < selectedBets.length; index++) {
       const bet = selectedBets[index];
       if (index === selectedBets.length - 1) bet.isLast = true;
 
-      const message = `Placed $${formatAmount(bet.amount || 0)} bet on ${bet.name} @ ${formatAmount(bet.price || 0)}`;
+      // Ensure this bet has a valid userId (fallback to current userId if needed)
+      const betWithUserId = { ...bet, userId: bet.userId || currentUserId };
+      const message = `Placed $${formatAmount(betWithUserId.amount || 0)} bet on ${betWithUserId.name} @ ${formatAmount(betWithUserId.price || 0)}`;
       const className =
         "!rounded-xs !bg-[#222222] shadow-2xl !text-white !text-sm !font-bold border-l-4 border-[#ffe91f] font-smoothing";
       const toastConfig = { closeButton: false, hideProgressBar: true, className };
@@ -32,7 +47,7 @@ const Confirm = () => {
         const result = await fetch(`${BETTING_URL}/bet`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(bet),
+          body: JSON.stringify(betWithUserId),
         });
 
         if (!result.ok) {
