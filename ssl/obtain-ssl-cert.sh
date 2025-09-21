@@ -149,8 +149,10 @@ sudo chown -R $(whoami):$(whoami) ./ssl/certs/
 # Create dhparam if it doesn't exist
 if [[ ! -f "./ssl/certs/dhparam.pem" ]]; then
     echo -e "${GREEN}Generating Diffie-Hellman parameters (this may take a while)...${NC}"
-    docker run --rm -v "$(pwd)/ssl/certs:/certs" nginx:alpine \
-        sh -c "openssl dhparam -out /certs/dhparam.pem 2048"
+    
+    # Use Alpine, install openssl, generate dhparam
+    docker run --rm -v "$(pwd)/ssl/certs:/certs" alpine:latest \
+        sh -c "apk add --no-cache openssl && openssl dhparam -out /certs/dhparam.pem 2048"
 fi
 
 # Create certificate renewal script
