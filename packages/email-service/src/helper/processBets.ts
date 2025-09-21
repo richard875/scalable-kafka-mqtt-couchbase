@@ -1,13 +1,15 @@
-import { listKey } from "../helper/formatKeys.js";
 import redisService from "../services/redisService.js";
 import type BetV2 from "@fdj/shared/types/kafka/betV2.js";
+import { listKey, ttlKey } from "../helper/formatKeys.js";
 
 const processBets = async (userId: string): Promise<void> => {
   const key = listKey(userId);
+  const ttl = ttlKey(userId);
 
   const pipeline = redisService.multi();
   pipeline.lRange(key, 0, -1);
   pipeline.del(key);
+  pipeline.del(ttl);
 
   const [bets] = (await pipeline.exec()) as [string[], unknown];
   if (!bets || bets.length === 0) throw new Error("Failed to execute Redis pipeline");
