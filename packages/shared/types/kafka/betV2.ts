@@ -4,12 +4,12 @@ type Meta = {
   id: string;
   key: string;
   userId: string;
+  isLast: boolean;
 };
 
 type Info = {
   name: string;
   team: string;
-  isLast: boolean;
 };
 
 type Stats = {
